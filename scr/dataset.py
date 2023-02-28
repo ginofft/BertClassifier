@@ -1,9 +1,12 @@
+import torch
 from torch.utils.data import Dataset
 from transformers import BertTokenizer
+from typing import List, Dict
 
 class SentenceLabelDataset(Dataset):
     """This class create a labeled dataset from a list - each element having two component: [text, label]
 
+    Note: This class is intended to be used with dynamic padding. As such, tokenized_dataset consist of sentence with various length
     '''
     Attributes
     ----------
@@ -50,3 +53,27 @@ class SentenceLabelDataset(Dataset):
             "attention_mask": self.tokenized_dataset['attention_mask'][idx],
             "label": self.labels[idx]
         }
+
+#Tokenizer pad_id
+_pad_token_id = BertTokenizer.pad_token_id 
+
+def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
+    return seq + (max_batch_len - len(seq)) * [pad_value]
+
+def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
+    """This function padd all sentence to the longest sentence in the batch - used to do dynamic padding
+    """
+
+    batch_input = list()
+    batch_attention_mask = list()
+    labels = list()
+    max_size = max([len(ex['input_ids']) for ex in batch])
+    for item in batch:
+        batch_input += [pad_seq(item['input_ids'], max_size, _pad_token_id)]
+        batch_attention_mask += [pad_seq(item['attention_mask'], max_size, 0)]
+        labels.append(item['label'])
+    return {
+        'input_ids': torch.tensor(batch_input, dtype = torch.long),
+        'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
+        'labels': torch.tensor(labels, dtype = torch.long),
+    }
