@@ -7,7 +7,7 @@ class SentenceLabelDataset(Dataset):
     """This class create a labeled dataset from a list - each element having two component: [text, label]
 
     Note: This class is intended to be used with dynamic padding. As such, tokenized_dataset consist of sentence with various length
-    '''
+
     Attributes
     ----------
     labelSet : List[str]
@@ -63,7 +63,7 @@ def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
 def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
     """This function padd all sentence to the longest sentence in the batch - used to do dynamic padding
     """
-    
+
     batch_input = list()
     batch_attention_mask = list()
     labels = list()

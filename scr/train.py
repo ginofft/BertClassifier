@@ -13,13 +13,12 @@ def train(
         epoch=1):
         
     metrics = evaluate.load("accuracy")
-    dataloader = DataLoader(
-                        train_set, 
-                        batch_size = batch_size, 
-                        num_workers = 2, 
-                        shuffle = True,
-                        collate_fn = collate_dynamic_padding,
-                        pin_memory = True)
+    dataloader = DataLoader(train_set, 
+                            batch_size = batch_size, 
+                            num_workers = 2, 
+                            shuffle = True,
+                            collate_fn = collate_dynamic_padding,
+                            pin_memory = True)
     n_batches = len(dataloader)
 
     epoch_loss = 0
@@ -105,4 +104,3 @@ def inference(testSet,
     if device == torch.device('cuda'):
         torch.cuda.empty_cache()
     return avg_loss
-    
