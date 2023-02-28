@@ -63,7 +63,7 @@ def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
 def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
     """This function padd all sentence to the longest sentence in the batch - used to do dynamic padding
     """
-
+    
     batch_input = list()
     batch_attention_mask = list()
     labels = list()
