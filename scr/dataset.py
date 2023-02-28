@@ -7,9 +7,19 @@ class SentenceLabelDataset(Dataset):
     '''
     Attributes
     ----------
-    listData : list[str, str]
-        A list whose elements consist of two component: text and label
-    labelSet : 
+    labelSet : List[str]
+        A list whose elements are our classes
+    texts : List[str]
+        A list whose elements is the text
+    labels : List[int]
+        A list whose element is the index of that class inside labelSet
+    tokenizer : BertTokenizer
+        Bert pre-trained tokenizer, inherits from Huggingface's PretrainedTokenizer
+    tokenized_dataset : List[Dict[str, List[int]]]
+        tokenized dataset, return as a list of dictionary with three keys:
+        - input_ids : token's  idex
+        - attention_mask : attention mask to feed into transformer
+        - token_type_ids : not used for our purpose
     """
 
     def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('bert-base-uncased')):
@@ -25,8 +35,8 @@ class SentenceLabelDataset(Dataset):
         texts = []
         labels = []
         for data in listData:
-        texts.append(data[0]) 
-        labels.append(self.labelSet.index(data[1]))
+            texts.append(data[0]) 
+            labels.append(self.labelSet.index(data[1]))
         return texts, labels
     
     def __len__(self):
