@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import Dataset
 from transformers import BertTokenizer
 from typing import List, Dict
+import json
 
 class SentenceLabelDataset(Dataset):
     """This class create a labeled dataset from a list - each element having two component: [text, label]
@@ -77,3 +78,17 @@ def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
         'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
         'labels': torch.tensor(labels, dtype = torch.long),
     }
+
+def get_data_from_json(path):
+    with open(path, 'r') as f:
+        dataDict = json.load(f)
+    print('The keys found in this json are: ', dataDict.keys())
+    return dataDict
+    
+def get_label_set(*lists):
+    labelSet = []
+    for currentList in lists:
+        for data in currentList:
+            if data[1] not in labelSet:
+                labelSet.append(data[1])
+    return labelSet

@@ -2,12 +2,29 @@ import argparse
 from pathlib import Path
 import torch
 
-from scr.dataset import SentenceLabelDataset
+from scr.dataset import SentenceLabelDataset, get_data_from_json, get_label_set
 from scr.train import train, inference
 from scr.models import BertMLPClassifier
 from scr.utils import save_checkpoint, load_checkpoint
 
 parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
+
+parser.add_argument('--batch_size', type=int, default = 16, help='batch size')
+parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
+parser.add_argument('--mode', type=str, default='train', 
+                    help='training mode or inference mode',
+                    choices=['train', 'test'],
+                    required=True)
+parser.add_argument('--saveEvery', type = int, default = 10, 
+                    help='no. epoch before a save is created')
+
+parser.add_argument('--datasetPath', type = str, default='',
+                    help='Path to dataset json')
+
+parser.add_argument('--savePath', type = str, default = '',
+                    help = 'Path to save checkpoint to')
+parser.add_argument('--loadPath', type = str, default = '',
+                    help = 'Path to load checkpoint from')
 
 if __name__ == "__main__":
     opt = parser.parse_args()
@@ -24,11 +41,22 @@ if __name__ == "__main__":
     optimizer = torch.optim.AdamW(model.parameters(), lr = 1e-6)
     criterion = torch.nn.CrossEntropyLoss()
 
+    dataDict = get_data_from_json(opt.datasetPath)
+    trainList = dataDict['train']
+    valList = dataDict['val']
+    testList = dataDict['test']
+    lists = [trainList, valList, testList] 
+    labelSet = get_label_set(lists)
+
+    trainSet = SentenceLabelDataset(trainList, labelSet)
+    valSet = SentenceLabelDataset(valList, labelSet)
+    testSet = SentenceLabelDataset(testList, labelSet)
+
     if opt.mode.lower() == 'train':
         startEpoch = 0
         val_loss = float('inf')
         train_loss = float('inf')
-
+        
         if opt.loadPath:
             startEpoch, train_loss, val_loss = load_checkpoint(
                                                 Path(opt.loadPath),
@@ -38,10 +66,7 @@ if __name__ == "__main__":
         for epoch in range(startEpoch+1, opt.nEpochs+1):
             epoch_train_loss = train(trainSet, model, criterion, 
                                     optimizer, device, opt.batch_size, epoch)
-            if opt.validationPath:
-                epoch_val_loss = inference(valSet, model, criterion, device)
-            else:
-                epoch_val_loss = float('inf')
+            epoch_val_loss = inference(valSet, model, criterion, device)
             
             if (epoch_val_loss < val_loss):
                 val_loss = epoch_val_loss
@@ -68,5 +93,3 @@ if __name__ == "__main__":
                                             optimizer)
         else:
             raise Exception('Please point to a model using ---loadPath')
-        
-        
