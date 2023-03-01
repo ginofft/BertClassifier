@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 import torch
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 
 from scr.dataset import SentenceLabelDataset, get_data_from_json, get_label_set
 from scr.train import train, inference
@@ -10,21 +10,26 @@ from scr.utils import save_checkpoint, load_checkpoint
 
 parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
 
-parser.add_argument('--batch_size', type=int, default = 16, help='batch size')
-parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
-parser.add_argument('--mode', type=str, default='train', 
-                    help='training mode or inference mode',
-                    choices=['train', 'test'],
-                    required=True)
+#model, optimizer and criterion parameters
+parser.add_argument('--lr', type = float, default=1e-6, help='learning rate')
 parser.add_argument('--bertVariation', type=str, default='distilbert-base-uncased',
                     help='pretrained Bert checkpoint on HuggingFace')
 
+#training parameters
+parser.add_argument('--mode', type=str, default='train', 
+                    help='training mode or inference mode',
+                    choices=['train', 'inference'],
+                    required=True)
+parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
 
+#Data paremters
+parser.add_argument('--batch_size', type=int, default = 16, help='batch size')
 parser.add_argument('--datasetPath', type = str, default='',
                     help='Path to dataset json')
 
+#check point parameters
 parser.add_argument('--savePath', type = str, default = '',
                     help = 'Path to save checkpoint to')
 parser.add_argument('--loadPath', type = str, default = '',
@@ -51,9 +56,9 @@ if __name__ == "__main__":
     testList = dataDict['test']
     labelSet = get_label_set(trainList, valList, testList)
 
-    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
-    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
-    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
+    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = AutoTokenizer.from_pretrained(opt.bertVariation))
+    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = AutoTokenizer.from_pretrained(opt.bertVariation))
+    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = AutoTokenizer.from_pretrained(opt.bertVariation))
 
     if opt.mode.lower() == 'train':
         startEpoch = 0

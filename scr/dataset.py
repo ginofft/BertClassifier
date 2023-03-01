@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import Dataset
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 from typing import List, Dict
 import json
 
@@ -26,7 +26,7 @@ class SentenceLabelDataset(Dataset):
         - token_type_ids : not used for our purpose
     """
 
-    def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('distilbert-base-uncased')):
+    def __init__(self, listData, labelSet, tokenizer=AutoTokenizer.from_pretrained('distilbert-base-uncased')):
         """Passing list of [text, label] and the label set into our dataset
 
         Parameters
