@@ -26,7 +26,7 @@ class SentenceLabelDataset(Dataset):
         - token_type_ids : not used for our purpose
     """
 
-    def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('bert-base-uncased')):
+    def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('distillbert-base-uncased')):
         """Passing list of [text, label] and the label set into our dataset
 
         Parameters

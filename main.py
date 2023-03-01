@@ -50,9 +50,9 @@ if __name__ == "__main__":
     testList = dataDict['test']
     labelSet = get_label_set(trainList, valList, testList)
 
-    trainSet = SentenceLabelDataset(trainList, labelSet)
-    valSet = SentenceLabelDataset(valList, labelSet)
-    testSet = SentenceLabelDataset(testList, labelSet)
+    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = opt.bertVariation)
+    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = opt.bertVariation)
+    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = opt.bertVariation)
 
     if opt.mode.lower() == 'train':
         startEpoch = 0
