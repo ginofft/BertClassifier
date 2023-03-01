@@ -89,7 +89,7 @@ class SentenceLabelDataset(Dataset):
         }
 
 #Tokenizer pad_id
-_pad_token_id = BertTokenizer.from_pretrained('bert-base-uncased').pad_token_id 
+_pad_token_id = AutoTokenizer.from_pretrained('distilbert-base-uncased').pad_token_id 
 
 def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
     return seq + (max_batch_len - len(seq)) * [pad_value]
