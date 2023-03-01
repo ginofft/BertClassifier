@@ -92,3 +92,6 @@ if __name__ == "__main__":
                                             optimizer)
         else:
             raise Exception('Please point to a model using ---loadPath')
+
+        print('---------------------------Running Inferenece---------------------------')
+        test_loss = inference(testSet, model, criterion, device)
