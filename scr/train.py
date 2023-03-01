@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import DataLoader
-from dataset import collate_dynamic_padding
+from .dataset import collate_dynamic_padding
 import evaluate
 
 def train(
