@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 import torch
+from transformers import BertTokenizer
 
 from scr.dataset import SentenceLabelDataset, get_data_from_json, get_label_set
 from scr.train import train, inference
@@ -50,9 +51,9 @@ if __name__ == "__main__":
     testList = dataDict['test']
     labelSet = get_label_set(trainList, valList, testList)
 
-    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = opt.bertVariation)
-    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = opt.bertVariation)
-    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = opt.bertVariation)
+    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
+    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
+    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
 
     if opt.mode.lower() == 'train':
         startEpoch = 0
