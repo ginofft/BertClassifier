@@ -67,7 +67,7 @@ if __name__ == "__main__":
                                     optimizer, device, opt.batch_size, epoch)
             epoch_val_loss, val_metrics = inference(valSet, model, criterion, device)
 
-            print('Epoch {} completed: \nTrain loss: {:.4f} - Train Metrics: {}\n Validation loss: {:.4f} - Validation Metrics {}'.format(
+            print('Epoch {} completed: \nTrain loss: {:.4f} - Train Metrics: {}\nValidation loss: {:.4f} - Validation Metrics {}'.format(
                 epoch, epoch_train_loss, train_metrics, epoch_val_loss, val_metrics))
             
             if (epoch_val_loss < val_loss):
