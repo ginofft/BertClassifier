@@ -3,6 +3,17 @@ from transformers import BertModel
 
 class BertMLPClassifier(nn.Module):
     """A sentence classfier obtained from attaching a MLP layer on top of BERT
+
+    Attributes
+    ----------
+    bert : BertModel 
+        pretrained bert model
+    dropout : torch.nn.Dropout
+        dropout layer
+    linear : torch.nn.Linear
+        MLP layer
+    relu : torch.nn.ReLU
+        relu layer
     """
 
     def __init__(self, nClasses = 150, dropout = 0.3):
@@ -24,6 +35,13 @@ class BertMLPClassifier(nn.Module):
 
 class BertCRFClassifier(nn.Module):
     def __init__(self):
+        pass
+    def forward(self):
+        pass
+
+class BertSVMClassifier(nn.Module):
+    def __init__(self):
+        super().__init__(BertSVMClassifier, self).__init__()
         pass
     def forward(self):
         pass

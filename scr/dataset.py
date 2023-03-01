@@ -27,6 +27,18 @@ class SentenceLabelDataset(Dataset):
     """
 
     def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('bert-base-uncased')):
+        """Passing list of [text, label] and the label set into our dataset
+
+        Parameters
+        ----------
+        listData : List[str, str]
+            A list whose element are two string: [text, label]
+        labelSet : List[str]
+            A list whose element are the labels
+        tokenizer : PretrainedTokenizer
+            Huggingface's tokenizer
+        """
+        
         self.labelSet = labelSet
         self.texts, self.labels = self._processList(listData)
         self.tokenizer = tokenizer
@@ -47,6 +59,27 @@ class SentenceLabelDataset(Dataset):
         return len(self.labels)
         
     def __getitem__(self, idx):
+        """Get item from dataset
+
+        Parameters
+        ----------
+        idx : int
+            Item index in this dataset
+        
+        Return
+        ------
+        A dictionary, whose keys are:
+        - text : str
+            the sentence in text form
+        - class : str
+            the class in text form
+        - input_ids : List[int]
+            tokenized sentenced
+        - attention_mask : List[int]
+            the attention mask
+        - label : List[int]
+            the class index in labelSet
+        """
         return{
             "text": self.texts[idx],
             "class": self.labelSet[self.labels[idx]],
@@ -63,6 +96,18 @@ def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
 
 def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
     """This function padd all sentence to the longest sentence in the batch - used to do dynamic padding
+
+    Parameters
+    ----------
+    batch : List[Dict]
+        A list of dictionaries, where each dict must contains three keys: input_ids, attention_mask, label
+    
+    Return
+    ------
+    A dictionary whose keys are:
+        - input_ids : 2D tensor of [batch_size, max_batch_length]
+        - attention_mask : 2D tensor of [batch_size, max_batch_length]
+        - labels : 1D tensor of labels
     """
 
     batch_input = list()
@@ -80,12 +125,16 @@ def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
     }
 
 def get_data_from_json(path):
+    """Return a dictionary from json file, where each keys contain a list.
+    """
     with open(path, 'r') as f:
         dataDict = json.load(f)
     print('The keys found in this json are: ', dataDict.keys())
     return dataDict
     
 def get_label_set(*lists):
+    """Return a List[str] of label, used to map 'label' into indices.
+    """
     labelSet = []
     for currentList in lists:
         for data in currentList:
