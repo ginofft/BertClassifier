@@ -15,7 +15,7 @@ parser.add_argument('--mode', type=str, default='train',
                     help='training mode or inference mode',
                     choices=['train', 'test'],
                     required=True)
-parser.add_argument('--bertVariation', type=str, default='distillbert-base-uncased',
+parser.add_argument('--bertVariation', type=str, default='distilbert-base-uncased',
                     help='pretrained Bert checkpoint on HuggingFace')
 
 parser.add_argument('--saveEvery', type = int, default = 10, 
