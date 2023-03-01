@@ -45,8 +45,7 @@ if __name__ == "__main__":
     trainList = dataDict['train']
     valList = dataDict['val']
     testList = dataDict['test']
-    lists = [trainList, valList, testList] 
-    labelSet = get_label_set(lists)
+    labelSet = get_label_set(trainList, valList, testList)
 
     trainSet = SentenceLabelDataset(trainList, labelSet)
     valSet = SentenceLabelDataset(valList, labelSet)
