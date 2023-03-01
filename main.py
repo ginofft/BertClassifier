@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 import torch
-from transformers import AutoTokenizer
+from transformers import BertTokenizer
 
 from scr.dataset import SentenceLabelDataset, get_data_from_json, get_label_set
 from scr.train import train, inference
@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
 
 #model, optimizer and criterion parameters
 parser.add_argument('--lr', type = float, default=1e-6, help='learning rate')
-parser.add_argument('--bertVariation', type=str, default='distilbert-base-uncased',
+parser.add_argument('--bertVariation', type=str, default='bert-base-uncased',
                     help='pretrained Bert checkpoint on HuggingFace')
 
 #training parameters
@@ -56,9 +56,9 @@ if __name__ == "__main__":
     testList = dataDict['test']
     labelSet = get_label_set(trainList, valList, testList)
 
-    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = AutoTokenizer.from_pretrained(opt.bertVariation))
-    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = AutoTokenizer.from_pretrained(opt.bertVariation))
-    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = AutoTokenizer.from_pretrained(opt.bertVariation))
+    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
+    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
+    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
 
     if opt.mode.lower() == 'train':
         startEpoch = 0

@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import Dataset
-from transformers import AutoTokenizer
+from transformers import BertTokenizer
 from typing import List, Dict
 import json
 
@@ -26,7 +26,7 @@ class SentenceLabelDataset(Dataset):
         - token_type_ids : not used for our purpose
     """
 
-    def __init__(self, listData, labelSet, tokenizer=AutoTokenizer.from_pretrained('distilbert-base-uncased')):
+    def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('bert-base-uncased')):
         """Passing list of [text, label] and the label set into our dataset
 
         Parameters
@@ -89,7 +89,7 @@ class SentenceLabelDataset(Dataset):
         }
 
 #Tokenizer pad_id
-_pad_token_id = AutoTokenizer.from_pretrained('distilbert-base-uncased').pad_token_id 
+_pad_token_id = BertTokenizer.from_pretrained('bert-base-uncased').pad_token_id 
 
 def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
     return seq + (max_batch_len - len(seq)) * [pad_value]

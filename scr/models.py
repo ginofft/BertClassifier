@@ -1,5 +1,5 @@
 from torch import nn
-from transformers import AutoModel
+from transformers import BertModel
 
 class BertMLPClassifier(nn.Module):
     """A sentence classfier obtained from attaching a MLP layer on top of BERT
@@ -16,9 +16,9 @@ class BertMLPClassifier(nn.Module):
         relu layer
     """
 
-    def __init__(self, nClasses = 150, dropout = 0.3, checkpoint='distilbert-base-uncased'):
+    def __init__(self, nClasses = 150, dropout = 0.3, checkpoint='bert-base-uncased'):
         super(BertMLPClassifier, self).__init__()
-        self.bert = AutoModel.from_pretrained(checkpoint)
+        self.bert = BertModel.from_pretrained(checkpoint)
         self.dropout = nn.Dropout(dropout)
         self.linear = nn.Linear(self.bert.config.hidden_size,
                                 nClasses)
