@@ -22,7 +22,7 @@ class BertMLPClassifier(nn.Module):
         x = self.relu(x)
         return x
 
-class BertCRFClassifier(nn.Moddule):
+class BertCRFClassifier(nn.Module):
     def __init__(self):
         pass
     def forward(self):
