@@ -15,6 +15,9 @@ parser.add_argument('--mode', type=str, default='train',
                     help='training mode or inference mode',
                     choices=['train', 'test'],
                     required=True)
+parser.add_argument('--bertVariation', type=str, default='distillbert-base-uncased',
+                    help='pretrained Bert checkpoint on HuggingFace')
+
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
 
@@ -35,7 +38,7 @@ if __name__ == "__main__":
         device = torch.device('cpu')
         print('No GPU found, running on CPU!!')
     
-    model = BertMLPClassifier()
+    model = BertMLPClassifier(checkpoint = opt.bertVariation)
     model.to(device)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr = 1e-6)
