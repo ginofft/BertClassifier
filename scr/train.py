@@ -52,13 +52,13 @@ def train(
             del batch_loss
     
     avg_loss = epoch_loss / n_batches
-    print('--> Epoch {} completed, train avg. loss: {:.6f}'.format(epoch, avg_loss))
-    print('Epoch {} Metrics: {}'.format(epoch,metrics.compute()))
+    # print('--> Epoch {} completed, train avg. loss: {:.6f}'.format(epoch, avg_loss))
+    # print('Epoch {} Metrics: {}'.format(epoch,metrics.compute()))
     del dataloader
     
     if device == torch.device('cuda'):
         torch.cuda.empty_cache()
-    return avg_loss
+    return avg_loss, metrics.compute()
 
 def inference(testSet,
         model,
@@ -97,10 +97,10 @@ def inference(testSet,
             del batch_loss
     avg_loss = epoch_loss / n_batches
     
-    print('---> Inference loss: {:.6f}'.format(avg_loss), flush = True)
-    print('Inference Metrics: {}'.format(metrics.compute()), flush = True)
+    # print('---> Inference loss: {:.6f}'.format(avg_loss), flush = True)
+    # print('Inference Metrics: {}'.format(metrics.compute()), flush = True)
     del dataloader
     
     if device == torch.device('cuda'):
         torch.cuda.empty_cache()
-    return avg_loss
+    return avg_loss, metrics.compute()

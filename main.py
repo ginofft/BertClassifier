@@ -63,9 +63,12 @@ if __name__ == "__main__":
                                                 optimizer)
         
         for epoch in range(startEpoch+1, opt.nEpochs+1):
-            epoch_train_loss = train(trainSet, model, criterion, 
+            epoch_train_loss, train_metrics = train(trainSet, model, criterion, 
                                     optimizer, device, opt.batch_size, epoch)
-            epoch_val_loss = inference(valSet, model, criterion, device)
+            epoch_val_loss, val_metrics = inference(valSet, model, criterion, device)
+
+            print('Epoch {} completed: \nTrain loss: {:.4f} - Train Metrics: {}\n Validation loss: {:.4f} - Validation Metrics {}'.format(
+                epoch, epoch_train_loss, train_metrics, epoch_val_loss, val_metrics))
             
             if (epoch_val_loss < val_loss):
                 val_loss = epoch_val_loss
@@ -94,4 +97,5 @@ if __name__ == "__main__":
             raise Exception('Please point to a model using ---loadPath')
 
         print('---------------------------Running Inferenece---------------------------')
-        test_loss = inference(testSet, model, criterion, device)
+        test_loss, test_metrics = inference(testSet, model, criterion, device)
+        print('Test loss: {:.4f} - Test Metrics: {}'.format(test_loss, test_metrics))
