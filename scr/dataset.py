@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import Dataset
 from transformers import BertTokenizer
 from typing import List, Dict
+from dataclasses import dataclass
 import json
 
 class SentenceLabelDataset(Dataset):
@@ -87,42 +88,53 @@ class SentenceLabelDataset(Dataset):
             "attention_mask": self.tokenized_dataset['attention_mask'][idx],
             "label": self.labels[idx]
         }
+@dataclass
+class SmartCollator():
+    """ This class provide methods for dynamic padding
 
-#Tokenizer pad_id
-_pad_token_id = BertTokenizer.from_pretrained('bert-base-uncased').pad_token_id 
-
-def pad_seq(seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
-    return seq + (max_batch_len - len(seq)) * [pad_value]
-
-def collate_dynamic_padding(batch) -> Dict[str, torch.Tensor]:
-    """This function padd all sentence to the longest sentence in the batch - used to do dynamic padding
-
-    Parameters
+    Attributes
     ----------
-    batch : List[Dict]
-        A list of dictionaries, where each dict must contains three keys: input_ids, attention_mask, label
+    pad_token_id : int
+        the token id of [PAD] token, which are usually set by the tokenizer
     
-    Return
-    ------
-    A dictionary whose keys are:
-        - input_ids : 2D tensor of [batch_size, max_batch_length]
-        - attention_mask : 2D tensor of [batch_size, max_batch_length]
-        - labels : 1D tensor of labels
+    Methods
+    -------
+    collate_dynamic_paddding(batch)
+        take in a batch of tokenized sentences with various length. Then pad them all to the longest sentence in the pad
     """
+    pad_token_id: int
+    def pad_seq(self, seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
+        return seq + (max_batch_len - len(seq)) * [pad_value]
 
-    batch_input = list()
-    batch_attention_mask = list()
-    labels = list()
-    max_size = max([len(ex['input_ids']) for ex in batch])
-    for item in batch:
-        batch_input += [pad_seq(item['input_ids'], max_size, _pad_token_id)]
-        batch_attention_mask += [pad_seq(item['attention_mask'], max_size, 0)]
-        labels.append(item['label'])
-    return {
-        'input_ids': torch.tensor(batch_input, dtype = torch.long),
-        'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
-        'labels': torch.tensor(labels, dtype = torch.long),
-    }
+    def collate_dynamic_padding(self, batch) -> Dict[str, torch.Tensor]:
+        """This function padd all sentence to the longest sentence in the batch - used to do dynamic padding
+
+        Parameters
+        ----------
+        batch : List[Dict]
+            A list of dictionaries, where each dict must contains three keys: input_ids, attention_mask, label
+        
+        Return
+        ------
+        A dictionary whose keys are:
+            - input_ids : 2D tensor of [batch_size, max_batch_length]
+            - attention_mask : 2D tensor of [batch_size, max_batch_length]
+            - labels : 1D tensor of labels
+        """
+
+        batch_input = list()
+        batch_attention_mask = list()
+        labels = list()
+        max_size = max([len(ex['input_ids']) for ex in batch])
+        for item in batch:
+            batch_input += [self.pad_seq(item['input_ids'], max_size, self.pad_token_id)]
+            batch_attention_mask += [self.pad_seq(item['attention_mask'], max_size, 0)]
+            labels.append(item['label'])
+        return {
+            'input_ids': torch.tensor(batch_input, dtype = torch.long),
+            'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
+            'labels': torch.tensor(labels, dtype = torch.long),
+        }
 
 def get_data_from_json(path):
     """Return a dictionary from json file, where each keys contain a list.

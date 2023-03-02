@@ -1,6 +1,6 @@
 import torch
 from torch.utils.data import DataLoader
-from .dataset import collate_dynamic_padding
+from .dataset import collate_dynamic_padding, SmartCollator
 import evaluate
 
 def train(
@@ -11,13 +11,14 @@ def train(
         device=torch.device("cuda"),
         batch_size=8,  
         epoch=1):
-        
+    
+    collator = SmartCollator(pad_token_id = train_set.tokenizer.pad_token_id)
     metrics = evaluate.load("accuracy")
     dataloader = DataLoader(train_set, 
                             batch_size = batch_size, 
                             num_workers = 2, 
                             shuffle = True,
-                            collate_fn = collate_dynamic_padding,
+                            collate_fn = collator.collate_dynamic_padding,
                             pin_memory = True)
     n_batches = len(dataloader)
 
@@ -65,12 +66,13 @@ def inference(testSet,
         criterion, 
         device = torch.device('cuda'),
         batch_size=8,):
+    collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id)
     metrics = evaluate.load("accuracy")
     dataloader = DataLoader(testSet, 
                             batch_size = batch_size, 
                             num_workers = 2, 
                             shuffle = True,
-                            collate_fn = collate_dynamic_padding,
+                            collate_fn = collator.collate_dynamic_padding,
                             pin_memory = True)
     epoch_loss = 0
     n_batches = len(dataloader)
