@@ -51,9 +51,9 @@ if __name__ == "__main__":
     criterion = torch.nn.CrossEntropyLoss()
 
     dataDict = get_data_from_json(opt.datasetPath)
-    trainList = dataDict['train']
-    valList = dataDict['val']
-    testList = dataDict['test']
+    trainList = dataDict['train'] + dataDict['oos_train']
+    valList = dataDict['val'] + dataDict['oos_val']
+    testList = dataDict['test'] + dataDict['oos_test']
     labelSet = get_label_set(trainList, valList, testList)
 
     trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
