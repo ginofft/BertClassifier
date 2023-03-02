@@ -16,7 +16,7 @@ class BertMLPClassifier(nn.Module):
         relu layer
     """
 
-    def __init__(self, nClasses = 150, dropout = 0.3, checkpoint='bert-base-uncased'):
+    def __init__(self, nClasses = 151, dropout = 0.3, checkpoint='bert-base-uncased'):
         super(BertMLPClassifier, self).__init__()
         self.bert = BertModel.from_pretrained(checkpoint)
         self.dropout = nn.Dropout(dropout)
