@@ -18,7 +18,7 @@ This repo will work with any .json dataset with similar format to CLINC150. Spec
             "set up a 52 minute timer", 
             "timer"
         ],
-        ...
+            ...
         ],
     "train":[
         [
