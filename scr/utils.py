@@ -28,7 +28,7 @@ def predict_class(*texts, model, tokenizer, labelSet):
     masks = tokenized_texts['attention_mask'].to(device)
 
     embedding = model(input_ids, masks)
-    preds = torch.argmax(dim=1)
+    preds = torch.argmax(embedding,dim=1)
     results = []
     for pred in preds:
         results.append(labelSet[pred])
