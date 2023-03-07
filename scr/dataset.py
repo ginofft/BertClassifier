@@ -40,6 +40,8 @@ class SentenceLabelDataset(Dataset):
         """
         
         self.labelSet = labelSet
+        self.nClasses = len(labelSet)
+
         self.texts, self.labels = self._processList(listData)
         self.tokenizer = tokenizer
 
@@ -84,16 +86,12 @@ class SentenceLabelDataset(Dataset):
         - label : List[int]
             the class index in labelSet
         """
-        oneHotVector = torch.zeros(len(self.labelSet))
-        for label in self.labels[idx]:
-            oneHotVector[label] = 1
         return{
             "text": self.texts[idx],
             "class": [self.labelSet[ind] for ind in self.labels[idx]],
             "input_ids": self.tokenized_dataset['input_ids'][idx],
             "attention_mask": self.tokenized_dataset['attention_mask'][idx],
             "label": self.labels[idx],
-            "OneHotVector": oneHotVector
         }
 @dataclass
 class SmartCollator():
@@ -110,6 +108,7 @@ class SmartCollator():
         take in a batch of tokenized sentences with various length. Then pad them all to the longest sentence in the pad
     """
     pad_token_id: int
+    nClasses : int
     def pad_seq(self, seq:List[int], max_batch_len: int, pad_value:int)->List[int]:
         return seq + (max_batch_len - len(seq)) * [pad_value]
 
@@ -133,13 +132,16 @@ class SmartCollator():
         batch_attention_mask = list()
         batch_targets = list()
         max_size = max([len(ex['input_ids']) for ex in batch])
-        for item in batch:
+
+        batch_targets = torch.zeros(len(batch), self.nClasses)
+        for idx, item in enumerate(batch):
             batch_input += [self.pad_seq(item['input_ids'], max_size, self.pad_token_id)]
             batch_attention_mask += [self.pad_seq(item['attention_mask'], max_size, 0)]
-            batch_targets += [item['OneHotVector']]
-            #batch_targets.append(item['OneHotVector'])
+            
+            for label in item['label']:
+              batch_targets[idx, label] = 1
         return {
             'input_ids': torch.tensor(batch_input, dtype = torch.long),
             'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
-            'labels': torch.tensor(batch_targets, dtype = torch.long),
+            'labels' : batch_targets
         }
