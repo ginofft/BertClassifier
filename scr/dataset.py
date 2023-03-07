@@ -48,7 +48,9 @@ class SentenceLabelDataset(Dataset):
                         truncation = False)
                         
     def _processList(self, listData):
-        for sentence, labels_instance in listData:
+        for data in listData:
+            sentence = data[0]
+            labels_instance = data[1]
             self.texts.append(sentence) 
             
             print(labels_instance)
