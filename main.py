@@ -97,6 +97,9 @@ if __name__ == "__main__":
                                      device, opt.batch_size, epoch)
             epoch_val_loss = inference(valSet, model, criterion, device, opt.batch_size)
             
+            print('Epoch {} completed: \nTrain loss: {:.4f} \nValidation loss: {:.4f}'.format(
+                epoch, epoch_train_loss, epoch_val_loss))
+            
             if (epoch_val_loss < val_loss):
                 val_loss = epoch_val_loss
                 save_checkpoint({
