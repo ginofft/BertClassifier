@@ -51,6 +51,7 @@ class SentenceLabelDataset(Dataset):
         for sentence, labels_instance in listData:
             self.texts.append(sentence) 
             
+            print(labels_instance)
             labels = []
             for label in labels_instance:
                 labels.append(self.labelSet.index(label))
