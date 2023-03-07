@@ -48,16 +48,16 @@ class SentenceLabelDataset(Dataset):
                         truncation = False)
                         
     def _processList(self, listData):
-        for data in listData:
-            sentence = data[0]
-            labels_instance = data[1]
-            self.texts.append(sentence) 
+        texts = []
+        labels = []
+        for sentence, labels_instance in listData:
+            texts.append(sentence) 
             
-            print(labels_instance)
-            labels = []
+            label_indices = []
             for label in labels_instance:
-                labels.append(self.labelSet.index(label))
-            self.labels.append(labels)
+                label_indices.append(self.labelSet.index(label))
+            labels.append(label_indices)
+        return texts, labels
     
     def __len__(self):
         return len(self.labels)
@@ -86,7 +86,7 @@ class SentenceLabelDataset(Dataset):
         """
         return{
             "text": self.texts[idx],
-            "class": self.labelSet[self.labels[idx]],
+            "class": [self.labelSet[ind] for ind in self.labels[idx]],
             "input_ids": self.tokenized_dataset['input_ids'][idx],
             "attention_mask": self.tokenized_dataset['attention_mask'][idx],
             "label": self.labels[idx]
