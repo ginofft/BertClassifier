@@ -28,13 +28,10 @@ def train(
     for batch_id, data in enumerate(dataloader, start_iter):
         input_ids = data['input_ids'].to(device)
         attention_masks = data['attention_mask'].to(device)
-        
-        target = torch.zeros(model.nClasses).to(device)
-        for label in data['labels']:
-            target[label] = 1 
+        targets = data['labels'].to(device)
 
         embeddings = model(input_ids, attention_masks)
-        loss = criterion(embeddings, target).to(device)
+        loss = criterion(embeddings, targets).to(device)
         loss.backward()
         optimizer.step()
 
@@ -85,13 +82,10 @@ def inference(testSet,
         for batch_id, data in enumerate(dataloader, start_iter):
             input_ids = data['input_ids'].to(device)
             attention_masks = data['attention_mask'].to(device)
-        
-            target = torch.zeros(model.nClasses).to(device)
-            for label in data['labels']:
-                target[label] = 1 
+            targets = data['labels'].to(device)
 
             embeddings = model(input_ids, attention_masks)
-            loss = criterion(embeddings, target).to(device)
+            loss = criterion(embeddings, targets).to(device)
 
             batch_loss = loss.item()
             epoch_loss += batch_loss

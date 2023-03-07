@@ -84,12 +84,16 @@ class SentenceLabelDataset(Dataset):
         - label : List[int]
             the class index in labelSet
         """
+        oneHotVector = torch.zeros(len(self.labelSet))
+        for label in self.labels[idx]:
+            oneHotVector[label] = 1
         return{
             "text": self.texts[idx],
             "class": [self.labelSet[ind] for ind in self.labels[idx]],
             "input_ids": self.tokenized_dataset['input_ids'][idx],
             "attention_mask": self.tokenized_dataset['attention_mask'][idx],
-            "label": self.labels[idx]
+            "label": self.labels[idx],
+            "OneHotVector": oneHotVector
         }
 @dataclass
 class SmartCollator():
@@ -127,14 +131,14 @@ class SmartCollator():
 
         batch_input = list()
         batch_attention_mask = list()
-        labels = list()
+        batch_targets = list()
         max_size = max([len(ex['input_ids']) for ex in batch])
         for item in batch:
             batch_input += [self.pad_seq(item['input_ids'], max_size, self.pad_token_id)]
             batch_attention_mask += [self.pad_seq(item['attention_mask'], max_size, 0)]
-            labels.append(item['label'])
+            batch_targets.append(item['OneHotVector'])
         return {
             'input_ids': torch.tensor(batch_input, dtype = torch.long),
             'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
-            'labels': torch.tensor(labels, dtype = torch.long),
+            'labels': torch.tensor(batch_targets, dtype = torch.long),
         }
