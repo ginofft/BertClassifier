@@ -61,9 +61,9 @@ if __name__ == "__main__":
 
     
     if opt.dataFormat.lower() == 'mixsnips':
-        trainPath = opt.datasetPath + 'train.txt'
-        valPath = opt.datasetPath + 'dev.txt'
-        testPath = opt.datasetPath + 'test.txt'
+        trainPath = opt.datasetPath + '/train.txt'
+        valPath = opt.datasetPath + '/dev.txt'
+        testPath = opt.datasetPath + '/test.txt'
 
         trainList = read_CLINC150_file(trainPath)
         valList = read_CLINC150_file(valPath)
