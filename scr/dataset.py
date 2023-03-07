@@ -136,7 +136,8 @@ class SmartCollator():
         for item in batch:
             batch_input += [self.pad_seq(item['input_ids'], max_size, self.pad_token_id)]
             batch_attention_mask += [self.pad_seq(item['attention_mask'], max_size, 0)]
-            batch_targets.append(item['OneHotVector'])
+            batch_targets += [item['OneHotVector']]
+            #batch_targets.append(item['OneHotVector'])
         return {
             'input_ids': torch.tensor(batch_input, dtype = torch.long),
             'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
