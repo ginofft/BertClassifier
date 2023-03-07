@@ -1,10 +1,10 @@
 import torch
 from torch.utils.data import DataLoader
-from .dataset import SmartCollator
+from .dataset import SmartCollator, SentenceLabelDataset
 import evaluate
 
 def train(
-        train_set,
+        train_set:SentenceLabelDataset,
         model,
         criterion,
         optimizer,
@@ -12,8 +12,8 @@ def train(
         batch_size=8,  
         epoch=1):
     
-    collator = SmartCollator(pad_token_id = train_set.tokenizer.pad_token_id)
-    metrics = evaluate.load("accuracy")
+    collator = SmartCollator(pad_token_id = train_set.tokenizer.pad_token_id, nClasses=train_set.nClasses)
+    #metrics = evaluate.load("accuracy")
     dataloader = DataLoader(train_set, 
                             batch_size = batch_size, 
                             num_workers = 2, 
@@ -61,13 +61,13 @@ def train(
         torch.cuda.empty_cache()
     return avg_loss#, metrics.compute()
 
-def inference(testSet,
+def inference(testSet : SentenceLabelDataset,
         model,
         criterion, 
         device = torch.device('cuda'),
         batch_size=8,):
-    collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id)
-    metrics = evaluate.load("accuracy")
+    collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id, nClasses=testSet.nClasses)
+    #metrics = evaluate.load("accuracy")
     dataloader = DataLoader(testSet, 
                             batch_size = batch_size, 
                             num_workers = 2, 

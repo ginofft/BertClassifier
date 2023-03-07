@@ -46,12 +46,6 @@ if __name__ == "__main__":
     else:
         device = torch.device('cpu')
         print('No GPU found, running on CPU!!')
-    
-    model = BertMLPClassifier(checkpoint = opt.bertVariation)
-    model.to(device)
-
-    optimizer = torch.optim.AdamW(model.parameters(), lr = 1e-6)
-    criterion = torch.nn.BCEWithLogitsLoss()
 
     if opt.dataFormat.lower() == 'clinc150':
         dataDict = read_CLINC150_file(opt.datasetPath)
@@ -74,6 +68,12 @@ if __name__ == "__main__":
     valSet = SentenceLabelDataset(valList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
     testSet = SentenceLabelDataset(testList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
 
+    model = BertMLPClassifier(checkpoint = opt.bertVariation, nClasses=trainSet.nClasses)
+    model.to(device)
+
+    optimizer = torch.optim.AdamW(model.parameters(), lr = 1e-6)
+    criterion = torch.nn.BCEWithLogitsLoss()
+    
     if opt.mode.lower() == 'train':
         startEpoch = 0
         val_loss = float('inf')
