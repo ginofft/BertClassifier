@@ -80,7 +80,8 @@ def get_label_set(*lists):
     """
     labelSet = []
     for currentList in lists:
-        for data in currentList:
-            if data[1] not in labelSet:
-                labelSet.append(data[1])
+        for sentence, labels in currentList:
+            for label in labels:
+                if label not in labelSet:
+                    labelSet.append(label)
     return labelSet
