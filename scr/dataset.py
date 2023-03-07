@@ -6,8 +6,7 @@ from dataclasses import dataclass
 import json
 
 class SentenceLabelDataset(Dataset):
-    """This class create a labeled dataset from a list - each element having two component: [text, label]
-
+    """This class create a labeled dataset from a list - each element is: [text, [labels]]
     Note: This class is intended to be used with dynamic padding. As such, tokenized_dataset consist of sentence with various length
 
     Attributes
@@ -15,8 +14,8 @@ class SentenceLabelDataset(Dataset):
     labelSet : List[str]
         A list whose elements are our classes
     texts : List[str]
-        A list whose elements is the text
-    labels : List[int]
+        A list whose elements is the sentence
+    labels : List[List[int]]
         A list whose element is the index of that class inside labelSet
     tokenizer : BertTokenizer
         Bert pre-trained tokenizer, inherits from Huggingface's PretrainedTokenizer
@@ -32,8 +31,8 @@ class SentenceLabelDataset(Dataset):
 
         Parameters
         ----------
-        listData : List[str, str]
-            A list whose element are two string: [text, label]
+        listData : List[str, List[str]]
+            A list whose elements are in the form: [text, [labels]]
         labelSet : List[str]
             A list whose element are the labels
         tokenizer : PretrainedTokenizer
@@ -49,12 +48,13 @@ class SentenceLabelDataset(Dataset):
                         truncation = False)
                         
     def _processList(self, listData):
-        texts = []
-        labels = []
-        for data in listData:
-            texts.append(data[0]) 
-            labels.append(self.labelSet.index(data[1]))
-        return texts, labels
+        for sentence, labels_instance in listData:
+            self.texts.append(sentence) 
+            
+            labels = []
+            for label in labels_instance:
+                labels.append(self.labelSet.index(label))
+            self.labels.append(labels)
     
     def __len__(self):
         return len(self.labels)
