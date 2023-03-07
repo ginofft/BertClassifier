@@ -28,19 +28,22 @@ def train(
     for batch_id, data in enumerate(dataloader, start_iter):
         input_ids = data['input_ids'].to(device)
         attention_masks = data['attention_mask'].to(device)
-        labels = data['labels'].to(device)
+        
+        target = torch.zeros(model.nClasses).to(device)
+        for label in data['labels']:
+            target[label] = 1 
 
         embeddings = model(input_ids, attention_masks)
-        loss = criterion(embeddings, labels).to(device)
+        loss = criterion(embeddings, target).to(device)
         loss.backward()
         optimizer.step()
 
         batch_loss = loss.item()
         epoch_loss += batch_loss
 
-        # Calculate Metrics
-        preds = torch.argmax(embeddings, dim=1)
-        metrics.add_batch(references = labels, predictions = preds)
+        # # Calculate Metrics
+        # preds = torch.argmax(embeddings, dim=1)
+        # metrics.add_batch(references = labels, predictions = preds)
 
         del input_ids, attention_masks, embeddings
         del loss
@@ -59,7 +62,7 @@ def train(
     
     if device == torch.device('cuda'):
         torch.cuda.empty_cache()
-    return avg_loss, metrics.compute()
+    return avg_loss#, metrics.compute()
 
 def inference(testSet,
         model,
@@ -82,17 +85,20 @@ def inference(testSet,
         for batch_id, data in enumerate(dataloader, start_iter):
             input_ids = data['input_ids'].to(device)
             attention_masks = data['attention_mask'].to(device)
-            labels = data['labels'].to(device)
+        
+            target = torch.zeros(model.nClasses).to(device)
+            for label in data['labels']:
+                target[label] = 1 
 
             embeddings = model(input_ids, attention_masks)
-            loss = criterion(embeddings, labels).to(device)  
-            
+            loss = criterion(embeddings, target).to(device)
+
             batch_loss = loss.item()
             epoch_loss += batch_loss
 
             # Calculate Metrics
-            preds = torch.argmax(embeddings, dim=1)
-            metrics.add_batch(references = labels, predictions = preds)
+            # preds = torch.argmax(embeddings, dim=1)
+            # metrics.add_batch(references = labels, predictions = preds)
 
             del input_ids, attention_masks, embeddings
             del loss
@@ -105,4 +111,4 @@ def inference(testSet,
     
     if device == torch.device('cuda'):
         torch.cuda.empty_cache()
-    return avg_loss, metrics.compute()
+    return avg_loss#, metrics.compute()
