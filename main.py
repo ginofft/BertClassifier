@@ -65,9 +65,9 @@ if __name__ == "__main__":
         valPath = opt.datasetPath + '/dev.txt'
         testPath = opt.datasetPath + '/test.txt'
 
-        trainList = read_CLINC150_file(trainPath)
-        valList = read_CLINC150_file(valPath)
-        testList = read_CLINC150_file(testPath)
+        trainList = read_MixSNIPs_file(trainPath)
+        valList = read_MixSNIPs_file(valPath)
+        testList = read_MixSNIPs_file(testPath)
     
     labelSet = get_label_set(trainList, valList, testList)
     trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
