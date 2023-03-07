@@ -64,7 +64,7 @@ def read_MixSNIPs_file(filePath):
             label = intent_instance.split('#')
         else:
             label = [intent_instance]
-            labels.append(label)
+        labels.append(label)
     return list(zip(sentences, labels))
 
 def read_CLINC150_file(filePath):
