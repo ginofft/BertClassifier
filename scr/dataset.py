@@ -138,13 +138,3 @@ class SmartCollator():
             'attention_mask': torch.tensor(batch_attention_mask, dtype = torch.long),
             'labels': torch.tensor(labels, dtype = torch.long),
         }
-
-def get_label_set(*lists):
-    """Return a List[str] of label, used to map 'label' into indices.
-    """
-    labelSet = []
-    for currentList in lists:
-        for data in currentList:
-            if data[1] not in labelSet:
-                labelSet.append(data[1])
-    return labelSet

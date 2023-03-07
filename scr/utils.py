@@ -74,3 +74,13 @@ def read_CLINC150_file(filePath):
         dataDict = json.load(f)
     print('The keys found in this json are: ', dataDict.keys())
     return dataDict
+
+def get_label_set(*lists):
+    """Return a List[str] of label, used to map 'label' into indices.
+    """
+    labelSet = []
+    for currentList in lists:
+        for data in currentList:
+            if data[1] not in labelSet:
+                labelSet.append(data[1])
+    return labelSet
