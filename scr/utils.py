@@ -1,5 +1,6 @@
 import torch
 from pathlib import Path
+import json
 
 def save_checkpoint(state, path:Path, filename='latest.pth.tar'):
     out_path = path/filename
@@ -32,3 +33,44 @@ def predict_class(texts, model, tokenizer, labelSet):
     for pred in preds:
         results.append(labelSet[pred])
     return results
+
+def read_MixSNIPs_file(filePath):
+    texts, slots, intents = [], [], []
+    text, slot = [], []
+    with open(filePath, 'r', encoding="utf8") as fr:
+        for line in fr.readlines():
+            items = line.strip().split()
+            if len(items) == 1:
+                texts.append(text)
+                slots.append(slot)
+                if "/" not in items[0]:
+                    intents.append(items)
+                else:
+                    new = items[0].split("/")
+                    intents.append([new[1]])
+                # clear buffer lists.
+                text, slot = [], []
+            elif len(items) == 2:
+                text.append(items[0].strip())
+                slot.append(items[1].strip())
+    sentences = []
+    labels = []
+    space = ' '
+    for i, txt in enumerate(texts):
+        sentences.append(space.join(txt))
+        
+        intent_instance = intents[i][0]
+        if '#' in intent_instance:
+            label = intent_instance.split('#')
+        else:
+            label = [intent_instance]
+            labels.append(label)
+    return list(zip(sentences, labels))
+
+def read_CLINC150_file(filePath):
+    """Return a dictionary from json file, where each keys contain a list.
+    """
+    with open(filePath, 'r') as f:
+        dataDict = json.load(f)
+    print('The keys found in this json are: ', dataDict.keys())
+    return dataDict

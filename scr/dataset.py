@@ -139,14 +139,6 @@ class SmartCollator():
             'labels': torch.tensor(labels, dtype = torch.long),
         }
 
-def get_data_from_json(path):
-    """Return a dictionary from json file, where each keys contain a list.
-    """
-    with open(path, 'r') as f:
-        dataDict = json.load(f)
-    print('The keys found in this json are: ', dataDict.keys())
-    return dataDict
-    
 def get_label_set(*lists):
     """Return a List[str] of label, used to map 'label' into indices.
     """
