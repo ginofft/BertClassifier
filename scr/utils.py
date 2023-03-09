@@ -1,5 +1,6 @@
 import torch
 from pathlib import Path
+from typing import List
 import json
 
 def save_checkpoint(state, path:Path, filename='latest.pth.tar'):
@@ -34,7 +35,9 @@ def predict_class(texts, model, tokenizer, labelSet):
         results.append(labelSet[pred])
     return results
 
-def read_MixSNIPs_file(filePath):
+def read_MixSNIPs_file(filePath) -> List[str, List[str]]:
+    """read MixSNIPs file into List[str, List[str]] format
+    """
     texts, slots, intents = [], [], []
     text, slot = [], []
     with open(filePath, 'r', encoding="utf8") as fr:
