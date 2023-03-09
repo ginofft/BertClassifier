@@ -127,5 +127,7 @@ if __name__ == "__main__":
             raise Exception('Please point to a model using ---loadPath')
 
         print('---------------------------Running Inferenece---------------------------')
-        test_loss, test_metrics = inference(testSet, model, criterion, device)
-        print('Test loss: {:.4f} - Test Metrics: {}'.format(test_loss, test_metrics))
+        # test_loss, test_metrics = inference(testSet, model, criterion, device)
+        # print('Test loss: {:.4f} - Test Metrics: {}'.format(test_loss, test_metrics))
+        test_loss = inference(testSet, model, criterion, device, opt.batch_size)
+        print('Test loss: {:.4f}'.format(test_loss))
