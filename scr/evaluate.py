@@ -1,8 +1,17 @@
 import torch
+from patterns import Singleton
+class MultiLabelEvaluator(metaclass = Singleton):
+    
+    preds : torch.Tensor
+    targets : torch.Tensor
+    percent = 0.5
 
-def calculate_multi_label_accuracy(preds: torch.Tensor, targets: torch.Tensor):
-    if preds.device != targets.device:
-        raise TypeError('input tensors must be on the same device')
-    assert preds.shape == targets.shape, "the two input tensors must have the same shape"
-    return (torch.sum(preds*targets).item() / torch.numel(preds))
+    def _check_size(self) -> None:
+        if self.preds.size() != self.targets.size():
+            raise Exception("preds and targets must be the same size")
+        if self.preds.dim() != 2:
+            raise Exception("preds and targets must have two dimensions")
+
+    def get_confusion_matrix(self) -> torch.Tensor:
+        pass
 
