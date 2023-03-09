@@ -31,7 +31,7 @@ class SentenceLabelDataset(Dataset):
 
         Parameters
         ----------
-        listData : List[str, List[str]]
+        listData : List[Tuple[str, List[str]]]
             A list whose elements are in the form: [text, [labels]]
         labelSet : List[str]
             A list whose element are the labels
