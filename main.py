@@ -7,6 +7,7 @@ from scr.dataset import SentenceLabelDataset
 from scr.train import train, inference
 from scr.models import BertMLPClassifier
 from scr.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read_MixSNIPs_file, get_label_set
+from scr.evaluate import MultiLabelEvaluator
 
 parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
 
@@ -23,6 +24,10 @@ parser.add_argument('--mode', type=str, default='train',
 parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
+
+parser.add_argument('--metrics', type = str, nargs = '+', 
+                    default='Accuracy', choices=['Accuracy', 'Recall', 'Precision', 'F1'],
+                    help='The evaluation metric for multi-label classification')
 
 #Data paremters
 parser.add_argument('--dataFormat', type=str, default = 'MixSNIPs', 

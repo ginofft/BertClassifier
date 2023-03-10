@@ -1,6 +1,7 @@
 import torch
 from torch.utils.data import DataLoader
 from .dataset import SmartCollator, SentenceLabelDataset
+from .evaluate import MultiLabelEvaluator
 import evaluate
 
 def train(
