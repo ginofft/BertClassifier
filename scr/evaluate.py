@@ -48,3 +48,11 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classRecall = torch.sum(truePositive, dim =0) / torch.sum(self.targets, dim =0)
         recall = torch.sum(truePositive) / torch.sum(self.targets).item()
         return classRecall, recall
+    
+    def get_F1(self):
+        classPrecision, precision = self.get_precision()
+        classRecall, recall = self.get_recall()
+
+        classF1 = (2*classPrecision*classRecall)/(classPrecision+classRecall)
+        F1 = (2*precision*recall)/(precision+recall)
+        return classF1, F1
