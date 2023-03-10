@@ -18,9 +18,8 @@ class MultiLabelEvaluator(metaclass = Singleton):
             self.probs = probs
             self.targets = targets
         else:
-            self.probs = torch.cat(self.probs, probs, dim =0)
-            self.targets = torch.cat(self.targets, targets, dim =0)
-
+            self.probs = torch.cat((self.probs, probs), dim =0)
+            self.targets = torch.cat((self.targets, targets), dim =0)
     def _check(self) -> None:
         if self.probs == None or self.targets == None:
             raise Exception("empty input tensor")
