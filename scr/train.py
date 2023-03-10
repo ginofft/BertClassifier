@@ -17,7 +17,7 @@ def train(
         criterion,
         optimizer,
         evaluator:MultiLabelEvaluator,
-        metrics = ['Accuracy', 'F1'],
+        metrics = ['Accuracy'],
         device=torch.device("cuda"),
         batch_size=8,  
         epoch=1):
@@ -82,10 +82,11 @@ def inference(testSet : SentenceLabelDataset,
         model,
         criterion, 
         evaluator : MultiLabelEvaluator,
-        metrics = ['Accuracy', 'F1'],
+        metrics = ['Accuracy'],
         device = torch.device('cuda'),
         batch_size=8,):
     collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id, nClasses=testSet.nClasses)
+    print(metrics)
     evalFuns = [EVALUATION_MAP[metric.lower()] for metric in metrics]
     dataloader = DataLoader(testSet, 
                             batch_size = batch_size, 
