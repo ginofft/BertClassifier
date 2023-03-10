@@ -2,6 +2,7 @@ import torch
 from torch.utils.data import DataLoader
 from .dataset import SmartCollator, SentenceLabelDataset
 from .evaluate import MultiLabelEvaluator
+from typing import List
 
 EVALUATION_MAP = {
     'accuracy' : MultiLabelEvaluator.get_accuracy,
@@ -82,7 +83,7 @@ def inference(testSet : SentenceLabelDataset,
         model,
         criterion, 
         evaluator : MultiLabelEvaluator,
-        metrics = ['Accuracy'],
+        metrics : List[str]=['Accuracy'],
         device = torch.device('cuda'),
         batch_size=8,):
     collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id, nClasses=testSet.nClasses)
