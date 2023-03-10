@@ -13,9 +13,9 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self._check_size()
 
     def _check_size(self) -> None:
-        if self.prob.size() != self.targets.size():
+        if self.probs.size() != self.targets.size():
             raise Exception("input tensors must have the same size")
-        if self.prob.dim() != 2:
+        if self.probs.dim() != 2:
             raise Exception("input tensors must have two dimension")
 
     def _get_positives(self):
@@ -32,6 +32,4 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classAccuracy = torch.sum(truePositive, dim=1) / torch.sum(positive, dim=1)
         accuracy = (torch.sum(truePositive) / torch.sum(positive)).item()
         return classAccuracy, accuracy
-    
-
     
