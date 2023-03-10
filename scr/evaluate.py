@@ -48,14 +48,14 @@ class MultiLabelEvaluator(metaclass = Singleton):
         positive, truePositive, falsePositive = self._get_positives()
         preds = (self.probs > self.percent).int()
         classPrecsion = torch.sum(truePositive, dim =0) / torch.sum(preds, dim =0)
-        precision = torch.sum(truePositive) / torch.sum(preds).item()
+        precision = (torch.sum(truePositive) / torch.sum(preds)).item()
         return classPrecsion, precision
     
     def get_recall(self):
         positive, truePositive, falsePositive = self._get_positives()
         preds = (self.probs > self.percent).int()
         classRecall = torch.sum(truePositive, dim =0) / torch.sum(self.targets, dim =0)
-        recall = torch.sum(truePositive) / torch.sum(self.targets).item()
+        recall = (torch.sum(truePositive) / torch.sum(self.targets)).item()
         return classRecall, recall
     
     def get_F1(self):
@@ -63,5 +63,5 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classRecall, recall = self.get_recall()
 
         classF1 = (2*classPrecision*classRecall)/(classPrecision+classRecall)
-        F1 = (2*precision*recall)/(precision+recall).item()
-        return classF1, F1
+        f1 = (2*precision*recall)/(precision+recall)
+        return classF1, f1
