@@ -86,7 +86,7 @@ def inference(testSet : SentenceLabelDataset,
         device = torch.device('cuda'),
         batch_size=8,):
     collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id, nClasses=testSet.nClasses)
-    evalFuns = [EVALUATION_MAP[metric] for metric in metrics]
+    evalFuns = [EVALUATION_MAP[metric.lower()] for metric in metrics]
     dataloader = DataLoader(testSet, 
                             batch_size = batch_size, 
                             num_workers = 2, 
