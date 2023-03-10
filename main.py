@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+from typing import List
 import torch
 from transformers import BertTokenizer
 
@@ -24,8 +25,8 @@ parser.add_argument('--mode', type=str, default='train',
 parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
-parser.add_argument('--metrics', type = str, nargs = '+', 
-                    default='Accuracy', choices=['Accuracy', 'Recall', 'Precision', 'F1'],
+parser.add_argument('--metrics', type = List[str], nargs = '+', 
+                    default=['Accuracy'], choices=['Accuracy', 'Recall', 'Precision', 'F1'],
                     help='The evaluation metric for multi-label classification')
 
 #Data paremters

@@ -18,7 +18,7 @@ def train(
         criterion,
         optimizer,
         evaluator:MultiLabelEvaluator,
-        metrics = ['Accuracy'],
+        metrics : List[str] = ['Accuracy'],
         device=torch.device("cuda"),
         batch_size=8,  
         epoch=1):
