@@ -68,6 +68,7 @@ if __name__ == "__main__":
         valList = read_MixSNIPs_file(valPath)
         testList = read_MixSNIPs_file(testPath)
     
+    print(trainList)
     labelSet = get_label_set(trainList, valList, testList)
     print(labelSet)
     trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
