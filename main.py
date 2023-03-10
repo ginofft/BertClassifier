@@ -24,7 +24,6 @@ parser.add_argument('--mode', type=str, default='train',
 parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
-
 parser.add_argument('--metrics', type = str, nargs = '+', 
                     default='Accuracy', choices=['Accuracy', 'Recall', 'Precision', 'F1'],
                     help='The evaluation metric for multi-label classification')
@@ -79,6 +78,8 @@ if __name__ == "__main__":
     optimizer = torch.optim.AdamW(model.parameters(), lr = 1e-6)
     criterion = torch.nn.BCEWithLogitsLoss()
     
+    metrics = opt.metrics
+    evaluator = MultiLabelEvaluator()
     if opt.mode.lower() == 'train':
         startEpoch = 0
         val_loss = float('inf')
@@ -98,12 +99,17 @@ if __name__ == "__main__":
             # print('Epoch {} completed: \nTrain loss: {:.4f} - Train Metrics: {}\nValidation loss: {:.4f} - Validation Metrics {}'.format(
             #     epoch, epoch_train_loss, train_metrics, epoch_val_loss, val_metrics))
             
-            epoch_train_loss = train(trainSet, model, criterion, optimizer,
+            epoch_train_loss, train_metrics = train(trainSet, model, criterion, optimizer,
+                                     evaluator, metrics, 
                                      device, opt.batch_size, epoch)
-            epoch_val_loss = inference(valSet, model, criterion, device, opt.batch_size)
+            epoch_val_loss, val_metrics = inference(valSet, model, criterion, 
+                                       evaluator, metrics,
+                                       device, opt.batch_size)
             
             print('Epoch {} completed: \nTrain loss: {:.4f} \nValidation loss: {:.4f}'.format(
                 epoch, epoch_train_loss, epoch_val_loss))
+            print('Train metrics: {} \nValidation metrics: {}'.format(
+                train_metrics, val_metrics))
             
             if (epoch_val_loss < val_loss):
                 val_loss = epoch_val_loss
@@ -132,7 +138,8 @@ if __name__ == "__main__":
             raise Exception('Please point to a model using ---loadPath')
 
         print('---------------------------Running Inferenece---------------------------')
-        # test_loss, test_metrics = inference(testSet, model, criterion, device)
-        # print('Test loss: {:.4f} - Test Metrics: {}'.format(test_loss, test_metrics))
-        test_loss = inference(testSet, model, criterion, device, opt.batch_size)
+        test_loss, test_metrics = inference(testSet, model, criterion, 
+                                            evaluator, metrics,
+                                            device, opt.batch_size)
         print('Test loss: {:.4f}'.format(test_loss))
+        print('Test metrics: {}'.format(test_metrics))
