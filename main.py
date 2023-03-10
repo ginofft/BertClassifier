@@ -68,9 +68,7 @@ if __name__ == "__main__":
         valList = read_MixSNIPs_file(valPath)
         testList = read_MixSNIPs_file(testPath)
     
-    print(trainList)
     labelSet = get_label_set(trainList, valList, testList)
-    print(labelSet)
     trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
     valSet = SentenceLabelDataset(valList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
     testSet = SentenceLabelDataset(testList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
@@ -95,13 +93,6 @@ if __name__ == "__main__":
                                                 optimizer)
         
         for epoch in range(startEpoch+1, opt.nEpochs+1):
-            # epoch_train_loss, train_metrics = train(trainSet, model, criterion, 
-            #                         optimizer, device, opt.batch_size, epoch)
-            # epoch_val_loss, val_metrics = inference(valSet, model, criterion, device)
-
-            # print('Epoch {} completed: \nTrain loss: {:.4f} - Train Metrics: {}\nValidation loss: {:.4f} - Validation Metrics {}'.format(
-            #     epoch, epoch_train_loss, train_metrics, epoch_val_loss, val_metrics))
-            
             epoch_train_loss, train_metrics = train(trainSet, model, criterion, optimizer,
                                      evaluator, metrics, 
                                      device, opt.batch_size, epoch)
