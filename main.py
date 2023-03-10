@@ -7,7 +7,7 @@ from transformers import BertTokenizer
 from scr.dataset import SentenceLabelDataset
 from scr.train import train, inference
 from scr.models import BertMLPClassifier
-from scr.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read_MixSNIPs_file, get_label_set
+from scr.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read_MixSNIPs_file, get_label_set, turn_single_label_to_multilabels
 from scr.evaluate import MultiLabelEvaluator
 
 parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         trainList = dataDict['train'] + dataDict['oos_train']
         valList = dataDict['val'] + dataDict['oos_val']
         testList = dataDict['test'] + dataDict['oos_test']
-
+        turn_single_label_to_multilabels(trainList, valList, testList)
     
     if opt.dataFormat.lower() == 'mixsnips':
         trainPath = opt.datasetPath + '/train.txt'

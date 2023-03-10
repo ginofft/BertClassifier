@@ -93,3 +93,8 @@ def get_label_set(*lists):
                 if label not in labelSet:
                     labelSet.append(label)
     return labelSet
+
+def turn_single_label_to_multilabels(*lists):
+    for l in lists:
+        for element in l:
+            element[1] = [element[1]]
