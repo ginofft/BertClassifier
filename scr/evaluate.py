@@ -1,8 +1,10 @@
 import torch
 from .patterns import Singleton
+from typing import Optional
 class MultiLabelEvaluator(metaclass = Singleton):
-
-    def __init__(self, probs, targets, percent = 0.5):
+     
+    def __init__(self, probs : Optional[torch.Tensor] = None, 
+                 targets : Optional[torch.Tensor] = None, percent = 0.5):
         self.probs = probs
         self.targets = targets
         self.percent = percent
@@ -11,16 +13,24 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.truePositive = None
         self.falsePositive = None
 
-        self._check_size()
+    def add_batch(self, probs, targets):
+        if self.probs is None or self.targets is None:
+            self.probs = probs
+            self.targets = targets
+        else:
+            self.probs = torch.cat(self.probs, probs, dim =0)
+            self.targets = torch.cat(self.targets, targets, dim =0)
 
-    def _check_size(self) -> None:
+    def _check(self) -> None:
+        if self.probs == None or self.targets == None:
+            raise Exception("empty input tensor")
         if self.probs.size() != self.targets.size():
             raise Exception("input tensors must have the same size")
         if self.probs.dim() != 2:
             raise Exception("input tensors must have two dimension")
 
     def _get_positives(self):
-        self._check_size()
+        self._check()
         if (self.positive != None) and (self.truePositive != None):
             return self.positive, self.truePositive, self.falsePositive
         preds = (self.probs > self.percent).int()
