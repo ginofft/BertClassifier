@@ -1,7 +1,7 @@
 class Singleton(type):
     def __init__(cls, name, bases, dic) -> None:
         cls._instance = None
-        super.__init__(name, bases, dic)
+        super().__init__(name, bases, dic)
         
     def __call__(cls, *args, **kwargs) -> object:
         if cls._instance is not None:
