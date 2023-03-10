@@ -63,5 +63,5 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classRecall, recall = self.get_recall()
 
         classF1 = (2*classPrecision*classRecall)/(classPrecision+classRecall)
-        F1 = (2*precision*recall)/(precision+recall)
+        F1 = (2*precision*recall)/(precision+recall).item()
         return classF1, F1
