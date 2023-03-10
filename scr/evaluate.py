@@ -13,6 +13,14 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.truePositive = None
         self.falsePositive = None
 
+    def clean(self):
+        self.probs = None
+        self.targets = None
+        
+        self.positive = None
+        self.truePositive = None
+        self.falsePositive = None
+    
     def add_batch(self, probs, targets):
         if self.probs is None or self.targets is None:
             self.probs = probs
