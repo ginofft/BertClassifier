@@ -35,6 +35,32 @@ def predict_class(texts, model, tokenizer, labelSet):
         results.append(labelSet[pred])
     return results
 
+def predict_topk(texts, k, model, tokenizer, labelSet):
+    device = model.bert.device
+    tokenized_texts = tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
+    input_ids = tokenized_texts[input_ids].to(device)
+    masks = tokenized_texts['attention_mask'].to(device)
+
+    embedding =  model(input_ids, masks)
+    predsMatrix = torch.topk(embedding, dim =1, k = k)
+    results = []
+    for preds in predsMatrix:
+        results.append([labelSet[pred] for pred in preds])
+    return results
+
+def predict_at_p_percent(texts, p, model, tokenizer, labelSet):
+    device = model.bert.device
+    tokenized_texts = tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
+    input_ids = tokenized_texts[input_ids].to(device)
+    masks = tokenized_texts['attention_mask'].to(device)
+
+    embedding =  model(input_ids, masks)
+    predsMatrix = torch.where(embedding > p, 1, 0)
+    results = []
+    for preds in predsMatrix:
+        results.append([labelSet[pred] for pred in torch.nonzero(preds)])
+    return results
+
 def read_MixSNIPs_file(filePath) -> List[Tuple[str, List[str]]]:
     """read MixSNIPs file into a list of tuple, whose element is: sentence, [label]
 
