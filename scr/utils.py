@@ -124,3 +124,20 @@ def turn_single_label_to_multilabels(*lists):
     for l in lists:
         for element in l:
             element[1] = [element[1]]
+
+def increment(x):
+    return (x+1)
+
+class Predictor():
+    def __init__(self, model, tokenizer, labelSet, device = torch.device('cuda')):
+        self.model = model
+        self.tokenizer = tokenizer
+        self.labelSet = labelSet
+        self.device = device
+
+        if self.model.nClasses != len(labelSet):
+            raise Exception("Number of model's classifier ({}) differ from length of label set {}"
+                            .format(self.model.nClasses, len(labelSet)))
+        
+    def get_class(self):
+
