@@ -129,7 +129,32 @@ def increment(x):
     return (x+1)
 
 class Predictor():
+    """This class contains the predictor given a classifier, its tokenizer and a labelSet
+
+    Attributes 
+    ----------
+    model : torch.nn.Module
+        The classifier
+    tokenizer : transformers.PretrainedTokenizer
+        The associated tokenizer
+    labelSet : List[str] 
+        The set of possible classes
+
+    Methods
+    -------
+    get_class(texts) -> List[str]
+        get the highest classes of each sentence in `texts`
+    get_topk_classes(texts, k) -> List[List[str]]
+        get the top `k` classes of each sentence in `texts`
+    get_classes_at_percent(texts, p) -> List[List[str]]
+        get the classes whose probability is higher than `p` (0<=p<1)
+    """
+
     def __init__(self, model, tokenizer, labelSet, device = torch.device('cuda')):
+        """
+        Parameters
+        ----------
+        """
         self.model = model
         self.tokenizer = tokenizer
         self.labelSet = labelSet
@@ -139,5 +164,41 @@ class Predictor():
             raise Exception("Number of model's classifier ({}) differ from length of label set {}"
                             .format(self.model.nClasses, len(labelSet)))
         
-    def get_class(self):
-        pass
+    def get_class(self, texts: List[str]):
+        device = self.device
+        tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
+        input_ids = tokenized_texts['input_ids'].to(device)
+        masks = tokenized_texts['attention_mask'].to(device)
+
+        embedding = self.model(input_ids, masks)
+        preds = torch.argmax(embedding,dim=1)
+        results = []
+        for pred in preds:
+            results.append(self.labelSet[pred])
+        return results
+    
+    def get_topk_classes(self, texts: List[str], k : int):        
+        device = self.device
+        tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
+        input_ids = tokenized_texts[input_ids].to(device)
+        masks = tokenized_texts['attention_mask'].to(device)
+
+        embedding = self.model(input_ids, masks)
+        predsMatrix = torch.topk(embedding, dim =1, k = k)
+        results = []
+        for preds in predsMatrix:
+            results.append([self.labelSet[pred] for pred in preds])
+        return results
+    
+    def get_classes_at_percent(self, texts: List[str], p : float):
+        device = self.device
+        tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
+        input_ids = tokenized_texts[input_ids].to(device)
+        masks = tokenized_texts['attention_mask'].to(device)
+
+        embedding =  self.model(input_ids, masks)
+        predsMatrix = torch.where(embedding > p, 1, 0)
+        results = []
+        for preds in predsMatrix:
+            results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
+        return results
