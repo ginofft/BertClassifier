@@ -140,4 +140,4 @@ class Predictor():
                             .format(self.model.nClasses, len(labelSet)))
         
     def get_class(self):
-
+        pass
