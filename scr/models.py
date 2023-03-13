@@ -24,6 +24,7 @@ class BertMLPClassifier(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.linear = nn.Linear(self.bert.config.hidden_size,
                                 self.nClasses)
+        nn.init.xavier_uniform(self.linear.weight)
         #self.relu = nn.ReLU()
 
     def forward(self, input_ids, masks):
