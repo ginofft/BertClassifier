@@ -185,11 +185,11 @@ class Predictor():
     def get_topk_classes(self, texts: List[str], k : int):        
         device = self.device
         tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-        input_ids = tokenized_texts[input_ids].to(device)
+        input_ids = tokenized_texts['input_ids'].to(device)
         masks = tokenized_texts['attention_mask'].to(device)
 
         embedding = self.model(input_ids, masks)
-        predsMatrix = torch.topk(embedding, dim =1, k = k)
+        predsMatrix = torch.topk(embedding, dim =1, k = k).indices
         results = []
         for preds in predsMatrix:
             results.append([self.labelSet[pred] for pred in preds])
@@ -198,7 +198,7 @@ class Predictor():
     def get_classes_at_percent(self, texts: List[str], p : float):
         device = self.device
         tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-        input_ids = tokenized_texts[input_ids].to(device)
+        input_ids = tokenized_texts['input_ids'].to(device)
         masks = tokenized_texts['attention_mask'].to(device)
 
         embedding =  self.model(input_ids, masks)
