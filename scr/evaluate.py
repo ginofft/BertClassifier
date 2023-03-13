@@ -28,6 +28,7 @@ class MultiLabelEvaluator(metaclass = Singleton):
         else:
             self.probs = torch.cat((self.probs, probs), dim =0)
             self.targets = torch.cat((self.targets, targets), dim =0)
+
     def _check(self) -> None:
         if self.probs == None or self.targets == None:
             raise Exception("empty input tensor")
@@ -73,3 +74,10 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classF1 = (2*classPrecision*classRecall)/(classPrecision+classRecall)
         f1 = (2*precision*recall)/(precision+recall)
         return classF1, f1
+    
+    def get_micro_f1(self):
+        positive, truePositive, falsePositive = self._get_positives()
+        preds = (self.probs > self.percent).int()
+        precision = (torch.sum(truePositive) / torch.sum(preds)).item()
+        recall = (torch.sum(truePositive) / torch.sum(self.targets)).item()
+        return (2*precision*recall)/(precision+recall)

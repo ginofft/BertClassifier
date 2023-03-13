@@ -9,4 +9,4 @@ preds = torch.as_tensor([[1,0,0], [0,1,1], [0,1,0], [1,1,0], [1,1,0]])
 
 def test_micro_f1()-> None:
    evaluator = MultiLabelEvaluator(preds, targets, percent=0.5)
-   assert evaluator.get_micro_f1() > 0
+   assert math.isclose(evaluator.get_micro_f1(), (12/17), rel_tol = 1e-6)
