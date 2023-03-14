@@ -9,17 +9,20 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.targets = targets
         self.percent = percent
 
-        self.positive = None
         self.truePositive = None
         self.falsePositive = None
+        self.trueNegative = None
+        self.falseNegative = None
 
     def clean(self):
         self.probs = None
         self.targets = None
-        
-        self.positive = None
+        self.percent = None
+
         self.truePositive = None
         self.falsePositive = None
+        self.trueNegative = None
+        self.falseNegative = None
     
     def add_batch(self, probs, targets):
         if self.probs is None or self.targets is None:
@@ -37,54 +40,72 @@ class MultiLabelEvaluator(metaclass = Singleton):
         if self.probs.dim() != 2:
             raise Exception("input tensors must have two dimension")
 
-    def _get_positives(self):
+    def _get_positives_and_negatives(self):
         self._check()
-        if (self.positive != None) and (self.truePositive != None):
-            return self.positive, self.truePositive, self.falsePositive
+        if  (self.truePositive != None) and \
+            (self.falsePositive != None) and \
+            (self.trueNegative != None) and \
+            (self.falseNegative != None):
+            return self.truePositive, self.falsePositive, self.trueNegative, self.falseNegative
+        
         preds = (self.probs > self.percent.unsqueeze(0)).int()
-        self.positive = torch.logical_or(preds, self.targets)
+        
+        #god i love my brain
         self.truePositive = torch.logical_and(preds, self.targets)
-        self.falsePositive = torch.where(self.truePositive==0, preds, 0)
-        return self.positive, self.truePositive, self.falsePositive
+        self.falsePositive = torch.logical_and(preds, torch.logical_not(self.targets))
+        self.trueNegative = torch.logical_and(torch.logical_not(preds), 
+                                            torch.logical_not(self.targets))
+        self.falseNegative = torch.logical_and(torch.logical_not(preds), self.targets)
+        
+        
+        return self.truePositive, self.falsePositive, self.trueNegative, self.falseNegative
     
-    def get_accuracy(self):
-        positive, truePositive, _ = self._get_positives()
-        classAccuracy = torch.sum(truePositive, dim=0) / torch.sum(positive, dim=0)
-        return classAccuracy
-    
+    def get_micro_accuracy(self):
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
+        correct = torch.sum(truePositive) + torch.sum(trueNegative)
+        all = correct + torch.sum(falsePositive) + torch.sum(falseNegative)
+        return correct/all
+
+    def get_macro_accuracy(self):
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
+        classTP = torch.sum(truePositive, dim=0)
+        classFP = torch.sum(falsePositive, dim =0)
+        classTN = torch.sum(trueNegative, dim=0)
+        classFN = torch.sum(falseNegative, dim =0)
+        classAccuracy = (classTP + classTN)/(classTP+classTN+classFP+classFN)
+        return torch.mean(classAccuracy)
+
     def get_precision(self):
-        positive, truePositive, falsePositive = self._get_positives()
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         classPrecsion = torch.sum(truePositive, dim =0) / torch.sum(preds, dim =0)
         return classPrecsion
     
     def get_recall(self):
-        positive, truePositive, falsePositive = self._get_positives()
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         classRecall = torch.sum(truePositive, dim =0) / torch.sum(self.targets, dim =0)
         return classRecall
-    
-    def get_F1(self):
-        classPrecision, precision = self.get_precision()
-        classRecall, recall = self.get_recall()
-
-        classF1 = (2*classPrecision*classRecall)/(classPrecision+classRecall)
-        f1 = (2*precision*recall)/(precision+recall)
-        return classF1, f1
 
     def get_micro_precision(self):
-        pass
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
+        preds = (self.probs > self.percent.unsqueeze(0)).int()
+        return torch.sum(truePositive) / (torch.sum(preds))
+
     def get_micro_recall(self):
-        pass
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
+        return torch.sum(truePositive) / (torch.sum(self.targets))
          
     def get_micro_f1(self):
-        positive, truePositive, falsePositive = self._get_positives()
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         precision = (torch.sum(truePositive) / torch.sum(preds)).item()
         recall = (torch.sum(truePositive) / torch.sum(self.targets)).item()
         return (2*precision*recall)/(precision+recall)
 
     def get_macro_f1(self):
-        classF1, _ = self.get_F1()
-        f1 = torch.mean(classF1) 
+        classPrecision = self.get_precision()
+        classRecall = self.get_recall()
+        classF1 = (2*classPrecision*classRecall) / (classPrecision+classRecall)
+        f1 = torch.mean(classF1).item()
         return f1
