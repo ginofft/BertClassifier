@@ -4,7 +4,7 @@ from typing import Optional
 class MultiLabelEvaluator(metaclass = Singleton):
      
     def __init__(self, probs : Optional[torch.Tensor] = None, 
-                 targets : Optional[torch.Tensor] = None, percent = 0.5):
+                 targets : Optional[torch.Tensor] = None, percent : Optional[torch.Tensor] = None):
         self.probs = probs
         self.targets = targets
         self.percent = percent
@@ -41,7 +41,7 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self._check()
         if (self.positive != None) and (self.truePositive != None):
             return self.positive, self.truePositive, self.falsePositive
-        preds = (self.probs > self.percent).int()
+        preds = (self.probs > self.percent.unsqueeze(0)).int()
         self.positive = torch.logical_or(preds, self.targets)
         self.truePositive = torch.logical_and(preds, self.targets)
         self.falsePositive = torch.where(self.truePositive==0, preds, 0)
@@ -50,22 +50,19 @@ class MultiLabelEvaluator(metaclass = Singleton):
     def get_accuracy(self):
         positive, truePositive, _ = self._get_positives()
         classAccuracy = torch.sum(truePositive, dim=0) / torch.sum(positive, dim=0)
-        accuracy = (torch.sum(truePositive) / torch.sum(positive)).item()
-        return classAccuracy, accuracy
+        return classAccuracy
     
     def get_precision(self):
         positive, truePositive, falsePositive = self._get_positives()
-        preds = (self.probs > self.percent).int()
+        preds = (self.probs > self.percent.unsqueeze(0)).int()
         classPrecsion = torch.sum(truePositive, dim =0) / torch.sum(preds, dim =0)
-        precision = (torch.sum(truePositive) / torch.sum(preds)).item()
-        return classPrecsion, precision
+        return classPrecsion
     
     def get_recall(self):
         positive, truePositive, falsePositive = self._get_positives()
-        preds = (self.probs > self.percent).int()
+        preds = (self.probs > self.percent.unsqueeze(0)).int()
         classRecall = torch.sum(truePositive, dim =0) / torch.sum(self.targets, dim =0)
-        recall = (torch.sum(truePositive) / torch.sum(self.targets)).item()
-        return classRecall, recall
+        return classRecall
     
     def get_F1(self):
         classPrecision, precision = self.get_precision()
@@ -74,10 +71,20 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classF1 = (2*classPrecision*classRecall)/(classPrecision+classRecall)
         f1 = (2*precision*recall)/(precision+recall)
         return classF1, f1
-    
+
+    def get_micro_precision(self):
+        pass
+    def get_micro_recall(self):
+        pass
+         
     def get_micro_f1(self):
         positive, truePositive, falsePositive = self._get_positives()
-        preds = (self.probs > self.percent).int()
+        preds = (self.probs > self.percent.unsqueeze(0)).int()
         precision = (torch.sum(truePositive) / torch.sum(preds)).item()
         recall = (torch.sum(truePositive) / torch.sum(self.targets)).item()
         return (2*precision*recall)/(precision+recall)
+
+    def get_macro_f1(self):
+        classF1, _ = self.get_F1()
+        f1 = torch.mean(classF1) 
+        return f1
