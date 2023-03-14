@@ -2,7 +2,45 @@ import torch
 from .patterns import Singleton
 from typing import Optional
 class MultiLabelEvaluator(metaclass = Singleton):
-     
+    """Singleton class used for calculating various metrics for multi-label classification, such as: accuracy, precision, recall and f1
+
+    Attributes
+    ----------
+    `probs` : Torch.Tensor
+        Matrix of size [no. data, no. classes], where `probs[i,j]` denote the probability of the i'th data contains the j'th class
+    `targets` : Torch.Tensor
+        Matrix of size [no. data, no. classes], where `targets[i,j] == 1` if the i'th data contains the j'th class
+    `percent` : Torch.Tensor
+        Vector of size [no. classes], where `percent[j]` is the classification threshold for the j'th class
+    `truePositive` : Torch.Tensor
+        Matrix of size [no. data, no. classes] denoting true positive.
+    `falsePositive` : Torch.Tensor
+        Matrix of size [no. data, no. classes] denoting false positive.
+    `trueNegative` : Torch.Tensor
+        Matrix of size [no. data, no. classes] denoting true negative.
+    `falseNegative` : Torch.Tensor
+        Matrix of size [no. data, no. classes] denoting false negative.
+    
+    Methods
+    -------
+    :meth:`add_batch(probs, targets)` -> None
+        add probs and targets into self.probs and self.targets respectively
+    :meth:`clean()` -> None
+        make all attribute into None, as this is a Singleton class
+    :meth:`get_micro_accuracy()` -> float :
+        return the micro accuracy
+    :meth:`get_macro_accuracy()` -> float: 
+        return the macro accuracy
+    :meth:`get_micro_precision()` -> float : 
+        return the micro precision
+    :meth:`get_micro_recall()` -> float :
+        return the micro recall
+    :meth:`get_micro_f1()` -> float :
+        return the micor f1
+    :meth:`get_macro_f1()` -> float :
+        return the macro f1
+
+    """
     def __init__(self, probs : Optional[torch.Tensor] = None, 
                  targets : Optional[torch.Tensor] = None, percent : Optional[torch.Tensor] = None):
         self.probs = probs
@@ -60,50 +98,50 @@ class MultiLabelEvaluator(metaclass = Singleton):
         
         return self.truePositive, self.falsePositive, self.trueNegative, self.falseNegative
     
-    def get_micro_accuracy(self):
+    def get_micro_accuracy(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         correct = torch.sum(truePositive) + torch.sum(trueNegative)
         all = correct + torch.sum(falsePositive) + torch.sum(falseNegative)
-        return correct/all
+        return (correct/all).item()
 
-    def get_macro_accuracy(self):
+    def get_macro_accuracy(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         classTP = torch.sum(truePositive, dim=0)
         classFP = torch.sum(falsePositive, dim =0)
         classTN = torch.sum(trueNegative, dim=0)
         classFN = torch.sum(falseNegative, dim =0)
         classAccuracy = (classTP + classTN)/(classTP+classTN+classFP+classFN)
-        return torch.mean(classAccuracy)
+        return torch.mean(classAccuracy).item()
 
-    def get_precision(self):
+    def get_precision(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         classPrecsion = torch.sum(truePositive, dim =0) / torch.sum(preds, dim =0)
         return classPrecsion
     
-    def get_recall(self):
+    def get_recall(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         classRecall = torch.sum(truePositive, dim =0) / torch.sum(self.targets, dim =0)
         return classRecall
 
-    def get_micro_precision(self):
+    def get_micro_precision(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
-        return torch.sum(truePositive) / (torch.sum(preds))
+        return (torch.sum(truePositive) / (torch.sum(preds))).item()
 
-    def get_micro_recall(self):
+    def get_micro_recall(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
-        return torch.sum(truePositive) / (torch.sum(self.targets))
+        return (torch.sum(truePositive) / (torch.sum(self.targets))).item()
          
-    def get_micro_f1(self):
+    def get_micro_f1(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         precision = (torch.sum(truePositive) / torch.sum(preds)).item()
         recall = (torch.sum(truePositive) / torch.sum(self.targets)).item()
         return (2*precision*recall)/(precision+recall)
 
-    def get_macro_f1(self):
+    def get_macro_f1(self) -> float:
         classPrecision = self.get_precision()
         classRecall = self.get_recall()
         classF1 = (2*classPrecision*classRecall) / (classPrecision+classRecall)
