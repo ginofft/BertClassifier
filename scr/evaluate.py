@@ -27,18 +27,30 @@ class MultiLabelEvaluator(metaclass = Singleton):
         add probs and targets into self.probs and self.targets respectively
     :meth:`clean()` -> None
         make all attribute into None, as this is a Singleton class
+    :meth:`get_class_accuracy()` -> torch.Tensor :
+        Vector of size [no. classes], containing accuracy of each class
+    :meth:`get_class_precision()` -> torch.Tensor :
+        Vector of size [no. classes], containing precision of each class     
+    :meth:`get_class_recall()` -> torch.Tensor :
+        Vector of size [no. classes], containing recall of each class
+    :meth:`get_class_f1()` -> torch.Tensor :
+        Vector of size [no. classes], containing f1 of each class
     :meth:`get_micro_accuracy()` -> float :
-        return the micro accuracy
-    :meth:`get_macro_accuracy()` -> float: 
-        return the macro accuracy
+
+    :meth:`get_macro_accuracy()` -> float :
+
     :meth:`get_micro_precision()` -> float : 
-        return the micro precision
+
+    :meth:`get_macro_precision()` -> float :
+
     :meth:`get_micro_recall()` -> float :
-        return the micro recall
+
+    :meth:`get_macro_recall()` -> float :
+
     :meth:`get_micro_f1()` -> float :
-        return the micor f1
+
     :meth:`get_macro_f1()` -> float :
-        return the macro f1
+
 
     """
     def __init__(self, probs : Optional[torch.Tensor] = None, 
@@ -93,11 +105,18 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.falsePositive = torch.logical_and(preds, torch.logical_not(self.targets))
         self.trueNegative = torch.logical_and(torch.logical_not(preds), 
                                             torch.logical_not(self.targets))
-        self.falseNegative = torch.logical_and(torch.logical_not(preds), self.targets)
-        
-        
+        self.falseNegative = torch.logical_and(torch.logical_not(preds), self.targets) 
         return self.truePositive, self.falsePositive, self.trueNegative, self.falseNegative
-    
+
+    def get_class_accuracy(self) -> torch.Tensor:
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
+        classTP = torch.sum(truePositive, dim=0)
+        classFP = torch.sum(falsePositive, dim =0)
+        classTN = torch.sum(trueNegative, dim=0)
+        classFN = torch.sum(falseNegative, dim =0)
+        classAccuracy = (classTP + classTN)/(classTP+classTN+classFP+classFN)
+        return classAccuracy
+ 
     def get_micro_accuracy(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         correct = torch.sum(truePositive) + torch.sum(trueNegative)
@@ -105,35 +124,44 @@ class MultiLabelEvaluator(metaclass = Singleton):
         return (correct/all).item()
 
     def get_macro_accuracy(self) -> float:
-        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
-        classTP = torch.sum(truePositive, dim=0)
-        classFP = torch.sum(falsePositive, dim =0)
-        classTN = torch.sum(trueNegative, dim=0)
-        classFN = torch.sum(falseNegative, dim =0)
-        classAccuracy = (classTP + classTN)/(classTP+classTN+classFP+classFN)
+        classAccuracy = self.get_class_accuracy()
         return torch.mean(classAccuracy).item()
 
-    def get_precision(self) -> float:
+    def get_class_precision(self) -> torch.Tensor:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         classPrecsion = torch.sum(truePositive, dim =0) / torch.sum(preds, dim =0)
         return classPrecsion
     
-    def get_recall(self) -> float:
+    def get_micro_precision(self) -> float:
+        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
+        preds = (self.probs > self.percent.unsqueeze(0)).int()
+        return (torch.sum(truePositive) / (torch.sum(preds))).item()
+    
+    def get_macro_precision(self) -> float:
+        classPrecsion = self.get_class_precision()
+        return torch.mean(classPrecsion).item()
+
+    def get_class_recall(self) -> torch.Tensor:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
         classRecall = torch.sum(truePositive, dim =0) / torch.sum(self.targets, dim =0)
         return classRecall
 
-    def get_micro_precision(self) -> float:
-        truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
-        preds = (self.probs > self.percent.unsqueeze(0)).int()
-        return (torch.sum(truePositive) / (torch.sum(preds))).item()
-
     def get_micro_recall(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         return (torch.sum(truePositive) / (torch.sum(self.targets))).item()
-         
+
+    def get_macro_recall(self) -> float:        
+        classRecall = self.get_class_recall()
+        return torch.mean(classRecall).item()
+
+    def get_class_f1(self) -> torch.Tensor:
+        classPrecision = self.get_class_precision()
+        classRecall = self.get_class_recall()
+        classF1 = (2*classPrecision*classRecall) / (classPrecision+classRecall)
+        return classF1
+
     def get_micro_f1(self) -> float:
         truePositive, falsePositive, trueNegative, falseNegative = self._get_positives_and_negatives()
         preds = (self.probs > self.percent.unsqueeze(0)).int()
@@ -142,8 +170,8 @@ class MultiLabelEvaluator(metaclass = Singleton):
         return (2*precision*recall)/(precision+recall)
 
     def get_macro_f1(self) -> float:
-        classPrecision = self.get_precision()
-        classRecall = self.get_recall()
-        classF1 = (2*classPrecision*classRecall) / (classPrecision+classRecall)
-        f1 = torch.mean(classF1).item()
-        return f1
+        classF1 = self.get_class_f1()
+        return torch.mean(classF1).item()
+    
+class ThresholdOptimizer():
+    pass
