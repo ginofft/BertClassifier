@@ -2,7 +2,7 @@ from scr.evaluate import MultiLabelEvaluator
 import torch
 import math
 
-#dummy test values
+#Test value for MultiLabelEvaluator
 targets = torch.as_tensor([[1,1,0], [0,1,1], [0,0,1], [1,1,1], [1,0,0]])
 preds = torch.as_tensor([[1,0,0], [0,1,1], [0,1,0], [1,1,0], [1,1,0]])
 percent = torch.as_tensor([0.5,0.5,0.5])
@@ -68,8 +68,12 @@ def test_clean() -> None:
    evaluator.clean()
    assert all([attr is None for attr in evaluator.__dict__.values()])
 
+#this test must be run after test_clean() cause im retarded
 def test_add_batch() -> None:
-   evaluator = MultiLabelEvaluator()
+   evaluator.percent = percent
    evaluator.add_batch(preds, targets)
    evaluator.add_batch(preds, targets)
    assert (evaluator.probs.shape[0] == 2*preds.shape[0])
+
+targets =  torch.as_tensor([[1,1,0], [0,1,1], [0,0,1], [1,1,1], [1,0,0]])
+probs = torch.as_tensor([[3.8, 4.2, -1.5], [2.1,7,0], [2, 3.6, 0.23], [4,3.7,0.17], [3.5, 3.8, 0.3]])
