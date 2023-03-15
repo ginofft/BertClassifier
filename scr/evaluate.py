@@ -56,15 +56,23 @@ class MultiLabelEvaluator(metaclass = Singleton):
 
     """
     def __init__(self, probs : Optional[torch.Tensor] = None, 
-                 targets : Optional[torch.Tensor] = None, percent : Optional[torch.Tensor] = None):
+                 targets : Optional[torch.Tensor] = None, 
+                 percent : Optional[torch.Tensor] = None,
+                 device = torch.device('cuda')):
         self.probs = probs
         self.targets = targets
         self.percent = percent
+        self.device = device
+        
+        self.probs.to(self.device)
+        self.targets.to(self.device)
+        self.percent.to(self.device)
 
     def clean(self):
         self.probs = None
         self.targets = None
         self.percent = None
+        self.device = None
     
     @property
     def preds(self):
@@ -89,6 +97,12 @@ class MultiLabelEvaluator(metaclass = Singleton):
                                  self.targets)    
 
     def add_batch(self, probs, targets):
+        if self.device is None:
+            if torch.cuda.is_available():
+                self.device = torch.device('cuda')
+            else:
+                self.device = torch.device('cpu')
+
         if self.probs is None or self.targets is None:
             self.probs = probs
             self.targets = targets
@@ -162,7 +176,7 @@ class MultiLabelEvaluator(metaclass = Singleton):
         return torch.mean(classF1).item()
     
     def get_optimal_percent(self):
-        highestClassF1 = torch.zeros(self.probs.size()[1])
+        highestClassF1 = torch.zeros(self.probs.size()[1]).to(self.device)
         result = self.probs[0]
         for prob in self.probs:
             self.percent = prob
