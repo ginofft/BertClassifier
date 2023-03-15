@@ -62,11 +62,6 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.probs = probs
         self.targets = targets
         self.percent = percent
-        self.device = device
-        
-        self.probs.to(self.device)
-        self.targets.to(self.device)
-        self.percent.to(self.device)
 
     def clean(self):
         self.probs = None
@@ -176,7 +171,7 @@ class MultiLabelEvaluator(metaclass = Singleton):
         return torch.mean(classF1).item()
     
     def get_optimal_percent(self):
-        highestClassF1 = torch.zeros(self.probs.size()[1]).to(self.device)
+        highestClassF1 = torch.zeros(self.probs.size()[1]).to(self.probs.device)
         result = self.probs[0]
         for prob in self.probs:
             self.percent = prob
