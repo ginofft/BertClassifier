@@ -26,7 +26,15 @@ parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
 parser.add_argument('--metrics', nargs = '+', 
-                    default=['Accuracy'], choices=['Accuracy', 'Recall', 'Precision', 'F1'],
+                    default=['macro accuracy'], 
+                    choices=['macro accuracy',
+                             'micro accuracy',
+                             'macro precision',
+                             'micro precision',
+                             'macro recall',
+                             'micro recall' 
+                             'macro f1',
+                             'micro f1'],
                     help='The evaluation metric for multi-label classification')
 
 #Data paremters
@@ -93,17 +101,16 @@ if __name__ == "__main__":
                                                 optimizer)
         
         for epoch in range(startEpoch+1, opt.nEpochs+1):
-            epoch_train_loss, train_metrics = train(trainSet, model, criterion, optimizer,
-                                     evaluator, metrics, 
-                                     device, opt.batch_size, epoch)
+            epoch_train_loss = train(trainSet, model, 
+                                    criterion, optimizer, 
+                                    device, opt.batch_size, epoch)
             epoch_val_loss, val_metrics = inference(valSet, model, criterion, 
-                                       evaluator, metrics,
-                                       device, opt.batch_size)
+                                                    evaluator, metrics,
+                                                    device, opt.batch_size)
             
             print('Epoch {} completed: \nTrain loss: {:.4f} \nValidation loss: {:.4f}'.format(
                 epoch, epoch_train_loss, epoch_val_loss))
-            print('Train metrics: {} \nValidation metrics: {}'.format(
-                train_metrics, val_metrics))
+            print('Validation metrics: {}'.format(val_metrics))
             
             if (epoch_val_loss < val_loss):
                 val_loss = epoch_val_loss
@@ -114,6 +121,7 @@ if __name__ == "__main__":
                     'model' : model.state_dict(),
                     'optimizer' : optimizer.state_dict(),
                     }, Path(opt.savePath), 'best.pth.tar')
+            
             if (epoch % opt.saveEvery) == 0:
                 save_checkpoint({
                     'epoch' : epoch,
