@@ -67,7 +67,6 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.probs = None
         self.targets = None
         self.percent = None
-        self.device = None
     
     @property
     def preds(self):
@@ -92,12 +91,6 @@ class MultiLabelEvaluator(metaclass = Singleton):
                                  self.targets)    
 
     def add_batch(self, probs, targets):
-        if self.device is None:
-            if torch.cuda.is_available():
-                self.device = torch.device('cuda')
-            else:
-                self.device = torch.device('cpu')
-
         if self.probs is None or self.targets is None:
             self.probs = probs
             self.targets = targets
