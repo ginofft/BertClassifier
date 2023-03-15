@@ -12,6 +12,8 @@ class MultiLabelEvaluator(metaclass = Singleton):
         Matrix of size [no. data, no. classes], where `targets[i,j] == 1` if the i'th data contains the j'th class
     `percent` : Torch.Tensor
         Vector of size [no. classes], where `percent[j]` is the classification threshold for the j'th class
+    `preds` : Torch.Tensor
+        Matrix of size [no. data, no. classes], where `preds[i,j] == 1` if `probs[i,j] > percent[j]`.
     `truePositive` : Torch.Tensor
         Matrix of size [no. data, no. classes] denoting true positive.
     `falsePositive` : Torch.Tensor
@@ -159,5 +161,14 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classF1 = self.get_class_f1()
         return torch.mean(classF1).item()
     
-class ThresholdOptimizer():
-    pass
+    def get_optimal_percent(self):
+        highestClassF1 = torch.zeros(self.probs.size()[1])
+        result = self.probs[0]
+        for prob in self.probs:
+            self.percent = prob
+            classF1 = self.get_class_f1()
+            changeVector = classF1 > highestClassF1
+            highestClassF1 = torch.where(changeVector, classF1, highestClassF1)
+            result = torch.where(changeVector, prob, result)
+        self.percent = result
+        return self.percent

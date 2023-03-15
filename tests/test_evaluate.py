@@ -57,6 +57,7 @@ def test_get_macro_recall() -> None:
 def test_get_class_f1() -> None:
    result = torch.as_tensor([1, 4/7, 1/2])
    isClose = torch.isclose(result, evaluator.get_class_f1(), rtol=1e-6)
+   assert all(isClose)
    
 def test_get_micro_f1()-> None:
    assert math.isclose(evaluator.get_micro_f1(), (12/17), rel_tol = 1e-6)
@@ -75,5 +76,12 @@ def test_add_batch() -> None:
    evaluator.add_batch(preds, targets)
    assert (evaluator.probs.shape[0] == 2*preds.shape[0])
 
-targets =  torch.as_tensor([[1,1,0], [0,1,1], [0,0,1], [1,1,1], [1,0,0]])
-probs = torch.as_tensor([[3.8, 4.2, -1.5], [2.1,7,0], [2, 3.6, 0.23], [4,3.7,0.17], [3.5, 3.8, 0.3]])
+def test_get_optimal_percent() -> None:
+   evaluator.clean()
+   targets = torch.as_tensor([[1,1,0], [0,1,1], [0,0,1], [1,1,1], [1,0,0]])
+   probs = torch.as_tensor([[3.8, 4.2, -1.5], [2.1,7,0], [2, 3.6, 0.23], [4,3.7,0.17], [3.5, 3.8, 0.3]])
+   evaluator.percent = torch.as_tensor([0.5, 0.5, 0.5])
+   evaluator.add_batch(probs, targets)
+   results = torch.as_tensor([3.5, 3.7, 0])
+   isClose = torch.isclose(results, evaluator.get_optimal_percent(), rtol = 1e-6)
+   assert all(isClose)
