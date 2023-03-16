@@ -106,18 +106,19 @@ def inference(testSet : SentenceLabelDataset,
             del loss
             del batch_loss
     avg_loss = epoch_loss / n_batches
-
-    evaluator.percent = evaluator.probs[0]
-    evaluator.get_optimal_percent()
+    
+    if evaluator.percent == None:
+        evaluator.percent = evaluator.probs[0]
+        evaluator.get_optimal_percent()
+    
     metricDict = {"Classifier thresholds" : evaluator.percent}
 
     metricResults = []
     for fun in evalFuns:
         metricResults.append(fun(evaluator))
     metricDict.update(dict(zip(metrics, metricResults)))
-    evaluator.clean()
     
-
+    evaluator.clean()
     del dataloader
     
     if device == torch.device('cuda'):
