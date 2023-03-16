@@ -21,7 +21,7 @@ Features:
 ## Quick Start
 To train:
 ```
-python main.py --mode train \
+python main.py --mode train --batch_size 512 \
     --datasetFormat CLINC150 \
     --nEpochs 500 --saveEvery 10 \
     --datasetPath data/CLINC150/data_oos_plus.json \
