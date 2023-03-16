@@ -26,13 +26,13 @@ parser.add_argument('--nEpochs', type = int, default=50, help='No. epochs')
 parser.add_argument('--saveEvery', type = int, default = 10, 
                     help='no. epoch before a save is created')
 parser.add_argument('--metrics', nargs = '+', 
-                    default=['macro accuracy'], 
+                    default=['macro f1'], 
                     choices=['macro accuracy',
                              'micro accuracy',
                              'macro precision',
                              'micro precision',
                              'macro recall',
-                             'micro recall' 
+                             'micro recall', 
                              'macro f1',
                              'micro f1'],
                     help='The evaluation metric for multi-label classification')

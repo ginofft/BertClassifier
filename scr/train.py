@@ -72,7 +72,7 @@ def inference(testSet : SentenceLabelDataset,
         model,
         criterion, 
         evaluator : MultiLabelEvaluator,
-        metrics : List[str]=['macro accuracy'],
+        metrics : List[str]=['macro f1'],
         device = torch.device('cuda'),
         batch_size=8,):
     collator = SmartCollator(pad_token_id = testSet.tokenizer.pad_token_id, nClasses=testSet.nClasses)
