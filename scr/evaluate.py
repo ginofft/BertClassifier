@@ -64,6 +64,8 @@ class MultiLabelEvaluator(metaclass = Singleton):
         self.percent = percent
 
     def clean(self):
+        """ Turn all attributes into `None`. Required as this is a Singleton class.
+        """
         self.probs = None
         self.targets = None
         self.percent = None
@@ -91,6 +93,8 @@ class MultiLabelEvaluator(metaclass = Singleton):
                                  self.targets)    
 
     def add_batch(self, probs, targets):
+        """ Add probs and targets into self.probs and targets respectively.
+        """
         if self.probs is None or self.targets is None:
             self.probs = probs
             self.targets = targets
@@ -163,7 +167,10 @@ class MultiLabelEvaluator(metaclass = Singleton):
         classF1 = self.get_class_f1()
         return torch.mean(classF1).item()
     
-    def get_optimal_percent(self):
+    def get_optimal_percent(self) -> torch.Tensor:
+        """Get the optimal classifier threholds for the current self.probs and self.targets\n
+        Will modify self.percent (set it as the optimal thresholds)
+        """
         highestClassF1 = torch.zeros(self.probs.size()[1]).to(self.probs.device)
         result = self.probs[0]
         for prob in self.probs:
