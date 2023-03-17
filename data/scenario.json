@@ -159,6 +159,244 @@
                 "skillset",
                 "postion"
             ]
+        ],
+        [
+            "You are looking for a software engineering position that pays between $100,000 and $120,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a data analyst position that pays between $80,000 and $100,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a project management position that pays between $90,000 and $110,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a graphic design position that pays between $60,000 and $80,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a sales position that pays between $70,000 and $90,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a customer service position that pays between $40,000 and $60,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a marketing position that pays between $80,000 and $100,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a human resources position that pays between $70,000 and $90,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a teaching position that pays between $40,000 and $60,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a software development position that pays between $90,000 and $110,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a software engineering position that pays between \u20ac80,000 and \u20ac100,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a data analyst position that pays between \u00a360,000 and \u00a380,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a project management position that pays between \u00a510,000,000 and \u00a512,000,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a graphic design position that pays between \u20ac50,000 and \u20ac70,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a sales position that pays between \u00a57,000,000 and \u00a59,000,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a customer service position that pays between \u20ac30,000 and \u20ac50,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a marketing position that pays between \u00a370,000 and \u00a390,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a human resources position that pays between \u00a58,000,000 and \u00a510,000,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a teaching position that pays between \u20ac30,000 and \u20ac50,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a software development position that pays between \u00a380,000 and \u00a3100,000 per year.",
+            [
+                "salary",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a software engineer.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a part-time job as a customer service representative.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a part-time job as a retail sales associate.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a marketing manager.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a civil engineer.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a part-time job as a delivery driver.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a part-time job as a cashier.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a project manager.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a data analyst.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a part-time job as a tutor.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a graphic designer.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a human resources manager.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a part-time job as a receptionist.",
+            [
+                "employment_type",
+                "postion"
+            ]
+        ],
+        [
+            "You are looking for a full-time job as a financial analyst.",
+            [
+                "employment_type",
+                "postion"
+            ]
         ]
     ]
 }
