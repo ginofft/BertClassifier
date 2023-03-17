@@ -121,7 +121,7 @@ if __name__ == "__main__":
                     'epoch' : epoch,
                     'train_loss' : epoch_train_loss,
                     'val_loss' : epoch_val_loss,
-                    'classfiers_threhold': optimal_val_thresholds,
+                    'classfier_threhold': optimal_val_thresholds,
                     'model' : model.state_dict(),
                     'optimizer' : optimizer.state_dict(),
                     }, Path(opt.savePath), 'best.pth.tar')
