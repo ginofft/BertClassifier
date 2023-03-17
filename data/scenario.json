@@ -1,0 +1,57 @@
+{
+    "prompt to ask for scenario" : 
+        {                    
+            "Format" : 
+                "Suppose you are a person looking for a job, you think relevant information for your job search are: [label fields]. Write [no. output] scenario describing your circumstances.",
+            "Example" :
+                "Suppose you are a person looking for a job, you think relevant information for your job search are: work location, your skillset, job titles, your education level, salary and whether you work fulltime or part time. Write 5 scenario describing your circumstances."    
+        },
+    
+    "prompt" : 
+        "Suppose you have a device with an Siri-like app that acts as a recruiter and can retrieve appropriate job openings. Given the scenario below that is related to your job search, write 20 ways of asking the intelligent device to retrieve appropriate job offers. [Your scenario]",
+    
+    "labels" : ["location", "position", "skillset", "salary", "education", "employment_type"],
+    
+    "scenario" : [
+        [
+            "You are a stay-at-home parent who is looking for a part-time job as a customer service representative in Seattle.", 
+            ["location", "position", "employment_type"]
+        ],
+        [
+            "You are a recent graduate with a degree in marketing and are looking for a job as a marketing coordinator in New York City.",
+            ["location", "position"]
+        ],
+        [
+            "You are a recent immigrant to the United States and are looking for a job as a nurse in Los Angeles.",
+            ["location", "position"]
+        ],
+        [
+            "You are a recent retiree who is looking for a part-time job as a sales associate in San Francisco.",
+            ["location", "position", "employment_type"]
+        ],
+        [
+            "You are a recent college graduate with a degree in computer science and are looking for a job as a software developer in Seattle.",
+            ["location", "position", "education"]
+        ],
+        [
+            "You are a recent college graduate with a degree in marketing and you are looking for a job as a marketing coordinator in San Francisco, CA.",
+            ["location", "position", "education"]
+        ],
+        [
+            "You are a recent high school graduate with no work experience and you are looking for a job as a sales associate in Chicago, IL.",
+            ["location, position, education"]
+        ],
+        [
+            "You are a software engineer with 10 years of experience and you are looking for a job as a software architect in Austin, TX.",
+            ["location, position"]
+        ],
+        [
+            "You are a part-time student with a degree in nursing and you are looking for a job as a nurse in Boston, MA.",
+            ["location, position, employment_type"]
+        ],
+        [
+            "You are a recent college graduate with a degree in computer science and you are looking for a job as a software engineer in Paris, France",
+            ["location, position, education"]
+        ]
+    ]
+}
