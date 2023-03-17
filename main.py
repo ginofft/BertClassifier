@@ -84,7 +84,7 @@ if __name__ == "__main__":
     model = BertMLPClassifier(checkpoint = opt.bertVariation, nClasses=trainSet.nClasses)
     model.to(device)
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr = 1e-6)
+    optimizer = torch.optim.AdamW(model.parameters(), lr = opt.lr)
     criterion = torch.nn.BCEWithLogitsLoss()
     
     metrics = opt.metrics
