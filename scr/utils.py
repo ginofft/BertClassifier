@@ -17,7 +17,8 @@ def load_checkpoint(path, model, optimizer = None):
     epoch = state['epoch']
     train_loss = state['train_loss']
     val_loss = state['val_loss']
-    classifier_thresholds = state['classifier_threshold']
+    #classifier_thresholds = state['classifier_threshold']
+    classifier_thresholds = state['classifier_threhold']
 
     model.load_state_dict(state['model'])
     if optimizer !=  None:
