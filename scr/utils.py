@@ -17,8 +17,7 @@ def load_checkpoint(path, model, optimizer = None):
     epoch = state['epoch']
     train_loss = state['train_loss']
     val_loss = state['val_loss']
-    #classifier_thresholds = state['classifier_threshold']
-    #classifier_thresholds = state['classifier_threhold']
+    classifier_threshold = state['classifier_threshold']
 
     model.load_state_dict(state['model'])
     if optimizer !=  None:
@@ -27,8 +26,8 @@ def load_checkpoint(path, model, optimizer = None):
     print("=> loaded checkpoint '{}' (epoch {})".format(True, epoch))
     print("Checkpoint's train loss is: {:.4f}".format(train_loss))
     print("Checkpoint's validation loss is: {:.4f}".format(val_loss))
-    #return epoch, train_loss, val_loss, classifier_thresholds
-    return epoch, train_loss, val_loss
+    return epoch, train_loss, val_loss, classifier_threshold
+    # return epoch, train_loss, val_loss
 
 
 def predict_class(texts, model, tokenizer, labelSet):
