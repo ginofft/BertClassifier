@@ -157,7 +157,7 @@ if __name__ == "__main__":
         test_loss, test_metrics = inference(testSet, model, criterion, 
                                             evaluator, metrics,
                                             device, opt.batch_size)
-        metric_results = {key : test_loss[key] for key in metrics}
+        metric_results = {key : test_metrics[key] for key in metrics}
 
         print('Test loss: {:.4f}'.format(test_loss))
         print('Test metrics: {}'.format(test_metrics))
