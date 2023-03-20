@@ -29,46 +29,6 @@ def load_checkpoint(path, model, optimizer = None):
     return epoch, train_loss, val_loss, classifier_threshold
     # return epoch, train_loss, val_loss
 
-
-def predict_class(texts, model, tokenizer, labelSet):
-    device = model.bert.device
-    tokenized_texts = tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-    input_ids = tokenized_texts['input_ids'].to(device)
-    masks = tokenized_texts['attention_mask'].to(device)
-
-    embedding = model(input_ids, masks)
-    preds = torch.argmax(embedding,dim=1)
-    results = []
-    for pred in preds:
-        results.append(labelSet[pred])
-    return results
-
-def predict_topk(texts, k, model, tokenizer, labelSet):
-    device = model.bert.device
-    tokenized_texts = tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-    input_ids = tokenized_texts[input_ids].to(device)
-    masks = tokenized_texts['attention_mask'].to(device)
-
-    embedding =  model(input_ids, masks)
-    predsMatrix = torch.topk(embedding, dim =1, k = k)
-    results = []
-    for preds in predsMatrix:
-        results.append([labelSet[pred] for pred in preds])
-    return results
-
-def predict_at_p_percent(texts, p, model, tokenizer, labelSet):
-    device = model.bert.device
-    tokenized_texts = tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-    input_ids = tokenized_texts[input_ids].to(device)
-    masks = tokenized_texts['attention_mask'].to(device)
-
-    embedding =  model(input_ids, masks)
-    predsMatrix = torch.where(embedding > p, 1, 0)
-    results = []
-    for preds in predsMatrix:
-        results.append([labelSet[pred] for pred in torch.nonzero(preds)])
-    return results
-
 def read_MixSNIPs_file(filePath) -> List[Tuple[str, List[str]]]:
     """read MixSNIPs file into a list of tuple, whose element is: sentence, [label]
 
@@ -132,9 +92,6 @@ def turn_single_label_to_multilabels(*lists):
     for l in lists:
         for element in l:
             element[1] = [element[1]]
-
-def increment(x):
-    return (x+1)
 
 class Predictor():
     """This class contains the predictor given a classifier, its tokenizer and a labelSet
@@ -221,4 +178,4 @@ class Predictor():
         results = []
         for preds in predsMatrix:
             results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
-        return results
+        return results  
