@@ -173,10 +173,9 @@ class Predictor():
                             .format(self.model.nClasses, len(labelSet)))
         
     def get_class(self, texts: List[str]):
-        device = self.device
         tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-        input_ids = tokenized_texts['input_ids'].to(device)
-        masks = tokenized_texts['attention_mask'].to(device)
+        input_ids = tokenized_texts['input_ids'].to(self.device)
+        masks = tokenized_texts['attention_mask'].to(self.device)
 
         embedding = self.model(input_ids, masks)
         preds = torch.argmax(embedding,dim=1)
@@ -186,10 +185,9 @@ class Predictor():
         return results
     
     def get_topk_classes(self, texts: List[str], k : int):        
-        device = self.device
         tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-        input_ids = tokenized_texts['input_ids'].to(device)
-        masks = tokenized_texts['attention_mask'].to(device)
+        input_ids = tokenized_texts['input_ids'].to(self.device)
+        masks = tokenized_texts['attention_mask'].to(self.device)
 
         embedding = self.model(input_ids, masks)
         predsMatrix = torch.topk(embedding, dim =1, k = k).indices
@@ -199,13 +197,27 @@ class Predictor():
         return results
     
     def get_classes_at_percent(self, texts: List[str], p : float):
-        device = self.device
         tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
-        input_ids = tokenized_texts['input_ids'].to(device)
-        masks = tokenized_texts['attention_mask'].to(device)
+        input_ids = tokenized_texts['input_ids'].to(self.device)
+        masks = tokenized_texts['attention_mask'].to(self.device)
 
         embedding =  self.model(input_ids, masks)
         predsMatrix = torch.where(embedding > p, 1, 0)
+        results = []
+        for preds in predsMatrix:
+            results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
+        return results
+
+    def get_classes_based_on_thresholds(self, texts : List[str], thresh : torch.Tensor):
+        tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
+        input_ids = tokenized_texts['input_ids'].to(self.device)
+        masks = tokenized_texts['attention_mask'].to(self.device)
+        
+        embedding = self.model(input_ids, masks)
+        if embedding.size()[1] != thresh.size()[0]:
+            raise Exception('The number of thresholds differ from the number of classes!!')
+        
+        predsMatrix = (embedding > thresh).int()
         results = []
         for preds in predsMatrix:
             results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
