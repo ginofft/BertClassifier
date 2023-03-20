@@ -95,14 +95,14 @@ if __name__ == "__main__":
         train_loss = float('inf')
         
         if opt.loadPath:
-            # startEpoch, train_loss, val_loss, _ = load_checkpoint(
-            #                                         Path(opt.loadPath),
-            #                                         model,
-            #                                         optimizer)
-            startEpoch, train_loss, val_loss = load_checkpoint(
-                                            Path(opt.loadPath),
-                                            model,
-                                            optimizer)
+            startEpoch, train_loss, val_loss, _ = load_checkpoint(
+                                                    Path(opt.loadPath),
+                                                    model,
+                                                    optimizer)
+            # startEpoch, train_loss, val_loss = load_checkpoint(
+            #                                 Path(opt.loadPath),
+            #                                 model,
+            #                                 optimizer)
         
         for epoch in range(startEpoch+1, opt.nEpochs+1):
             epoch_train_loss = train(trainSet, model, 
@@ -141,19 +141,19 @@ if __name__ == "__main__":
                     }, Path(opt.savePath), 'epoch{}.pth.tar'.format(epoch))
     else:
         if opt.loadPath:
-            # startEpoch, train_loss, val_loss, classifier_threshold = load_checkpoint(
-            #                                                         Path(opt.loadPath),
-            #                                                         model,
-            #                                                         optimizer)
-            startEpoch, train_loss, val_loss = load_checkpoint(
-                                                    Path(opt.loadPath),
-                                                    model,
-                                                    optimizer)
+            startEpoch, train_loss, val_loss, classifier_threshold = load_checkpoint(
+                                                                    Path(opt.loadPath),
+                                                                    model,
+                                                                    optimizer)
+            # startEpoch, train_loss, val_loss = load_checkpoint(
+            #                                         Path(opt.loadPath),
+            #                                         model,
+            #                                         optimizer)
         else:
             raise Exception('Please point to a model using ---loadPath')
 
         print('---------------------------Running Inferenece---------------------------')
-        #evaluator.percent = classifier_threshold
+        evaluator.percent = classifier_threshold
         test_loss, test_metrics = inference(testSet, model, criterion, 
                                             evaluator, metrics,
                                             device, opt.batch_size)
@@ -161,4 +161,4 @@ if __name__ == "__main__":
 
         print('Test loss: {:.4f}'.format(test_loss))
         print('Test metrics: {}'.format(test_metrics))
-        #print('Classifier thresholds: ',classifier_threshold)
+        print('Classifier thresholds: ',classifier_threshold)
