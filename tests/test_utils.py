@@ -1,6 +1,6 @@
-from scr.utils import *
-from scr.models import BertMLPClassifier
-from scr.dataset import SentenceLabelDataset
+from src.utils import *
+from src.models import BertMLPClassifier
+from src.dataset import SentenceLabelDataset
 
 if torch.cuda.is_available():
     device = torch.device('cuda')

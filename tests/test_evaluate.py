@@ -1,4 +1,4 @@
-from scr.evaluate import MultiLabelEvaluator
+from src.evaluate import MultiLabelEvaluator
 import torch
 import math
 
