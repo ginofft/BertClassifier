@@ -557,6 +557,226 @@
                 "position",
                 "education"
             ]
+        ],
+        [
+            "You are looking for a full-time software engineering position in the San Francisco Bay Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a part-time retail sales associate position in the New York City metropolitan area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a full-time management consulting position in the Chicago metropolitan area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a part-time nursing position in a hospital in the Greater Los Angeles Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a full-time legal associate position in the Greater Boston Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a part-time chef position in a restaurant in the Greater Miami Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a full-time cashier position in a grocery store in the Greater Seattle Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a part-time marketing coordinator position in the Greater Berlin Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a full-time financial analyst position in the Greater Tokyo Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a part-time news reporter position in the Greater Sydney Area.",
+            [
+                "location",
+                "position",
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a software engineering position that pays around $70,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a marketing manager position that pays around $120,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a finance director position that pays around $200,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a journalism position that pays around $40,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a human resources director position that pays around $150,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for an entry-level teaching position that pays around $45,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a data analyst position that pays around $80,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a customer service representative position that pays around $35,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a graphic designer position that pays around $50,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a sales representative position that pays around $60,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a web developer position that pays around $90,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a project manager position that pays around $100,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a social media manager position that pays around $55,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a human resources generalist position that pays around $70,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a software development manager position that pays around $150,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a marketing coordinator position that pays around $45,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a business analyst position that pays around $85,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a copywriter position that pays around $60,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a product manager position that pays around $120,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a customer success manager position that pays around $75,000 per year.",
+            [
+                "position",
+                "salary"
+            ]
         ]
     ]
 }
