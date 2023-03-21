@@ -777,6 +777,418 @@
                 "position",
                 "salary"
             ]
+        ],
+        [
+            "You have experience in Java programming and software development, and are looking for a job as a Java Developer, Software Engineer, or Software Developer.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software developer with experience in Python programming, web development, and database management.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a data analyst with experience in SQL, data visualization, and statistical analysis.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software engineer with experience in C++ programming, software architecture, and project management.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a web developer with experience in HTML, CSS, and JavaScript programming, and web design.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a project manager with experience in Agile methodology, team management, and project planning.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software tester with experience in test automation, test planning, and test case design.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a technical writer with experience in technical documentation, content management, and editing.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a business analyst with experience in requirements gathering, process improvement, and data analysis.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a network administrator with experience in network security, network design, and network troubleshooting.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a database administrator with experience in database design, database security, and database performance tuning.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a system administrator with experience in system administration, system security, and system performance tuning.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software architect with experience in software design patterns, software development methodologies, and software testing.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software development manager with experience in software development life cycle, team management, and software quality assurance.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software quality assurance engineer with experience in test automation, test planning, and test case design.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You are a software support engineer with experience in customer support, technical support, and software troubleshooting.",
+            [
+                "position",
+                "skillset"
+            ]
+        ],
+        [
+            "You have a high school diploma and are looking for an entry-level job.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have an associate\u2019s degree and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a bachelor\u2019s degree and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a master\u2019s degree and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a PhD and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a law degree and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a medical degree and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a degree in graphic design and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a degree in journalism and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have a degree in psychology and are looking for a job in your field.",
+            [
+                "education"
+            ]
+        ],
+        [
+            "You have experience in Java programming and software development.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in Python programming, web development, and database management.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in SQL, data visualization, and statistical analysis.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in C++ programming, software architecture, and project management.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in HTML, CSS, and JavaScript programming, and web design.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in Agile methodology, team management, and project planning.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in test automation, test planning, and test case design.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in technical documentation, content management, and editing.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in requirements gathering, process improvement, and data analysis.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in network security, network design, and network troubleshooting.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in database design, database security, and database performance tuning.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in system administration, system security, and system performance tuning.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in software design patterns, software development methodologies, and software testing.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in software development life cycle, team management, and software quality assurance.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in customer support, technical support, and software troubleshooting.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in data entry, data analysis, and data management.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in social media marketing, content creation, and digital advertising.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in sales, customer service, and account management.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in project management, team leadership, and strategic planning.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You have experience in graphic design, video editing, and multimedia production.",
+            [
+                "skillset"
+            ]
+        ],
+        [
+            "You are looking for a job in London.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Paris.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Berlin.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Tokyo.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Sydney.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Toronto.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Vancouver.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Melbourne.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Montreal.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Auckland.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Amsterdam.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Dublin.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Madrid.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Barcelona.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Rome.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Milan.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Munich.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Charlotte.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in San Jose.",
+            [
+                "location"
+            ]
+        ],
+        [
+            "You are looking for a job in Denver.",
+            [
+                "location"
+            ]
         ]
     ]
 }
