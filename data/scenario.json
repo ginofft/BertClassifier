@@ -1189,6 +1189,258 @@
             [
                 "location"
             ]
+        ],
+        [
+            "You are interested in working as a software engineer.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a data analyst.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are seeking a position as a marketing manager.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are searching for a job as a sales representative.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a customer service representative.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are interested in a job as a project manager.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are seeking a position as a human resources manager.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a financial analyst.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are interested in a job as a graphic designer.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a web developer.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are interested in a job as a social media manager.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a content writer.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are interested in a job as a product manager.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a business analyst.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are seeking a position as a supply chain manager.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a logistics coordinator.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are interested in a job as a network administrator.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a systems analyst.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are interested in a job as a database administrator.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job as a cybersecurity analyst.",
+            [
+                "position"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u20ac85,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a58,000,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a3100,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of $60,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u20ac35,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a59,000,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a380,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u20ac60,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of $70,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a57,000,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a350,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u20ac40,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of $120,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a510,000,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a390,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u20ac30,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of $80,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a56,000,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u00a370,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a job with a salary of \u20ac75,000 per year.",
+            [
+                "salary"
+            ]
+        ],
+        [
+            "You are looking for a full-time job",
+            [
+                "employment_type"
+            ]
+        ],
+        [
+            "You are looking for a part-time job",
+            [
+                "employment_type"
+            ]
         ]
     ]
 }
