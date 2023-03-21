@@ -94,308 +94,468 @@
             "You are a software engineer with experience in Java and are looking for software engineering positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a data analyst with experience in SQL and Python and are looking for data analyst positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a project manager with experience in Agile methodologies and are looking for project management positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a graphic designer with experience in Adobe Creative Suite and are looking for graphic design positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a sales representative with experience in B2B sales and are looking for sales positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a customer service representative with experience in call centers and are looking for customer service positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a marketing specialist with experience in social media marketing and are looking for marketing positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a human resources specialist with experience in recruiting and are looking for human resources positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a teacher with experience in teaching English as a second language and are looking for teaching positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are a software developer with experience in Python and are looking for software development positions.",
             [
                 "skillset",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a software engineering position that pays between $100,000 and $120,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a data analyst position that pays between $80,000 and $100,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a project management position that pays between $90,000 and $110,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a graphic design position that pays between $60,000 and $80,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a sales position that pays between $70,000 and $90,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a customer service position that pays between $40,000 and $60,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a marketing position that pays between $80,000 and $100,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a human resources position that pays between $70,000 and $90,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a teaching position that pays between $40,000 and $60,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a software development position that pays between $90,000 and $110,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a software engineering position that pays between \u20ac80,000 and \u20ac100,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a data analyst position that pays between \u00a360,000 and \u00a380,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a project management position that pays between \u00a510,000,000 and \u00a512,000,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a graphic design position that pays between \u20ac50,000 and \u20ac70,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a sales position that pays between \u00a57,000,000 and \u00a59,000,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a customer service position that pays between \u20ac30,000 and \u20ac50,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a marketing position that pays between \u00a370,000 and \u00a390,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a human resources position that pays between \u00a58,000,000 and \u00a510,000,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a teaching position that pays between \u20ac30,000 and \u20ac50,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a software development position that pays between \u00a380,000 and \u00a3100,000 per year.",
             [
                 "salary",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a software engineer.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a part-time job as a customer service representative.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a part-time job as a retail sales associate.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a marketing manager.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a civil engineer.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a part-time job as a delivery driver.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a part-time job as a cashier.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a project manager.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a data analyst.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a part-time job as a tutor.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a graphic designer.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a human resources manager.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a part-time job as a receptionist.",
             [
                 "employment_type",
-                "postion"
+                "position"
             ]
         ],
         [
             "You are looking for a full-time job as a financial analyst.",
             [
                 "employment_type",
-                "postion"
+                "position"
+            ]
+        ],
+        [
+            "You are a recent college graduate with a degree in computer science and are looking for a job as a software engineer in San Francisco.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a high school graduate with a few years of experience working in retail and are looking for a job as a sales associate in New York City.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a receptionist in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent immigrant with a degree in finance and are looking for a job as an accountant in Chicago.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent retiree with a degree in education and are looking for a part-time job as a tutor in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent college graduate with a degree in marketing and are looking for a job as a marketing coordinator in Los Angeles.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a high school graduate with a few years of experience working in food service and are looking for a job as a server in Miami.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a cashier in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent retiree with a degree in nursing and are looking for a part-time job as a home health aide in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent immigrant with a degree in engineering and are looking for a job as a mechanical engineer in Houston.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent college graduate with a degree in journalism and are looking for a job as a reporter in Washington D.C.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a high school graduate with a few years of experience working in customer service and are looking for a job as a call center representative in Chicago.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a dog walker in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent immigrant with a degree in computer science and are looking for a job as a software developer in San Diego.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent retiree with a degree in business and are looking for a part-time job as a consultant in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent college graduate with a degree in psychology and are looking for a job as a research assistant in Boston.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a high school graduate with a few years of experience working in construction and are looking for a job as a carpenter in Seattle.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a nanny in your local area.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent immigrant with a degree in biology and are looking for a job as a lab technician in New Orleans.",
+            [
+                "location",
+                "position",
+                "education"
+            ]
+        ],
+        [
+            "You are a recent retiree with a degree in art and are looking for a part-time job as a museum docent in your local area.",
+            [
+                "location",
+                "position",
+                "education"
             ]
         ]
     ]
