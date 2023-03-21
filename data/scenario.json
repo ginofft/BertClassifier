@@ -399,7 +399,7 @@
             ]
         ],
         [
-            "You are a recent college graduate with a degree in computer science and are looking for a job as a software engineer in San Francisco.",
+            "You are a recent college graduate with a degree in computer science looking for a software engineering position in San Francisco.",
             [
                 "location",
                 "position",
@@ -407,7 +407,7 @@
             ]
         ],
         [
-            "You are a high school graduate with a few years of experience working in retail and are looking for a job as a sales associate in New York City.",
+            "You are a high school graduate with no college degree looking for a retail sales associate position in New York City.",
             [
                 "location",
                 "position",
@@ -415,7 +415,7 @@
             ]
         ],
         [
-            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a receptionist in your local area.",
+            "You are a recent MBA graduate looking for a management consulting position in Chicago.",
             [
                 "location",
                 "position",
@@ -423,7 +423,7 @@
             ]
         ],
         [
-            "You are a recent immigrant with a degree in finance and are looking for a job as an accountant in Chicago.",
+            "You are a licensed nurse looking for a nursing position in a hospital in Los Angeles.",
             [
                 "location",
                 "position",
@@ -431,7 +431,7 @@
             ]
         ],
         [
-            "You are a recent retiree with a degree in education and are looking for a part-time job as a tutor in your local area.",
+            "You are a recent law school graduate looking for a legal associate position in Washington D.C.",
             [
                 "location",
                 "position",
@@ -439,7 +439,7 @@
             ]
         ],
         [
-            "You are a recent college graduate with a degree in marketing and are looking for a job as a marketing coordinator in Los Angeles.",
+            "You are a recent culinary school graduate looking for a chef position in a restaurant in Miami.",
             [
                 "location",
                 "position",
@@ -447,7 +447,7 @@
             ]
         ],
         [
-            "You are a high school graduate with a few years of experience working in food service and are looking for a job as a server in Miami.",
+            "You are a recent high school graduate looking for a part-time cashier position in a grocery store in Seattle.",
             [
                 "location",
                 "position",
@@ -455,7 +455,7 @@
             ]
         ],
         [
-            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a cashier in your local area.",
+            "You are a recent college graduate with a degree in marketing looking for a marketing coordinator position in Boston.",
             [
                 "location",
                 "position",
@@ -463,7 +463,7 @@
             ]
         ],
         [
-            "You are a recent retiree with a degree in nursing and are looking for a part-time job as a home health aide in your local area.",
+            "You are a recent college graduate with a degree in finance looking for a financial analyst position in Houston.",
             [
                 "location",
                 "position",
@@ -471,7 +471,7 @@
             ]
         ],
         [
-            "You are a recent immigrant with a degree in engineering and are looking for a job as a mechanical engineer in Houston.",
+            "You are a recent college graduate with a degree in journalism looking for a news reporter position in Atlanta.",
             [
                 "location",
                 "position",
@@ -479,7 +479,7 @@
             ]
         ],
         [
-            "You are a recent college graduate with a degree in journalism and are looking for a job as a reporter in Washington D.C.",
+            "You are a recent college graduate with a degree in computer science looking for a software engineering position in Tokyo.",
             [
                 "location",
                 "position",
@@ -487,7 +487,7 @@
             ]
         ],
         [
-            "You are a high school graduate with a few years of experience working in customer service and are looking for a job as a call center representative in Chicago.",
+            "You are a high school graduate with no college degree looking for a retail sales associate position in Paris.",
             [
                 "location",
                 "position",
@@ -495,7 +495,7 @@
             ]
         ],
         [
-            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a dog walker in your local area.",
+            "You are a recent MBA graduate looking for a management consulting position in London.",
             [
                 "location",
                 "position",
@@ -503,7 +503,7 @@
             ]
         ],
         [
-            "You are a recent immigrant with a degree in computer science and are looking for a job as a software developer in San Diego.",
+            "You are a licensed nurse looking for a nursing position in a hospital in Sydney.",
             [
                 "location",
                 "position",
@@ -511,7 +511,7 @@
             ]
         ],
         [
-            "You are a recent retiree with a degree in business and are looking for a part-time job as a consultant in your local area.",
+            "You are a recent law school graduate looking for a legal associate position in Toronto.",
             [
                 "location",
                 "position",
@@ -519,7 +519,7 @@
             ]
         ],
         [
-            "You are a recent college graduate with a degree in psychology and are looking for a job as a research assistant in Boston.",
+            "You are a recent culinary school graduate looking for a chef position in a restaurant in Rome.",
             [
                 "location",
                 "position",
@@ -527,7 +527,7 @@
             ]
         ],
         [
-            "You are a high school graduate with a few years of experience working in construction and are looking for a job as a carpenter in Seattle.",
+            "You are a recent high school graduate looking for a part-time cashier position in a grocery store in Vancouver.",
             [
                 "location",
                 "position",
@@ -535,7 +535,7 @@
             ]
         ],
         [
-            "You are a stay-at-home parent with a high school diploma and are looking for a part-time job as a nanny in your local area.",
+            "You are a recent college graduate with a degree in marketing looking for a marketing coordinator position in Berlin.",
             [
                 "location",
                 "position",
@@ -543,7 +543,7 @@
             ]
         ],
         [
-            "You are a recent immigrant with a degree in biology and are looking for a job as a lab technician in New Orleans.",
+            "You are a recent college graduate with a degree in finance looking for a financial analyst position in Singapore.",
             [
                 "location",
                 "position",
@@ -551,7 +551,7 @@
             ]
         ],
         [
-            "You are a recent retiree with a degree in art and are looking for a part-time job as a museum docent in your local area.",
+            "You are a recent college graduate with a degree in journalism looking for a news reporter position in Sydney.",
             [
                 "location",
                 "position",
