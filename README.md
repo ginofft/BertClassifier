@@ -6,6 +6,7 @@ This repo currently works for two dataset: [CLINC150](https://github.com/clinc/o
 User are recommended to write custom scripts to write your data into `scr.dataset.SentenceLabelDataset`, everything else should works just fine.
 
 Features:
+- Multible LM as backbone: Bert, RoBerta and DistilBert
 - MLP With BCELoss : independent classifier for each classes.
 - A Multi Label evaluator : with an method to get thresholding value that maximize **macro f1**.
 - Dynamic Padding : for faster training and inference.
