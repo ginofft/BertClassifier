@@ -2,21 +2,26 @@ import argparse
 from pathlib import Path
 from typing import List
 import torch
-from transformers import BertTokenizer
+from transformers import BertTokenizer, DistilBertTokenizer
 
 from src.dataset import SentenceLabelDataset
 from src.train import train, inference
-from src.models import BertMLPClassifier
+from src.models import BertMLPClassifier, DistilBertMLPClassifier
 from src.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read_MixSNIPs_file, get_label_set, turn_single_label_to_multilabels
 from src.evaluate import MultiLabelEvaluator
+
+MODEL_MAPPING = {
+    'Bert' : {'model' : BertMLPClassifier , 'tokenizer' : DistilBertTokenizer.from_pretrained('bert-base-uncased')},
+    'DistilBert' : {'model' : DistilBertMLPClassifier, 'tokenizer' : DistilBertTokenizer.from_pretrained('distilbert-base-uncased')}
+}
 
 parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
 
 #model, optimizer and criterion parameters
 parser.add_argument('--lr', type = float, default=1e-6, help='learning rate')
-parser.add_argument('--bertVariation', type=str, default='bert-base-uncased',
-                    help='pretrained Bert checkpoint on HuggingFace')
-
+parser.add_argument('--encoder', type=str, default='Bert',
+                    help='which text encoder to use',
+                    choices= ['Bert', 'DistillBert', 'RoBerta'])
 #training parameters
 parser.add_argument('--mode', type=str, default='train', 
                     help='training mode or inference mode',
@@ -77,11 +82,15 @@ if __name__ == "__main__":
         testList = read_MixSNIPs_file(testPath)
     
     labelSet = get_label_set(trainList, valList, testList)
-    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
-    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
-    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = BertTokenizer.from_pretrained(opt.bertVariation))
 
-    model = BertMLPClassifier(checkpoint = opt.bertVariation, nClasses=trainSet.nClasses)
+    tokenizer = MODEL_MAPPING[opt.encoder]['tokenizer']
+
+    trainSet = SentenceLabelDataset(trainList, labelSet, tokenizer = tokenizer)
+    valSet = SentenceLabelDataset(valList, labelSet, tokenizer = tokenizer)
+    testSet = SentenceLabelDataset(testList, labelSet, tokenizer = tokenizer)
+
+    model = MODEL_MAPPING[opt.encoder]['model']
+    model = model(nClasses=trainSet.nClasses)
     model.to(device)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr = opt.lr)
