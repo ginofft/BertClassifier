@@ -99,6 +99,7 @@ if __name__ == "__main__":
     metrics = opt.metrics
     evaluator = MultiLabelEvaluator()
     if opt.mode.lower() == 'train':
+        print('---------------------------Training---------------------------')
         startEpoch = 0
         val_loss = float('inf')
         train_loss = float('inf')
