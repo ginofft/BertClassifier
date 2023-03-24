@@ -2,17 +2,18 @@ import argparse
 from pathlib import Path
 from typing import List
 import torch
-from transformers import BertTokenizer, DistilBertTokenizer
+from transformers import BertTokenizer, DistilBertTokenizer, RobertaTokenizer
 
 from src.dataset import SentenceLabelDataset
 from src.train import train, inference
-from src.models import BertMLPClassifier, DistilBertMLPClassifier
+from src.models import BertMLPClassifier, DistilBertMLPClassifier, RoBertaMLPClassifier
 from src.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read_MixSNIPs_file, get_label_set, turn_single_label_to_multilabels
 from src.evaluate import MultiLabelEvaluator
 
 MODEL_MAPPING = {
     'Bert' : {'model' : BertMLPClassifier , 'tokenizer' : BertTokenizer.from_pretrained('bert-base-uncased')},
-    'DistilBert' : {'model' : DistilBertMLPClassifier, 'tokenizer' : DistilBertTokenizer.from_pretrained('distilbert-base-uncased')}
+    'DistilBert' : {'model' : DistilBertMLPClassifier, 'tokenizer' : DistilBertTokenizer.from_pretrained('distilbert-base-uncased')},
+    'RoBerta' : {'model' : RoBertaMLPClassifier, 'tokenizer' : RobertaTokenizer.from_pretrained('roberta-base')}
 }
 
 parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
