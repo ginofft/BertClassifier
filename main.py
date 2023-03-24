@@ -21,7 +21,7 @@ parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
 parser.add_argument('--lr', type = float, default=1e-6, help='learning rate')
 parser.add_argument('--encoder', type=str, default='Bert',
                     help='which text encoder to use',
-                    choices= ['Bert', 'DistillBert', 'RoBerta'])
+                    choices= ['Bert', 'DistilBert', 'RoBerta'])
 #training parameters
 parser.add_argument('--mode', type=str, default='train', 
                     help='training mode or inference mode',
