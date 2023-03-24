@@ -11,7 +11,7 @@ from src.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read
 from src.evaluate import MultiLabelEvaluator
 
 MODEL_MAPPING = {
-    'Bert' : {'model' : BertMLPClassifier , 'tokenizer' : DistilBertTokenizer.from_pretrained('bert-base-uncased')},
+    'Bert' : {'model' : BertMLPClassifier , 'tokenizer' : BertTokenizer.from_pretrained('bert-base-uncased')},
     'DistilBert' : {'model' : DistilBertMLPClassifier, 'tokenizer' : DistilBertTokenizer.from_pretrained('distilbert-base-uncased')}
 }
 
