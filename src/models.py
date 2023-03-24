@@ -41,7 +41,7 @@ class DistilBertMLPClassifier(nn.Module):
     Attributes
     ----------
     """
-    def _init_(self, nClasses = 151, dropout =0.3):
+    def __init__(self, nClasses = 151, dropout =0.3):
         super(DistilBertMLPClassifier, self).__init__()
 
         self.nClasses = nClasses
