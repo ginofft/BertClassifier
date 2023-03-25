@@ -67,6 +67,18 @@ class RoBertaMLPClassifier(nn.Module):
 
     Attributes
     ----------
+    nClasses : int
+        no. classes
+    roberta : RobertaModel
+        pretrained roberta model
+    dropout : torch.nn.Dropout
+        dropout layer
+    pre_classifier : torch.nn.Linear
+        linear layer before classifier 
+    tanh : torch.nn.Tanh 
+        tanh activation fuction for pre classifier
+    classifier : torch.nn.Linear
+        classifier layer
     """
     def __init__(self, nClasses = 151, dropout = 0.3):
         super(RoBertaMLPClassifier, self).__init__()
