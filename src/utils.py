@@ -20,6 +20,8 @@ def load_checkpoint(path, model, optimizer = None):
     classifier_threshold = state['classifier_threshold']
 
     model.load_state_dict(state['model'])
+    if state['label_set'] != None:
+        model.labelSet = state['label_set']
     if optimizer !=  None:
         optimizer.load_state_dict(state['optimizer'])
         

@@ -16,9 +16,12 @@ class BertMLPClassifier(nn.Module):
         relu layer
     """
 
-    def __init__(self, nClasses = 151, dropout = 0.3):
+    def __init__(self, labelSet = None, dropout = 0.3):
         super(BertMLPClassifier, self).__init__()
-        self.nClasses = nClasses
+        if labelSet is None:
+            raise Exception("Empty label set, please provide a list of labels")
+        self.labelSet = labelSet
+        self.nClasses = len(self.labelSet)
 
         self.bert = BertModel.from_pretrained('bert-base-uncased')
         self.dropout = nn.Dropout(dropout)
@@ -41,10 +44,13 @@ class DistilBertMLPClassifier(nn.Module):
     Attributes
     ----------
     """
-    def __init__(self, nClasses = 151, dropout =0.3):
+    def __init__(self, labelSet = None, dropout =0.3):
         super(DistilBertMLPClassifier, self).__init__()
+        if labelSet is None:
+            raise Exception("Empty label set, please provide a list of labels")
+        self.labelSet = labelSet
+        self.nClasses = len(self.labelSet)
 
-        self.nClasses = nClasses
         self.distilBert = DistilBertModel.from_pretrained('distilbert-base-uncased')
         self.pre_classifier = nn.Linear(self.distilBert.config.hidden_size
                                         ,self.distilBert.config.hidden_size)
@@ -80,10 +86,13 @@ class RoBertaMLPClassifier(nn.Module):
     classifier : torch.nn.Linear
         classifier layer
     """
-    def __init__(self, nClasses = 151, dropout = 0.3):
+    def __init__(self, labelSet = None, dropout = 0.3):
         super(RoBertaMLPClassifier, self).__init__()
+        if labelSet is None:
+            raise Exception("Empty label set, please provide a list of labels")
+        self.labelSet = labelSet
+        self.nClasses = len(self.labelSet)
 
-        self.nClasses = nClasses
         self.roberta = RobertaModel.from_pretrained('roberta-base')
         self.pre_classifier = nn.Linear(self.roberta.config.hidden_size,
                                         self.roberta.config.hidden_size)

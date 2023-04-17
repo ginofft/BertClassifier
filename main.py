@@ -91,7 +91,7 @@ if __name__ == "__main__":
     testSet = SentenceLabelDataset(testList, labelSet, tokenizer = tokenizer)
 
     model = MODEL_MAPPING[opt.encoder]['model']
-    model = model(nClasses=trainSet.nClasses)
+    model = model(labelSet = labelSet)
     model.to(device)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr = opt.lr)
@@ -137,6 +137,7 @@ if __name__ == "__main__":
                     'train_loss' : epoch_train_loss,
                     'val_loss' : epoch_val_loss,
                     'classifier_threshold': optimal_val_thresholds,
+                    'label_set' : model.labelSet,
                     'model' : model.state_dict(),
                     'optimizer' : optimizer.state_dict(),
                     }, Path(opt.savePath), 'best.pth.tar')
@@ -147,6 +148,7 @@ if __name__ == "__main__":
                     'train_loss' : epoch_train_loss,
                     'val_loss' : epoch_val_loss,
                     'classifier_threshold': optimal_val_thresholds,
+                    'label_set' : model.labelSet,
                     'model' : model.state_dict(),
                     'optimizer' : optimizer.state_dict(),
                     }, Path(opt.savePath), 'epoch{}.pth.tar'.format(epoch))
