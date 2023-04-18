@@ -23,9 +23,8 @@ Features:
 To train:
 ```
 python main.py --mode train --batch_size 512 \
-    --datasetFormat CLINC150 \
     --nEpochs 500 --saveEvery 10 \
-    --datasetPath data/CLINC150/data_oos_plus.json \
+    --datasetPath data/CLINC150
     --metrics 'marco f1' \
     --savePath output
 ```
@@ -33,8 +32,7 @@ python main.py --mode train --batch_size 512 \
 To inference:
 ```
 python main.py --mode inference \
-    --datasetFormat CLINC150 \
-    --datasetPath data/data_oos_plus.json \
+    --datasetPath data/CLINC150 \
     --metrics 'macro f1' \
     --loadPath output/best.pth.tar
 ```
