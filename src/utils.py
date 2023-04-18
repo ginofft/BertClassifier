@@ -31,53 +31,10 @@ def load_checkpoint(path, model, optimizer = None):
     return epoch, train_loss, val_loss, classifier_threshold
     #return epoch, train_loss, val_loss
 
-def read_MixSNIPs_file(filePath) -> List[Tuple[str, List[str]]]:
-    """read MixSNIPs file into a list of tuple, whose element is: sentence, [label]
-
-    Return
-    -------
-    list : List[Tuple[str, List[str]]]
-        A list of tuple, whose are: a sentence and a list of labels
-    """
-    texts, slots, intents = [], [], []
-    text, slot = [], []
-    with open(filePath, 'r', encoding="utf8") as fr:
-        for line in fr.readlines():
-            items = line.strip().split()
-            if len(items) == 1:
-                texts.append(text)
-                slots.append(slot)
-                if "/" not in items[0]:
-                    intents.append(items)
-                else:
-                    new = items[0].split("/")
-                    intents.append([new[1]])
-                # clear buffer lists.
-                text, slot = [], []
-            elif len(items) == 2:
-                text.append(items[0].strip())
-                slot.append(items[1].strip())
-    sentences = []
-    labels = []
-    space = ' '
-    for i, txt in enumerate(texts):
-        sentences.append(space.join(txt))
-        
-        intent_instance = intents[i][0]
-        if '#' in intent_instance:
-            label = intent_instance.split('#')
-        else:
-            label = [intent_instance]
-        labels.append(label)
-    return list(zip(sentences, labels))
-
-def read_CLINC150_file(filePath):
-    """Return a dictionary from json file, where each keys contain a list.
-    """
-    with open(filePath, 'r') as f:
-        dataDict = json.load(f)
-    print('The keys found in this json are: ', dataDict.keys())
-    return dataDict
+def read_json(path):
+    with open(path, 'r') as f:
+        data = json.load(f)
+    return data
 
 def get_label_set(*lists):
     """Return a List[str] of label, used to map 'label' into indices.
@@ -89,11 +46,6 @@ def get_label_set(*lists):
                 if label not in labelSet:
                     labelSet.append(label)
     return labelSet
-
-def turn_single_label_to_multilabels(*lists):
-    for l in lists:
-        for element in l:
-            element[1] = [element[1]]
 
 class Predictor():
     """This class contains the predictor given a classifier, its tokenizer and a labelSet
@@ -181,3 +133,57 @@ class Predictor():
         for preds in predsMatrix:
             results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
         return results  
+    
+#---------------------------------------------------Depricated--------------------------------------------------
+def read_MixSNIPs_file(filePath) -> List[Tuple[str, List[str]]]:
+    """read MixSNIPs file into a list of tuple, whose element is: sentence, [label]
+
+    Return
+    -------
+    list : List[Tuple[str, List[str]]]
+        A list of tuple, whose are: a sentence and a list of labels
+    """
+    texts, slots, intents = [], [], []
+    text, slot = [], []
+    with open(filePath, 'r', encoding="utf8") as fr:
+        for line in fr.readlines():
+            items = line.strip().split()
+            if len(items) == 1:
+                texts.append(text)
+                slots.append(slot)
+                if "/" not in items[0]:
+                    intents.append(items)
+                else:
+                    new = items[0].split("/")
+                    intents.append([new[1]])
+                # clear buffer lists.
+                text, slot = [], []
+            elif len(items) == 2:
+                text.append(items[0].strip())
+                slot.append(items[1].strip())
+    sentences = []
+    labels = []
+    space = ' '
+    for i, txt in enumerate(texts):
+        sentences.append(space.join(txt))
+        
+        intent_instance = intents[i][0]
+        if '#' in intent_instance:
+            label = intent_instance.split('#')
+        else:
+            label = [intent_instance]
+        labels.append(label)
+    return list(zip(sentences, labels))
+
+def read_CLINC150_file(filePath):
+    """Return a dictionary from json file, where each keys contain a list.
+    """
+    with open(filePath, 'r') as f:
+        dataDict = json.load(f)
+    print('The keys found in this json are: ', dataDict.keys())
+    return dataDict
+
+def turn_single_label_to_multilabels(*lists):
+    for l in lists:
+        for element in l:
+            element[1] = [element[1]]

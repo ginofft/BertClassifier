@@ -7,7 +7,7 @@ from transformers import BertTokenizer, DistilBertTokenizer, RobertaTokenizer
 from src.dataset import SentenceLabelDataset
 from src.train import train, inference
 from src.models import BertMLPClassifier, DistilBertMLPClassifier, RoBertaMLPClassifier
-from src.utils import save_checkpoint, load_checkpoint, read_CLINC150_file, read_MixSNIPs_file, get_label_set, turn_single_label_to_multilabels
+from src.utils import save_checkpoint, load_checkpoint, read_json, get_label_set
 from src.evaluate import MultiLabelEvaluator
 
 MODEL_MAPPING = {
@@ -44,9 +44,6 @@ parser.add_argument('--metrics', nargs = '+',
                     help='The evaluation metric for multi-label classification')
 
 #Data paremters
-parser.add_argument('--dataFormat', type=str, default = 'MixSNIPs', 
-                    help="Input data format, currently support CLINC150 and MixSNIPs", 
-                    choices=['CLINC150', 'MixSNIPs'])
 parser.add_argument('--batch_size', type=int, default = 16, help='batch size')
 parser.add_argument('--datasetPath', type = str, default='',
                     help='Path to dataset json')
@@ -66,21 +63,12 @@ if __name__ == "__main__":
         device = torch.device('cpu')
         print('No GPU found, running on CPU!!')
 
-    if opt.dataFormat.lower() == 'clinc150':
-        dataDict = read_CLINC150_file(opt.datasetPath)
-        trainList = dataDict['train'] + dataDict['oos_train']
-        valList = dataDict['val'] + dataDict['oos_val']
-        testList = dataDict['test'] + dataDict['oos_test']
-        turn_single_label_to_multilabels(trainList, valList, testList)
-    
-    if opt.dataFormat.lower() == 'mixsnips':
-        trainPath = opt.datasetPath + '/train.txt'
-        valPath = opt.datasetPath + '/dev.txt'
-        testPath = opt.datasetPath + '/test.txt'
-
-        trainList = read_MixSNIPs_file(trainPath)
-        valList = read_MixSNIPs_file(valPath)
-        testList = read_MixSNIPs_file(testPath)
+    if opt.datasetPath == '':
+        raise Exception('Please provide a path to the dataset')
+    else:
+        trainList = read_json(opt.datasetPath + '/train.json')
+        valList = read_json(opt.datasetPath + '/val.json')
+        testList = read_json(opt.datasetPath + '/test.json')
     
     labelSet = get_label_set(trainList, valList, testList)
 
@@ -110,10 +98,6 @@ if __name__ == "__main__":
                                                     Path(opt.loadPath),
                                                     model,
                                                     optimizer)
-            # startEpoch, train_loss, val_loss = load_checkpoint(
-            #                                 Path(opt.loadPath),
-            #                                 model,
-            #                                 optimizer)
         
         for epoch in range(startEpoch+1, opt.nEpochs+1):
             epoch_train_loss = train(trainSet, model, 
@@ -158,10 +142,6 @@ if __name__ == "__main__":
                                                                     Path(opt.loadPath),
                                                                     model,
                                                                     optimizer)
-            # startEpoch, train_loss, val_loss = load_checkpoint(
-            #                                         Path(opt.loadPath),
-            #                                         model,
-            #                                         optimizer)
         else:
             raise Exception('Please point to a model using ---loadPath')
 
@@ -173,5 +153,5 @@ if __name__ == "__main__":
         metric_results = {key : test_metrics[key] for key in metrics}
 
         print('Test loss: {:.4f}'.format(test_loss))
-        print('Test metrics: {}'.format(test_metrics))
+        print('Test metrics: {}'.format(metric_results))
         print('Classifier thresholds: ',classifier_threshold)
