@@ -16,7 +16,7 @@ MODEL_MAPPING = {
     'RoBerta' : {'model' : RoBertaMLPClassifier, 'tokenizer' : RobertaTokenizer.from_pretrained('roberta-base')}
 }
 
-parser = argparse.ArgumentParser(description='Bert-Sentence-Classifier')
+parser = argparse.ArgumentParser(description='Sentence-Classifier')
 
 #model, optimizer and criterion parameters
 parser.add_argument('--lr', type = float, default=1e-6, help='learning rate')
