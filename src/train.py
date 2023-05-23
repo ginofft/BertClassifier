@@ -41,8 +41,9 @@ def train(
         input_ids = data['input_ids'].to(device)
         attention_masks = data['attention_mask'].to(device)
         targets = data['labels'].to(device)
-
         embeddings = model(input_ids, attention_masks)
+
+        optimizer.zero_grad()
         loss = criterion(embeddings, targets).to(device)
         loss.backward()
         optimizer.step()  
