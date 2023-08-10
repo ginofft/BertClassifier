@@ -20,10 +20,7 @@ class SentenceLabelDataset(Dataset):
     tokenizer : BertTokenizer
         Bert pre-trained tokenizer, inherits from Huggingface's PretrainedTokenizer
     tokenized_dataset : List[Dict[str, List[int]]]
-        tokenized dataset, return as a list of dictionary with three keys:
-        - input_ids : token's  idex
-        - attention_mask : attention mask to feed into transformer
-        - token_type_ids : not used for our purpose
+        tokenized dataset, return as a list of dictionary with three keys: input_ids - token's  idex, attention_mask - attention mask to feed into transformer, token_type_ids - not used for our purpose
     """
 
     def __init__(self, listData, labelSet, tokenizer=BertTokenizer.from_pretrained('bert-base-uncased')):
