@@ -41,15 +41,15 @@ def write_json(filename, data):
         json.dump(data, file, indent=4)
 
 def get_label_set(*lists):
-    """Return a Dict[int] of label, used to map 'label' into indices.
-    """
-    labelSet = {}
-    for currentList in lists:
-        for sentence, labels in currentList:
-            for label in labels:
-                if label not in labelSet:
-                    labelSet.append(label)
-    return labelSet
+    label_set = {}
+    count = 0
+    for current_lst in lists:
+        for dict in current_lst:
+            for labels in dict['label']:
+                if labels not in label_set:
+                    label_set[labels] = count 
+                    count += 1
+    return label_set
 
 class Predictor():
     """This class contains the predictor given a classifier, its tokenizer and a labelSet
