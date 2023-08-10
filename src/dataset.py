@@ -11,12 +11,12 @@ class SentenceLabelDataset(Dataset):
 
     Attributes
     ----------
-    labelSet : List[str]
-        A list whose elements are our classes
+    labelSet : Dict{str : int}
+        A dictionary with key being the text label and value being the indices in classifier
     texts : List[str]
         A list whose elements is the sentence
-    labels : List[List[int]]
-        A list whose element is the index of that class inside labelSet
+    labels : List[List[str]]
+        A list whose elements is a list of the classes associated with this the sentence
     tokenizer : BertTokenizer
         Bert pre-trained tokenizer, inherits from Huggingface's PretrainedTokenizer
     tokenized_dataset : List[Dict[str, List[int]]]
@@ -50,11 +50,10 @@ class SentenceLabelDataset(Dataset):
         texts = []
         labels = []
         for sentence, labels_instance in listData:
-            texts.append(sentence) 
-            
             label_indices = []
             for label in labels_instance:
-                label_indices.append(self.labelSet.index(label))
+                label_indices.append(label)
+            texts.append(sentence)     
             labels.append(label_indices)
         return texts, labels
     
@@ -85,10 +84,10 @@ class SentenceLabelDataset(Dataset):
         """
         return{
             "text": self.texts[idx],
-            "class": [self.labelSet[ind] for ind in self.labels[idx]],
+            "class": self.labels[idx],
             "input_ids": self.tokenized_dataset['input_ids'][idx],
             "attention_mask": self.tokenized_dataset['attention_mask'][idx],
-            "label": self.labels[idx],
+            "label": [self.labelSet[key] for key in self.labels[idx]]
         }
 @dataclass
 class SmartCollator():

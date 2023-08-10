@@ -36,10 +36,14 @@ def read_json(path):
         data = json.load(f)
     return data
 
+def write_json(filename, data):
+    with open(filename, "w") as file:
+        json.dump(data, file, indent=4)
+
 def get_label_set(*lists):
-    """Return a List[str] of label, used to map 'label' into indices.
+    """Return a Dict[int] of label, used to map 'label' into indices.
     """
-    labelSet = []
+    labelSet = {}
     for currentList in lists:
         for sentence, labels in currentList:
             for label in labels:
