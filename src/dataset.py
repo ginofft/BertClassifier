@@ -28,10 +28,10 @@ class SentenceLabelDataset(Dataset):
 
         Parameters
         ----------
-        listData : List[Tuple[str, List[str]]]
-            A list whose elements are in the form: [text, [labels]]
-        labelSet : List[str]
-            A list whose element are the labels
+        listData : List[Dict]
+            A list whose element are Dictionaries - each with two keys: `dialog` and `label`
+        labelSet : Dict
+            A dictionary with keys being the classes, and value being the classifier's index
         tokenizer : PretrainedTokenizer
             Huggingface's tokenizer
         """
@@ -47,14 +47,14 @@ class SentenceLabelDataset(Dataset):
                         truncation = False)
                         
     def _processList(self, listData):
+        temp_data = listData[0]
+        if ('dialog' not in temp_data) or ('label' not in temp_data):
+            raise ValueError(f"{listData} do not have the correct format")
         texts = []
         labels = []
-        for sentence, labels_instance in listData:
-            label_indices = []
-            for label in labels_instance:
-                label_indices.append(label)
-            texts.append(sentence)     
-            labels.append(label_indices)
+        for data in listData:
+            texts.append(data['dialog'])     
+            labels.append(data['label'])
         return texts, labels
     
     def __len__(self):

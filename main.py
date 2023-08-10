@@ -70,7 +70,7 @@ if __name__ == "__main__":
         valList = read_json(opt.datasetPath + '/val.json')
         testList = read_json(opt.datasetPath + '/test.json')
     
-    labelSet = get_label_set(trainList, valList, testList)
+    labelSet = get_label_set(trainList, valList)
 
     tokenizer = MODEL_MAPPING[opt.encoder]['tokenizer']
 
