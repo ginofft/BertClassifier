@@ -41,15 +41,15 @@ def write_json(filename, data):
         json.dump(data, file, indent=4)
 
 def get_label_set(*lists):
-    """Return a Dict[int] of label, used to map 'label' into indices.
-    """
-    labelSet = {}
-    for currentList in lists:
-        for sentence, labels in currentList:
-            for label in labels:
-                if label not in labelSet:
-                    labelSet.append(label)
-    return labelSet
+    label_set = {}
+    count = 0
+    for current_lst in lists:
+        for dict in current_lst:
+            for labels in dict['label']:
+                if labels not in label_set:
+                    label_set[labels] = count 
+                    count += 1
+    return label_set
 
 class Predictor():
     """This class contains the predictor given a classifier, its tokenizer and a labelSet
@@ -87,6 +87,14 @@ class Predictor():
             raise Exception("Number of model's classifier ({}) differ from length of label set {}"
                             .format(self.model.nClasses, len(labelSet)))
         
+        self.label_lst = self._get_label_list()
+
+    def _get_label_list(self):
+        label_lst = [0] * len(self.labelSet)
+        for k, v in self.labelSet.items():
+            label_lst[v] = k
+        return label_lst
+            
     def get_class(self, texts: List[str]):
         tokenized_texts = self.tokenizer(texts, padding = True, truncation = False, return_tensors = 'pt')
         input_ids = tokenized_texts['input_ids'].to(self.device)
@@ -96,7 +104,7 @@ class Predictor():
         preds = torch.argmax(embedding,dim=1)
         results = []
         for pred in preds:
-            results.append(self.labelSet[pred])
+            results.append(self.label_lst[pred])
         return results
     
     def get_topk_classes(self, texts: List[str], k : int):        
@@ -108,7 +116,7 @@ class Predictor():
         predsMatrix = torch.topk(embedding, dim =1, k = k).indices
         results = []
         for preds in predsMatrix:
-            results.append([self.labelSet[pred] for pred in preds])
+            results.append([self.label_lst[pred] for pred in preds])
         return results
     
     def get_classes_at_percent(self, texts: List[str], p : float):
@@ -120,7 +128,7 @@ class Predictor():
         predsMatrix = torch.where(embedding > p, 1, 0)
         results = []
         for preds in predsMatrix:
-            results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
+            results.append([self.label_lst[pred] for pred in torch.nonzero(preds)])
         return results
 
     def get_classes_based_on_thresholds(self, texts : List[str], thresh : torch.Tensor):
@@ -135,7 +143,7 @@ class Predictor():
         predsMatrix = (embedding > thresh).int()
         results = []
         for preds in predsMatrix:
-            results.append([self.labelSet[pred] for pred in torch.nonzero(preds)])
+            results.append([self.label_lst[pred] for pred in torch.nonzero(preds)])
         return results  
     
 #---------------------------------------------------Depricated--------------------------------------------------
