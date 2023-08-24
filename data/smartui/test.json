@@ -1,548 +1,302 @@
 [
     {
-        "dialog": "Hi! So, I accidentally deleted an important software on my desktop and now I can't work properly. Can you guide me through the Desktop Software Installation Support form?",
+        "dialog": "I cannot access a specific website. Can you check if there is a DNS block in place?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I'm having difficulties with my mobile email access. Can you assist me?",
+        "dialog": "Can you show me how to remove a DNS entry?",
         "label": [
-            "Mobile Email Access"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Can you show me how to access my email on my phone?",
+        "dialog": "I want to create a custom domain for my online store. Can you help me add/update/delete the DNS records?",
         "label": [
-            "Mobile Email Access"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hey, I'm stuck on the Work At Home Request form. Can you provide some guidance?",
+        "dialog": "Hi there! My company recently went through a merger and we need to update the DNS records for our domain. Can you assist us in completing the Add/Update/Delete DNS process?",
         "label": [
-            "Work At Home Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I recently moved into a new apartment and need help with designing a functional home office. Can you offer some guidance on working room setup?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble setting up my working room. Is there any way you can help me out?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm planning a baby shower. Can you help me with some theme ideas?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Can you help me with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you give me a hand with the New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help completing the form for requesting a new virtual machine.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm not sure how to fill out the New Virtual Machine Request. Can you offer some guidance?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hi, I'm in need of assistance with installing software on my desktop. Can you please guide me through the Desktop Software Installation Support process?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I have a major deadline approaching, and I believe I can work more efficiently from the comfort of my home. Can you assist me in completing the Work At Home Request form?",
+        "dialog": "Hello! I'm feeling extremely overwhelmed and stressed today. I think it would be best for me to work from home. Can you help me fill out a Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm experiencing delays in receiving work emails on my mobile device. Can you help me troubleshoot and improve the speed of mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need assistance in completing the firewall rules setup request. Can you help me?",
+        "dialog": "I'm struggling with setting up firewall rules. Can you walk me through the process step by step?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Could you guide me on how to complete the working room setup request?",
+        "dialog": "I accidentally deleted a DNS record for my website and now it's not working properly. Can you help me restore or update the DNS settings?",
         "label": [
-            "Working Room Setup"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I need assistance with the New Virtual Machine Request form. Can you provide support?",
+        "dialog": "Hi there! I'm struggling with my Windows Domain Service Request. Could you provide some help?",
         "label": [
-            "New Virtual Machine Request"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "I recently got a new phone and I need assistance with setting up my work email on it. Can you provide guidance for mobile email access?",
+        "dialog": "Hey, I'm a little lost with the Event Support Request Form and was wondering if you could offer me some assistance?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I need assistance with software installation on my desktop. Can you provide support?",
+        "dialog": "Greetings! I want to set up a custom domain for my company's blog and I need to add the necessary DNS records for it. Can you assist me with adding the DNS records for the custom domain?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hello there! I've just been assigned a new project which requires specific software. I could really use some help with the installation process. Can you point me to the Desktop Software Installation Support form?",
+        "dialog": "Hey! I'm unable to install software on my computer connected to the company's domain. Can you help me with a Windows Domain Service Request?",
         "label": [
-            "Desktop Software Installation Support"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Hey, I'm having trouble accessing my work email on my phone. Can you help me set up mobile email access?",
+        "dialog": "Do you have any tips for effective project budgeting?",
         "label": [
-            "Mobile Email Access"
+            "oos"
         ]
     },
     {
-        "dialog": "Hello! I'm in need of your expertise with the Work At Home Request form. I want to make sure I provide all the necessary information. Can you assist me?",
+        "dialog": "Sorry to bother you, but I'm stuck on the Event Support Request Form and can't proceed. Can you help me navigate through it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm not sure how to complete the Work At Home Request form, can you provide some guidance?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Can you assist with installing desktop software?",
+        "dialog": "I'm in need of some assistance with the Windows Domain Service Request form. Can you help me out?",
         "label": [
-            "Desktop Software Installation Support"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Can you help me with software installation on my desktop?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm a bit overwhelmed with all the software options out there. Can you help me complete the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm hosting a training session for new employees and I'm having trouble with the Working Room Setup form. Can you provide some guidance?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Is it possible to get some assistance with completing the form for a new virtual machine request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help with the New Virtual Machine Request, can you provide some assistance?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you help me find a good massage therapist?",
+        "dialog": "What are the benefits of yoga?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you help me find a good daycare for my child?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Can you assist me in completing the firewall rules setup form?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm encountering problems with installing software on my desktop. Can you provide support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you help me with installing software on my desktop? I need Desktop SoftWare Installation Support.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with the New Virtual Machine Request form. Can you guide me through it?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need some assistance with the working room setup form. Can you guide me?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the process of completing the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I require guidance on how to complete the New Virtual Machine Request form.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hi! I woke up this morning feeling really sick and I don't want to risk infecting my colleagues. Can you assist me with a Work At Home Request form?",
+        "dialog": "Hey there! I have a family member who needs my support today and I won't be able to make it into the office. Can you assist me with a Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Can you recommend a good budget travel destination?",
+        "dialog": "Hi! I'm really excited about this event I'm organizing, but I'm struggling with the Event Support Request Form. Can you please assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hello, I need help completing the Event Support Request Form. Can you please guide me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hi! I need assistance in managing my DNS. Can you please explain how to add/update/delete DNS?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I need help with my home network setup. Can you guide me?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Help me complete the firewall rules setup.",
+        "dialog": "I'm having trouble with the firewall rules setup form. Can you assist me?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Can you provide instructions on how to set up email on my mobile device?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you help me with my home security system?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "I'm looking for some help with the Working Room Setup form. Can you assist me?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hello! I'm in the process of moving to a new apartment and I could really use your help in filling out a Work At Home Request.",
+        "dialog": "I'm having trouble with the Work At Home Request form. Can you provide any assistance?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Hey there! I recently got a new job and I need some assistance in setting up my mobile email access. Can you help me with that?",
+        "dialog": "I need assistance in completing the Event Support Request Form. Can you provide any?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hey! I'm having trouble with the process of setting up a working room. Can you provide some assistance?",
+        "dialog": "What is the process to get a passport?",
         "label": [
-            "Working Room Setup"
+            "oos"
         ]
     },
     {
-        "dialog": "Hi there! I'm facing some challenges with working remotely. Can you assist me with submitting a Work At Home Request?",
+        "dialog": "Hey, I'm having trouble understanding the purpose of certain fields in the Firewall Rules Setup form. Can you provide some clarification?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I need some guidance on how to complete the Event Support Request Form. Can you assist?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm struggling with the Windows Domain Service Request form. Could you please lend a hand?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you assist me in filling out the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm looking for guidance on completing the working room setup form. Can you assist?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you recommend a good online language learning platform?",
+        "dialog": "Can you recommend a good hair salon?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Hi! I just switched to a new phone and I can't figure out how to access my work email on it. Can you guide me through the steps for Mobile Email Access?",
+        "dialog": "I'm looking for a new blender. Can you recommend a blender with strong blending power?",
         "label": [
-            "Mobile Email Access"
+            "oos"
         ]
     },
     {
-        "dialog": "I require assistance with Desktop Software Installation Support. Can you help?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need some help with filling out the Working Room Setup form, can you guide me?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hi! I'm looking for some assistance in creating a functional working environment in a room. Can you help me with that?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance on filling out the Mobile Email Access request.",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble with the Working Room Setup form, can you help?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need some guidance on filling out the Work At Home Request form. Can you help?",
+        "dialog": "I'm looking for some help with the Work At Home Request form. Can you provide me with some guidance?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm having trouble installing software on my computer and I'm not sure what the issue is. Can you provide assistance with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm experiencing some technical difficulties with my work email on my mobile device. Can you provide support for mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "What are the best practices for performance management?",
+        "dialog": "I want to adopt a child. Can you recommend a good adoption agency?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I'm struggling to access my email on my mobile device. Can you provide assistance?",
+        "dialog": "I'm not sure how to correctly complete the Event Support Request Form. Can you provide some assistance?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hey, I could really use your assistance with the New Virtual Machine Request form. I need a new virtual machine to run simulations for a research project.",
+        "dialog": "I'm not certain about the process for completing the Windows Domain Service Request. Can you guide me?",
         "label": [
-            "New Virtual Machine Request"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Can you give me a hand with the New Virtual Machine Request form?",
+        "dialog": "I'm not familiar with the process of setting up firewall rules. Can you provide some instructions?",
         "label": [
-            "New Virtual Machine Request"
+            "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm unable to receive work emails on my mobile phone. Can you help me troubleshoot and resolve the mobile email access problem?",
+        "dialog": "I'm looking for support with the firewall rules setup. Can you help?",
         "label": [
-            "Mobile Email Access"
+            "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm really struggling with the working room setup. Can you please guide me through the process?",
+        "dialog": "Hi, I'm in the process of completing the Event Support Request Form and I need your assistance. Can you provide some guidance?",
         "label": [
-            "Working Room Setup"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hello! I need your help in completing a form to request a new virtual machine. Our current virtual machine is nearing its end of life, and we need a replacement to avoid any disruptions. Can you guide me through the process?",
+        "dialog": "Can you recommend a good restaurant in town?",
         "label": [
-            "New Virtual Machine Request"
+            "oos"
         ]
     },
     {
-        "dialog": "Can you assist me with completing a Work At Home Request form?",
+        "dialog": "I'm in charge of a product showcase event and I need assistance with the Event Support Request Form. Can you provide some guidance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I urgently need your assistance in setting up the firewall rules. Our network is under attack and I want to block suspicious traffic.",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Do you have any recommendations for completing the Windows Domain Service Request form?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you help me fix my leaking faucet?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey there, I need some assistance with filling out the Event Support Request Form. Can you guide me through it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I need help with completing the Add/Update/Delete DNS form. Can you assist?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I need help completing the firewall rules setup form.",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Good morning! I have a personal appointment tomorrow and I won't be able to come to the office. Can you assist me with the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "My mobile email access stopped working after a recent software update. Can you help me fix the issue and regain access to my work emails?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hi! I'm having a tough time with the installation of software on my desktop. Can you offer any help?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi! I'm a web developer and I need help installing web development software on my computer. Can you assist me with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm looking for some assistance in filling out a request form for a new virtual machine.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Greetings! I'm facing some challenges with the firewall rules setup. Can you provide me with some assistance?",
+        "dialog": "I'm struggling with understanding the firewall rules setup. Can you explain it to me in simpler terms?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Can you assist with completing the Desktop Software Installation Support form?",
+        "dialog": "Hello! I'm currently isolated at home and need assistance with a Work At Home Request. Can you lend me a hand?",
         "label": [
-            "Desktop Software Installation Support"
+            "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm having trouble configuring firewall rules. Can you provide some help?",
+        "dialog": "Hey, I've got a tricky Event Support Request Form that needs to be completed ASAP. Can you assist me in getting it done smoothly?",
         "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "What are some good bicycle brands?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Could you provide assistance for filling out the firewall rules setup form?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble with the Desktop Software Installation Support request. Can you help?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi, I'm struggling with the Working Room Setup form. I want to create a collaborative and agile workspace for my team.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance on Desktop SoftWare Installation Support. Can you guide me?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with filling out a New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm a project manager and I need to access my work emails on my phone to stay updated on project status. Can you help me fill out the Mobile Email Access form?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I want to start a composting system. Can you recommend a compost bin for indoor use?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Hello! I recently started working from home and I need help installing productivity software on my laptop. Can you assist me with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "How do I reset my password for Facebook?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "I need help completing the desktop software installation support form.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I can't seem to connect my mobile device to my work email. Can you provide instructions on how to set up mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "My current virtual machine is experiencing technical issues and I need a replacement. Can you help me with the request form for a new one?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hi! I'm in the midst of a critical project and require your help to complete a New Virtual Machine Request. Can you assist me?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey there, I'm having some difficulties with installing software on my desktop. Can you provide me with some assistance for the Desktop Software Installation Support request?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hey, I'm at a loss when it comes to filling out the Desktop Software Installation Support form. Can you provide some guidance?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Could you provide some assistance in filling out the New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Could you please assist me in configuring the firewall rules? I want to ensure that our network is safe from any potential threats.",
-        "label": [
-            "Firewall Rules Setup"
+            "Event Support Request Form"
         ]
     },
     {
@@ -552,1047 +306,381 @@
         ]
     },
     {
-        "dialog": "I'm not sure how to properly configure the firewall rules. Can you assist me with that?",
+        "dialog": "I'm having trouble setting up the firewall rules. Can you provide help?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm a remote worker and I need assistance installing software on my company-provided laptop. Can you guide me through the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need some assistance in filling out the Work At Home Request form. Can you guide me through the process?",
+        "dialog": "I'm unsure of how to complete the Work At Home Request form. Can you guide me through it?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Could you provide instructions for installing software on my desktop?",
+        "dialog": "I'm struggling with the Event Support Request Form. Can you give me some support?",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I'm having trouble completing the working room setup form. Can you offer some help?",
+        "dialog": "I'm having trouble with the Windows Domain Service Request form. Can you walk me through it?",
         "label": [
-            "Working Room Setup"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "I'm encountering issues with the Working Room Setup request. Can you provide support?",
+        "dialog": "Hi! I have this awesome event coming up and I need help with the Event Support Request Form. Can you lend a hand?",
         "label": [
-            "Working Room Setup"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hello! I'm organizing a networking event and I need help with the room setup. Can you provide guidance on the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you assist me with completing the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm trying to reduce my plastic waste. Can you provide some tips for living a plastic-free lifestyle?",
+        "dialog": "Can you help me find a reliable babysitter?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you provide support for completing the Desktop Software Installation Support form?",
+        "dialog": "Hello! I'm in need of assistance with the Event Support Request Form. I want to ensure all the necessary details are included for a smooth event.",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Can you provide support in filling out the Desktop Software Installation Support request?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need assistance with the Work At Home Request form. Can you provide some help?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble with Desktop SoftWare Installation, can you assist me?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm not sure how to complete the New Virtual Machine Request form. Can you assist?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you help me out with the New Virtual Machine Request form? I'm stuck.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I require assistance with the working room setup form. Can you assist?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you provide assistance with the desktop software installation support process?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you help me fill out the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "How do I plan a surprise party?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Our company recently experienced a security breach, and we need to strengthen our network's defenses. Can you help me with the Firewall Rules Setup form to enhance our firewall configuration?",
+        "dialog": "Hey, could you lend me a hand in setting up the firewall rules? We've experienced a data breach and I want to prevent future incidents.",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Can you guide me through the process of installing software on my desktop?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you provide guidance on setting up email on my mobile device?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you guide me through the process of completing the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hi! I'm struggling with installing software on my desktop. Can you offer any assistance?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble installing software on my desktop. Can you provide assistance?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Could you walk me through the process of completing the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need some help with Desktop SoftWare Installation, can you guide me through it?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Could you provide assistance for Desktop SoftWare Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm planning a surprise party for my best friend's birthday and I could really use your help in filling out a Work At Home Request.",
+        "dialog": "Hey! I'm experiencing some issues with my work setup at home. Can you guide me through the process of submitting a Work At Home Request?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Hey there, I need some assistance with setting up the firewall rules for my company's network. Can you help me with that?",
+        "dialog": "I'm looking for assistance with the Work At Home Request form. Can you guide me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need to be home for a delivery that requires my signature. Can you guide me through the process of submitting a Work At Home Request?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you please guide me through filling out the Windows Domain Service Request form?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I need assistance in finding a reputable financial advisor. Can you provide some guidance?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hi, I'm having trouble understanding how to configure the firewall rules to allow access to a specific domain. Can you provide some assistance?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm having trouble falling asleep at night. Can you suggest some natural remedies for insomnia?",
+        "dialog": "Hi! I'm in charge of arranging an event and I'm running into some difficulties with the Event Support Request Form. Can you assist me in completing it?",
         "label": [
-            "oos"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I require support on completing the Work At Home Request form. Can you help?",
+        "dialog": "I'm feeling really tired and a day of working from home would help me recharge. Can you guide me on how to submit a Work At Home Request?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I need help configuring my mobile device to access my work email. Can you guide me through the process?",
+        "dialog": "Hey there! I'm stuck at home and need your assistance with a Work At Home Request. Can you help me out?",
         "label": [
-            "Mobile Email Access"
+            "Work At Home Request"
         ]
     },
     {
-        "dialog": "Can you help me plan a vacation?",
+        "dialog": "I'm having trouble completing a Windows Domain Service Request. Can you provide guidance?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I want to start a home garden. Can you recommend some low-maintenance plants for indoor gardening?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I'm struggling to understand how to properly set up the firewall rules. Can you provide some assistance?",
+        "dialog": "Hello! I'm stuck on the Windows Domain Service Request form. I need to configure DNS forwarders for the domain.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hello assistant, I'm facing some difficulties with the Windows Domain Service Request form. Can you provide me with some instructions?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm planning a surprise proposal. Can you suggest a romantic location?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "How do I budget my monthly expenses?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble with the Event Support Request Form. Can you provide some assistance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Could you provide assistance in filling out the Event Support Request Form?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I need assistance in filling out the Work At Home Request form. Can you assist me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you guide me through the process of filling out the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need assistance with the Work At Home Request form, can you guide me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need help with planning a wedding, can you assist?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey, I'm running out of time and I need assistance with the Event Support Request Form for my event. Can you lend me a hand?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you assist me in completing the Add/Update/Delete DNS form correctly?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you please assist me with the firewall rules setup? I'm a bit lost.",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Hi there! I'm a software engineer and I need help setting up my development environment with specific software. Can you assist me with filling out the Desktop Software Installation Support form?",
+        "dialog": "Hi! I'm currently facing some difficulties working from home. Can you guide me through the process of submitting a Work At Home Request?",
         "label": [
-            "Desktop Software Installation Support"
+            "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm struggling with the Desktop SoftWare Installation Support form. Our company recently adopted a new software and I need assistance in installing it on my computer.",
+        "dialog": "Hi, I'm dealing with some DNS issues and I need to make changes to the DNS configuration. Can you guide me through the process of adding, updating or deleting DNS entries?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hello, I'm in need of some expert guidance for software installation on my desktop. Can you offer me installation support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you provide any assistance with Desktop SoftWare Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Please help me with setting up mobile email access on my device.",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need assistance in finding a suitable gift for my friend's birthday.",
+        "dialog": "I'm having trouble sleeping. Can you provide any tips?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Hi! I could really use some support in filling out a form for a new virtual machine request. Can you help me out?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I just bought a new desktop computer and I need help installing all the necessary software. Can you guide me through Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hey, can you assist me with setting up a working room? I need to get it up and running as soon as possible.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I have a video conference call scheduled for today and it would be more convenient for me to attend it from home. Can you help me complete the Work At Home Request?",
+        "dialog": "Hey, can you lend me a hand? I need some assistance with completing the Work At Home Request form.",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Hello! I'm facing some technical difficulties while working from home. Can you assist me with a Work At Home Request?",
+        "dialog": "Is there a way to get guidance on completing the Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm rebranding my business and I need to update the DNS records to reflect the new domain name. Can you assist me with that?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hey, I'm having trouble with the Work At Home Request form. Can you help me out?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm stuck on the firewall rules setup. Can you offer your expertise to help me finish it?",
+        "dialog": "I'm having trouble filling out the Work At Home Request form. Can you provide assistance?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you walk me through the steps to complete the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Do you have any advice for conducting performance evaluations?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble with the firewall rules setup. Can you help?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm unable to send or receive emails on my work email account using my mobile device. Can you help me troubleshoot the issue?",
+        "dialog": "Hello! I'm having some difficulties with my Windows Domain Service Request. Can you offer your expertise?",
         "label": [
-            "Mobile Email Access"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Hey there! I need some assistance with configuring my work email on my mobile device. Can you guide me through the process?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hello! Can you lend a hand with filling out the New Virtual Machine Request form? I need a new virtual machine to set up a development environment for a game project.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey, can you assist me with configuring the firewall rules? I need to make sure that only authorized traffic can access our server.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Hello there! I'm in a bit of a pickle and could use your expertise in filling out the New Virtual Machine Request form. I need a new virtual machine to run automated tests for a software release.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm not sure how to complete the working room setup form. Can you assist?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hi, I'm in the process of arranging a new working room and I could use your help to complete the Working Room Setup form. Can you lend a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you provide support in completing the Work At Home Request form?",
+        "dialog": "Hi! I recently adopted a puppy and would like to spend some extra time with him. Can you assist me with submitting a Work At Home Request?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm looking for guidance on how to complete the firewall rules setup.",
+        "dialog": "Hey! I'm having trouble with the Windows Domain Service Request form. Mind helping me out?",
         "label": [
-            "Firewall Rules Setup"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "I need assistance with the Working Room Setup form. Can you provide me with some guidance?",
+        "dialog": "I need to add a CNAME record to point a subdomain to a different domain. Can you assist me?",
         "label": [
-            "Working Room Setup"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "What do I need to do to access email on my smartphone?",
+        "dialog": "I could use a little help with the Event Support Request Form. Can you lend me a hand?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I'm unsure how to fill out the Work At Home Request form. Can you assist?",
+        "dialog": "Is there a step-by-step guide for filling out a Windows Domain Service Request form?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you help me create a skincare routine?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm not sure how to proceed with the Event Support Request Form. Can you provide some insight?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm struggling to fill out the Work At Home Request. Can you provide some guidance?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm planning a team-building event. Can you suggest some fun activities?",
+        "dialog": "Can you walk me through completing the Windows Domain Service Request form?",
         "label": [
-            "oos"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Could you provide support for completing the New Virtual Machine Request?",
+        "dialog": "Hi, could you lend me a hand with the Add/Update/Delete DNS form? I want to update our DNS entries.",
         "label": [
-            "New Virtual Machine Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I'm looking for help with the Work At Home Request form. Can you help me out?",
+        "dialog": "I need help with the Event Support Request Form. Can you give me a hand?",
         "label": [
-            "Work At Home Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I need help with the form for Desktop SoftWare Installation Support. Can you guide me?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hello there! We're redesigning our workspace and need help with the Working Room Setup form. Can you guide us through the process?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm thinking of getting a gym membership. Can you suggest a gym with quality facilities and reasonable prices?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "I need to access my work email on my mobile device urgently as I have an important client email to reply to. Can you provide quick support for Mobile Email Access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hi there! I have a task that requires your expertise. I need assistance with the setup of a working room. Can you lend me a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you give me a hand with the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you provide instructions for accessing email on a mobile device?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you recommend some strategies for social media marketing?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the process of completing the Work At Home Request form?",
+        "dialog": "Would you mind helping me complete the Work At Home form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Could you give me some guidance on how to complete the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey! I just got some new software for my desktop, but I'm having trouble installing it. Can you guide me through the Desktop Software Installation Support process?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi, I could really use your expertise in completing a form for requesting a new virtual machine. Our current virtual machine is experiencing performance issues, and we need a more powerful one to meet our requirements. Can you help me with that?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hi there, I recently joined a new project and I need help installing the required software on my desktop. Can you please provide Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Need assistance with the Work At Home Request form, can you help?",
+        "dialog": "Hi there! I'm facing some challenges with working remotely. Can you assist me with submitting a Work At Home Request?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "I'm having difficulty completing the Work At Home Request form. Can you guide me?",
+        "dialog": "I need assistance with the Event Support Request Form. Can you assist?",
         "label": [
-            "Work At Home Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Could you guide me through the New Virtual Machine Request form?",
+        "dialog": "Can you walk me through the DNS Add/Update/Delete process?",
         "label": [
-            "New Virtual Machine Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I need help with desktop software installation. Can you provide guidance?",
+        "dialog": "Is there someone available to assist me with completing the Event Support Request Form?",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I want to start learning graphic design. Can you recommend some design software for beginners?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Hello, I'm having difficulties with installing software on my computer. Could you assist me with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "What are the latest news headlines?",
+        "dialog": "What are some popular TV series to binge-watch?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you give me some guidance on how to complete the Working Room Setup form?",
+        "dialog": "Hi! I'm facing some issues with my DNS configuration. Can you help me with adding/updating/deleting DNS records?",
         "label": [
-            "Working Room Setup"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Can you give me some advice on how to fill out the Working Room Setup form?",
+        "dialog": "I'm facing some difficulties while filling out the Windows Domain Service Request. Can you help me out?",
         "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you guide me in completing the Desktop SoftWare Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi, I'm having issues with installing software on my new office computer. Can you provide me with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Could you provide instructions on completing the new virtual machine request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you give me some advice on completing the firewall rules setup?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I need to check my work emails on the go, but I'm not sure how to set up my mobile email. Can you assist me with Mobile Email Access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need help completing the New Virtual Machine Request form. Can you guide me?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help completing the working room setup form.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you help me with the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hello there! I desperately need help setting up my mobile device to access my work email. Can you please provide me with the necessary steps?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm learning to code. Can you recommend any online resources for beginners?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Could you lend me a hand with the Desktop Software Installation Support form? I'm struggling a bit.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need help with the New Virtual Machine Request. Can you guide me?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hi there! I have a team meeting tomorrow and I'm not sure how to set up the room properly. Can you guide me through the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm unable to access my work email on my mobile. Can you provide assistance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need some help with the Desktop SoftWare Installation Support form. Can you provide any assistance?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'll be attending a conference next week and I'll need to access my work emails on my phone. Can you assist me with the Mobile Email Access form?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hey, I could really use your expertise in setting up a room for work purposes. Can you lend me a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I require support in filling out the firewall rules setup form.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with the Desktop Software Installation Support request, can you assist?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Help me complete the New Virtual Machine Request, please.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you give me a hand with completing the Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the Desktop SoftWare Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Is it possible for you to assist me in filling out the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I require help with filling out the New Virtual Machine Request form. Can you provide help?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I recently got a new mobile phone and I need assistance setting up my work email. Can you provide support for mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with completing the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "How can I improve my leadership skills?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "I need to complete a Work At Home Request form because I have a medical appointment and won't be able to come to the office. Can you help me with that?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the process of filling out the working room setup request?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey, I'm having trouble with the Desktop SoftWare Installation Support. The software I'm trying to install requires a license key, but I don't know where to find it.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you provide me with assistance in completing the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you recommend some leadership development programs?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Hi, I'm having trouble installing software on my computer. Can you provide me with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm facing challenges in setting up the firewall rules. Can you explain how to configure rules based on protocols and ports?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm always on the go and it would be really convenient if I could access my work email on my phone. Can you assist me with setting up mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you guide me through the Desktop Software Installation Support process?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you recommend some professional development courses?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with the Work At Home Request form. Can you provide help?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Could you assist me in completing the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I require support for the mobile email access request. Can you provide assistance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble configuring my work email on my mobile device. Can you provide me with some guidance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Do you have any instructions for filling out the New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help with the New Virtual Machine Request form, can you assist?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Do you have any tips for filling out the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "What are the best tourist attractions in London?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Hey! I could use some help with the process of setting up a working room. Can you lend a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you guide me through the process of setting up firewall rules?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with setting up email on my smartphone. Can you assist?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hello! I've been struggling to set up my work email on my mobile device. Could you lend me a hand with that?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm having difficulties setting up my work email on my new mobile device. Can you show me how to do it?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you recommend a good podcast on personal development?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Hi there! I'm starting a new job and I need help with the Working Room Setup form. Can you guide me through it?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey, I need some assistance with installing software on my desktop. Can you help me out?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I recently got a new phone and I need assistance setting up my work email on it. Can you assist me with mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Assistance needed for firewall rules setup.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you guide me through the Desktop SoftWare Installation Support process?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you help me complete the new virtual machine request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hello! I'm in need of assistance with the Desktop SoftWare Installation Support. The software I'm trying to install is asking for administrator privileges and I'm not sure how to grant them.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I've just joined a new company and I need assistance setting up my mobile email access. Can you help me with that?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you give me some guidance on how to complete the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance on how to fill out the New Virtual Machine Request form.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm struggling to access my email on my mobile device. Can you provide assistance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hello! I'm in the process of arranging a new working room and I could use your help to complete the Working Room Setup form. Can you lend a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "How do I train a puppy?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "What's the best way to clean a microwave?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Can you recommend a good yoga studio?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Could you assist me with the firewall rules setup form?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble with the New Virtual Machine Request form. Can you help me?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm looking for a new vacuum cleaner. Can you recommend a vacuum with strong suction power?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Can you provide support in installing software on my desktop?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi! I'm having trouble accessing my work emails on my smartphone. Can you help me with the mobile email setup?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hey there, I'm in need of some technological assistance. You see, I've been assigned a new project and I require a virtual machine to carry out my tasks. Could you please help me complete the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey, I'm responsible for network security and I'm struggling to fill out the Firewall Rules Setup form. Can you help me complete it?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Hi, I hope you're doing well. I could really use your assistance with completing the Work At Home Request form. Can you help me out?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I recently joined a new team, and I need help setting up software on my computer. Can you provide Desktop SoftWare Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm trying to create an ergonomic and efficient home office setup. Can you assist me with working room setup?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need support with the Desktop SoftWare Installation Support form.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "How do I set up my mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I recently got a new phone and I need help setting up my email on it. Can you assist me with Mobile Email Access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hey, I need assistance in setting up a working room for our new team. Can you help me with the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hello! I'm having a tough time installing software on my desktop. Can you offer any help?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm starting a new project and I need assistance with installing the necessary software on my desktop. Can you help me fill out the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I recently purchased a software license but I'm not sure how to activate it on my desktop.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble accessing my email on my phone. Can you help me troubleshoot?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need assistance with the Work At Home Request form. Can you guide me?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with the process of Desktop SoftWare Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm struggling to figure out the right configuration for the firewall rules. Can you provide some assistance?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having difficulty filling out the New Virtual Machine Request form. Can you provide support?",
-        "label": [
-            "New Virtual Machine Request"
+            "Windows Domain Service Request"
         ]
     },
     {
@@ -1602,541 +690,145 @@
         ]
     },
     {
-        "dialog": "I'm unable to send attachments from my work email on my mobile device. Can you assist me in resolving this issue with mobile email access?",
+        "dialog": "Sorry, but I could really use your help in completing the Windows Domain Service Request form. We've had some personnel changes and need to remove user accounts from the domain.",
         "label": [
-            "Mobile Email Access"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Is it possible for you to help me complete the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey there! I just started a new job and I'm struggling to set up my work email on my smartphone. Can you provide me with some support?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm at a loss when it comes to installing software on my desktop. Can you guide me through Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you assist me in filling out the firewall rules setup form?",
+        "dialog": "I'm having trouble with the firewall rules setup, can you guide me?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm having trouble setting up mobile email access on my device. Can you provide assistance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I have a request for Working Room Setup, but I'm not sure how to fill out the form. Can you guide me?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need to sync my work email account with my phone so that I can stay connected while on the go. Can you show me how to do it?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need help with the form for remote work, can you provide assistance?",
+        "dialog": "I need help with the Work At Home Request. Can you provide some support?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Could you help me with the Desktop SoftWare Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm unable to add my work email account to the email app on my mobile device. Can you guide me through the setup process?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need help with my car maintenance, can you guide me?",
+        "dialog": "I want to learn how to code. Can you recommend a beginner-friendly programming language?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Hi, I'm facing issues with installing software on my desktop. Could you please assist me with the Desktop Software Installation Support request?",
+        "dialog": "I'm having difficulty completing the Event Support Request Form. Can you assist?",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I'm a bit overwhelmed with the amount of software I need to install on my desktop. Can you assist me with the Desktop Software Installation Support?",
+        "dialog": "I am looking for assistance in filling out the Event Support Request Form. Can you help me with that?",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I'm organizing a charity event. Can you suggest some effective ways to fundraise?",
+        "dialog": "I need to complete a Work At Home Request form because my child's school is closed, and I need to take care of them. Can you help me with that?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "How can I organize my desk at work?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I'm unsure how to complete the working room setup request. Can you provide guidance?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you assist me in filling out the form for working from home?",
+        "dialog": "Hey! I have a family member visiting from out of town and I want to spend some time with them. Can you assist me with a Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Is there any assistance available for desktop software installation?",
+        "dialog": "Can you help me add a DNS entry?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hi! I'm facing some technical difficulties and need your help to complete a New Virtual Machine Request. Can you guide me through the process?",
+        "dialog": "Hey, I'm facing some troubles filling out my Windows Domain Service Request. Can you assist me?",
         "label": [
-            "New Virtual Machine Request"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Can you provide step-by-step instructions on how to fill out the Work At Home Request form?",
+        "dialog": "Good day! I'm struggling with DNS management. Can you guide me on adding/updating/deleting DNS?",
         "label": [
-            "Work At Home Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hey, I need assistance with setting up firewall rules. Can you help me with that?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with the firewall rules setup? I want to prevent unauthorized access to our network.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble installing software on my personal computer. Can you provide some support with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm in the process of organizing my home office and could really use some help with setting up a working room. Can you lend a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need to install some software on my desktop for a project but I have no idea where to start. Can you provide me with the Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm getting an error message when trying to access my work email on my mobile device. Can you assist me with resolving the error?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you give me instructions for completing the firewall rules setup?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you provide assistance with the Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you help me with the firewall rules setup process? I'm not sure how to proceed.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Hey there! I'm in a bit of a pickle. I need to get a working room ready, but I'm not sure where to start. Can you lend me a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Looking for help in completing the Desktop SoftWare Installation Support form. Can you assist me?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you provide instructions on how to fill out the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hello! I have a favor to ask. Could you provide some assistance with the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I need guidance on installing software on my desktop. Can you assist?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I want to configure the firewall rules, but I'm not confident in my abilities. Can you assist me with the Firewall Rules Setup?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you guide me on how to fill out the working room setup request?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance on how to complete the Work At Home Request form. Can you help?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "How do I connect my mobile device to my email account?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hi there! I require your assistance with the Desktop SoftWare Installation Support. I'm getting an error message during the installation and I don't know how to fix it.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Could you assist me in completing the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble accessing my work email on my mobile device after a system update. Can you help me troubleshoot and restore Mobile Email Access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I have an important delivery coming today and I need to be at home to receive it. Can you lend a hand in completing the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hello! I'm having trouble installing software on my office desktop. It's causing delays in my work. Can you help me out with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hello! I need some assistance with filling out the Working Room Setup form. I have to arrange a new office space for our team. Can you lend me a hand?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey, I'm a bit confused about how to configure firewall rules. Can you offer some assistance?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Could you assist me in filling out the Mobile Email Access form?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with the firewall rules setup process?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I need someone to assist me with the Work At Home Request form. Can you do that?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hi! I need some assistance in completing the Desktop Software Installation Support form. Can you show me the way?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm a game tester and I need a new virtual machine to test game compatibility. Can you help me fill out the request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "We're planning a company-wide meeting and I'm responsible for setting up the room. Can you guide me through the process of completing the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey! Can you provide some assistance with the Work At Home Request form? I want to make sure I do it right.",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Good day! I require assistance in arranging a room for work. Could you assist me with that?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Assistance required for completing the New Virtual Machine Request form.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Is there any support available for Desktop SoftWare Installation? I need assistance.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Do you have any guidance on completing the desktop software installation?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I just got a new laptop and I need assistance with installing software on it.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with completing the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm unable to access my email on my phone. Can you provide guidance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble installing software on my work desktop. Can you provide guidance on how to fill out the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need some assistance in filling out the Work At Home Request form. Can you provide me with some help?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Could you help me with desktop software installation?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hello there! I'm a cybersecurity expert and I need a new virtual machine to test the vulnerability of our network. Can you guide me through the process?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm facing issues while trying to install software on my desktop. Can you provide assistance with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm in charge of arranging the working room, and I could really use your help with the Working Room Setup form.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the process of completing the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you assist me in completing the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I require support in filling out the form for a new virtual machine. Can you offer assistance?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you teach me how to play guitar?",
+        "dialog": "Can you please check the weather for tomorrow? I need to know what to wear to the office.",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Could you assist me in completing the desktop software installation request?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Could you provide some support for filling out the New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you provide assistance with the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm in need of your help with the Work At Home Request form. I want to make sure I provide all the necessary information. Can you assist me?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hi there! I'm part of a team that's expanding rapidly, and we need additional virtual machines to accommodate our growing workload. Can you help us by completing the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Do you have any tips for effective employee performance management?",
+        "dialog": "I want to learn how to meditate. Can you provide some guidance?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Hello! I'm encountering some difficulties when trying to install software on my desktop. Could you provide me with some guidance for the Desktop Software Installation Support request?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I require help with the working room setup request. Can you assist?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey, I recently moved to a different office and I need some support in setting up my working space. Can you assist me with the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Is there any help available for desktop software installation?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm having difficulties accessing my work email on my mobile device. Can you help me troubleshoot and enable mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you walk me through the steps of completing the Work At Home Request?",
+        "dialog": "Hi there! I'm in a situation where I can't make it to the office for the next week. Can you help me complete the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Can you assist me with filling out the Work At Home Request form?",
+        "dialog": "Can you recommend some budget-friendly vacation destinations?",
         "label": [
-            "Work At Home Request"
+            "oos"
         ]
     },
     {
-        "dialog": "I have a personal appointment that I need to attend and it would be more convenient for me to work from home for the rest of the day. Can you help me with the Work At Home Request?",
+        "dialog": "Can you recommend a good podcast to listen to?",
         "label": [
-            "Work At Home Request"
+            "oos"
         ]
     },
     {
-        "dialog": "How can I check my email on my phone?",
+        "dialog": "Sorry to bother you, but I'm having trouble with the Event Support Request Form. Do you mind helping me out?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Can you provide support for installing software on my desktop?",
+        "dialog": "I'm experiencing issues with updating the DNS records. Can you help me?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I'm looking for assistance with the New Virtual Machine Request.",
+        "dialog": "Excuse me, I'm hitting a roadblock while trying to complete the Event Support Request Form. Could you offer some guidance?",
         "label": [
-            "New Virtual Machine Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Can you help me with installing software on my desktop? I need Desktop SoftWare Installation Support.",
+        "dialog": "How can I remove a red wine stain from white carpet?",
         "label": [
-            "Desktop Software Installation Support"
+            "oos"
         ]
     },
     {
-        "dialog": "Hi there! I need your help in filling out a form to request a new virtual machine. Our current virtual machine is outdated, and we need a more advanced one to leverage the latest technologies. Can you assist me with that?",
+        "dialog": "Hi, I'm organizing an event and I'm stuck with filling out the Event Support Request Form. Can you guide me through it?",
         "label": [
-            "New Virtual Machine Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hey, can you assist me in setting up access to my work email on my mobile device?",
+        "dialog": "How can I start a blog?",
         "label": [
-            "Mobile Email Access"
+            "oos"
         ]
     },
     {
-        "dialog": "I require assistance with filling out the Work At Home Request form, can you assist?",
+        "dialog": "Can you guide me through the process of filling out the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
@@ -2148,699 +840,465 @@
         ]
     },
     {
-        "dialog": "My computer needs some software installed, and I'm not sure how to do it. Can you assist me with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with the Working Room Setup request. Can you guide me through the process?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey there! I'm having trouble setting up my work environment at home. Can you help me with a Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I want to start a book collection. Can you suggest some timeless classics to add to my library?",
+        "dialog": "I'm looking for a new hobby. Can you recommend a creative outlet that doesn't require any special skills?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you recommend a good dentist?",
+        "dialog": "I need some help with the Add/Update/Delete DNS request form. Can you guide me?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I need assistance with the Work At Home Request. Can you help me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "What is the process to adopt a pet?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Greetings! I find myself in a situation where I need to set up a virtual machine for a critical project. Can you guide me through the process of completing the New Virtual Machine Request form?",
+        "dialog": "Hey, I need some help with the Event Support Request Form. Can you make sure I'm on the right track?",
         "label": [
-            "New Virtual Machine Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I require assistance with the firewall rules setup form.",
+        "dialog": "Hey, I need some assistance with the Event Support Request Form for the event I'm organizing. Can you show me how to complete it?",
         "label": [
-            "Firewall Rules Setup"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hey there! We're experiencing some performance issues with our current virtual machines. We need a new one to distribute the workload and improve efficiency. Can you assist me with filling out the request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Assist me in filling out the New Virtual Machine Request form. Can you do that?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you assist me in setting up email on my mobile device?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Could you please assist me with completing the Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you help me with the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help with filling out the New Virtual Machine Request form.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you guide me through the process of completing the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey, I'm having trouble accessing my work emails on my phone. Any chance you can guide me through the process?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm in a bit of a bind. I have a room that needs to be transformed into a productive workspace. Can you guide me through the process?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm a marketing coordinator and I need access to my work emails on my phone to respond to time-sensitive campaign requests. Can you guide me through the Mobile Email Access form?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm stuck on the New Virtual Machine Request form, can you help?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "What are the best travel destinations in Europe?",
+        "dialog": "I'm looking for a new hairstylist. Can you recommend one with experience in curly hair?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Could you guide me through the process of filling out a New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Please guide me through the Desktop SoftWare Installation Support form.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Is there any chance you could assist me in completing the Mobile Email Access form? I want to be able to check my work emails on my mobile device easily.",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need to access my work email on my mobile device while on vacation. Can you assist me with Mobile Email Access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need help with the Mobile Email Access request. Can you offer assistance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Hello! I'm in a bit of a fix with a working room setup. Can you guide me through the process?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I require guidance on how to complete the New Virtual Machine Request. Can you provide it?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help installing software on my desktop. Can you lend a hand?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm having difficulty understanding the technical jargon in the Firewall Rules Setup form. Can you simplify the instructions or provide me with some clarifications?",
+        "dialog": "I'm struggling to understand the firewall rules configuration process. Can you provide me with some support for the Firewall Rules Setup?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Could you provide some assistance with the working room setup request?",
+        "dialog": "Help! I'm stuck on the Windows Domain Service Request form. We're facing some performance issues with our current domain and need to add additional domain controllers.",
         "label": [
-            "Working Room Setup"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "I need guidance with the firewall rules setup. Can you offer help?",
+        "dialog": "Hey, hope you're doing well! I'm planning an amazing event and I need your expertise in filling out the Event Support Request Form. Can you assist me?",
         "label": [
-            "Firewall Rules Setup"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Can you help me with filling out the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey, can you help me out with completing a request form for a new virtual machine? I need it to test a new software deployment process.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey! I'm attending a conference next week and I need to work remotely during that time. Can you guide me through the steps of submitting a Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I have a request to arrange a working room, and I could use some guidance with the Working Room Setup form.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "How can I improve my problem-solving skills in a team setting?",
+        "dialog": "What are some healthy recipes?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I want to start a small business. Can you provide guidance?",
+        "dialog": "I require assistance with the firewall rules setup. Can you provide guidance?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I'm migrating my website to a new domain and I need to update the DNS to redirect the traffic. Can you guide me through the process?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you wash my car for me?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Hey! I'm a web designer and I need to install some design software on my computer. Can you help me complete the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi there! Our network has been compromised and we need to reconfigure the firewall rules. Can you assist me with the Firewall Rules Setup request?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Do you have any tips for filling out the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I'm trying to install some software on my desktop, but I keep encountering compatibility issues. Can you help me out by completing the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Is there a way you can help me with the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Good day! I'm facing some challenges with a working room setup. Can you offer your expertise to help me out?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble filling out the New Virtual Machine Request form. Can you assist me?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "How do I set up email on my mobile phone?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble filling out the Work At Home request form. Can you offer assistance?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you give me a hand with the firewall rules setup request?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Hi, can you guide me through the Working Room Setup form? I'm responsible for setting up a new meeting room with proper communication tools.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you walk me through the steps of completing a New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey there! I just got a new laptop for work, but I have no clue how to install the software I need. Can you help me with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hi! I have a request to make. Could you please help me with setting up a working room?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I'm at a loss on how to complete the firewall rules setup. Can you assist me with this task?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Could you please provide support on how to fill out the Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you assist me in configuring email access on my mobile phone?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you give me a hand with filling out the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I recently got a new desktop and I need help transferring and installing all my software. Can you guide me through the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I require support with software installation on my desktop. Can you help?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hey there! I've recently been assigned a project that requires the use of a virtual machine for data processing. However, I'm not quite sure how to go about requesting one. Could you assist me in completing the necessary form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with the firewall rules setup. Can you provide assistance?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Could you provide instructions on how to fill out the working room setup request?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you help me complete the Desktop Software Installation Support request?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with completing the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Due to recent changes in our network infrastructure, we need to update the firewall rules. Can you guide me through the process of completing the Firewall Rules Setup form?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you suggest some DIY projects for home improvement?",
+        "dialog": "I want to learn how to play the piano. Can you suggest any resources?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you guide me through the process of completing the new virtual machine request?",
+        "dialog": "I accidentally added the wrong MX record for my email server. How can I delete it?",
         "label": [
-            "New Virtual Machine Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Can you provide assistance for setting up firewall rules?",
+        "dialog": "I'm unsure about how to complete the Work At Home Request form. Can you give me some support?",
         "label": [
-            "Firewall Rules Setup"
+            "Work At Home Request"
         ]
     },
     {
-        "dialog": "I require help with the Desktop SoftWare Installation Support request.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Hello there, I'm struggling with the Desktop Software Installation Support form. Any chance you could provide some support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need to access my work email on my phone urgently as I'm expecting an important email. Can you help me with mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I'm struggling with the Desktop Software Installation Support request. Can you provide assistance?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Assistance required for firewall rules setup.",
+        "dialog": "I need guidance for configuring firewall rules, can you help?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "I'm getting married next year. Can you suggest a good wedding planner?",
+        "dialog": "I'm in a bit of a pickle here. Can you give me a hand with the Windows Domain Service Request form? We're setting up a new domain trust with an external organization.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey, I recently updated the IP address of my web server and now I need to update the DNS records accordingly. Can you assist me in making the necessary changes?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I'm organizing an important event and I'm not sure how to complete the Event Support Request Form. Can you provide some guidance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you recommend a good online language learning platform?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you walk me through the steps of filling out the New Virtual Machine Request form?",
+        "dialog": "Do you have any tips or tricks for successfully completing the Windows Domain Service Request?",
         "label": [
-            "New Virtual Machine Request"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Hey there! I have a family member who needs my support today and I won't be able to make it into the office. Can you assist me with a Work At Home Request form?",
+        "dialog": "Hello! I'm dealing with some issues regarding my DNS setup. Can you assist me with adding, updating, or deleting DNS entries?",
         "label": [
-            "Work At Home Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hey there! I have a meeting coming up and I need help setting up the working room. Can you assist me with the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Can you provide support for completing the form to request a new virtual machine?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need help with the desktop software installation support form.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm struggling to fill out the New Virtual Machine Request form. Can you provide some help?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need assistance with the firewall rules setup. Can you provide support?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you help me out with the Work At Home Request form?",
+        "dialog": "Can you provide me with some help on the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Greetings! I'm in need of help with the setup of a room for work purposes. Can you assist me?",
+        "dialog": "I'm organizing a product launch event and I'm stuck with the Event Support Request Form. Can you guide me through it?",
         "label": [
-            "Working Room Setup"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Excuse me, would you be able to assist me in filling out the New Virtual Machine Request form? We're expanding our team and need to allocate a virtual machine for the new member.",
+        "dialog": "Good day! I'm organizing an event and I could really use your assistance in completing the Event Support Request Form. Can you help me out?",
         "label": [
-            "New Virtual Machine Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hey, I'm having trouble setting up my work email on my phone. Can you guide me through the process of configuring Mobile Email Access?",
+        "dialog": "Need help with a Windows Domain Service Request. Can you provide support?",
         "label": [
-            "Mobile Email Access"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Can you support me with the New Virtual Machine Request form? I'm not sure how to fill it out.",
+        "dialog": "Could you guide me on how to complete the Event Support Request Form?",
         "label": [
-            "New Virtual Machine Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Can you assist me with completing the Desktop Software Installation Support request?",
+        "dialog": "Do you have instructions on how to complete the Event Support Request Form?",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I need some assistance with the New Virtual Machine Request form. Can you help me out?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I require help with the firewall rules setup, can you provide assistance?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having difficulty with the Work At Home Request form. Can you offer any assistance?",
+        "dialog": "Hi there! I was hoping you could assist me with the Work At Home Request form. I'm having trouble with it and could use your guidance.",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Hi! I'm having a hard time figuring out the firewall rules setup. Could you provide me with some support?",
+        "dialog": "I'm stuck on the Windows Domain Service Request form. Can you please guide me through it?",
         "label": [
-            "Firewall Rules Setup"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Could you help me fill in the details for the Working Room Setup form?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need help filling out the Working Room Setup request.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance on completing the Desktop Software Installation Support request.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I need help with software installation on my desktop.",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I have a personal project that requires uninterrupted time and access to specific tools. Can you please help me with the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hi there! I need assistance in configuring the working rooms for our upcoming conference. Can you please assist me in filling out the Working Room Setup request?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you please assist me with the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need assistance with the Working Room Setup request form. Can you provide support?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hi there! I'm having trouble with installing software on my work desktop. It's quite urgent, can you assist me with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble with the Work At Home Request form. Can you give me some tips?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I'm not sure how to fill out the Working Room Setup form. Can you provide any guidance?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Hey there! I'm facing some challenges with the firewall rules setup. Any chance you could provide me with some guidance?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Can you guide me through the process of filling out the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "What are the best tourist attractions in Paris?",
+        "dialog": "Can you recommend some good podcasts to listen to?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I need help with planning a baby shower, can you assist?",
+        "dialog": "I'm in a bit of a rush. Can I get your assistance with the Windows Domain Service Request form? We're setting up a new branch office and need to create a site-to-site VPN connection.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I want to update the DNS records for my email server. Can you show me how to do it?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hey, can you lend me a hand in filling out the Windows Domain Service Request form? I'm trying to set up a new domain for our company's upcoming project.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm not sure how to fill out the Windows Domain Service Request form. Can you assist?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey, could you lend a hand in completing this Add/Update/Delete DNS form? I'm having difficulties with it.",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I'm looking for a new gym. Can you recommend one with good personal trainers?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "Can you suggest some techniques for effective employee feedback?",
+        "dialog": "I'm looking for assistance with a Windows Domain Service Request. Can you provide support?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you help me find a good Mexican restaurant?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I'm struggling with the Desktop Software Installation Support request. Can you assist?",
+        "dialog": "Can you give me some support on filling out the Event Support Request Form?",
         "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I can't seem to figure out how to install new software on my computer. Can you assist with Desktop Software Installation Support?",
+        "dialog": "Hello! Our company website is currently showing a security warning and we suspect that the SSL certificate is not properly configured in the DNS records. Can you assist me in verifying and updating the records?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I accidentally uninstalled an important program on my computer, and now I can't figure out how to reinstall it. Can you help me complete the Desktop Software Installation Support form?",
+        "dialog": "I'm facing difficulties in understanding how to set up firewall rules. Can you lend me a hand?",
         "label": [
-            "Desktop Software Installation Support"
+            "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Hello! I'm facing some technical issues and need your assistance to fill out a New Virtual Machine Request. Can you provide your guidance?",
+        "dialog": "I'm looking for a new optometrist. Can you recommend one with a wide selection of eyewear?",
         "label": [
-            "New Virtual Machine Request"
+            "oos"
         ]
     },
     {
-        "dialog": "Hey there! I'm in a bit of a pickle. I just got a new laptop for work, but I have no idea how to install software on it. Can you help me out with the Desktop Software Installation Support form?",
+        "dialog": "I want to learn how to dance. Can you recommend any dance studios?",
         "label": [
-            "Desktop Software Installation Support"
+            "oos"
         ]
     },
     {
-        "dialog": "I'm looking for some assistance with the Work At Home request form. Can you guide me?",
+        "dialog": "Good day! The firewall rules setup is giving me a hard time. Could you please offer your expertise to ensure everything is properly configured?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hey! I'm organizing a special event and I'm struggling with completing the Event Support Request Form. Can you give me a hand?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Do you have any tips on how to fill out the Add/Update/Delete DNS form accurately?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you recommend a good hiking trail?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey, I could really use your help in filling out the Windows Domain Service Request. Are you available?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "What information do I need to provide for the Add/Update/Delete DNS form?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you help me find a restaurant near me?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Can you give me some instructions on how to fill out the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Hey! I'm in a bit of a bind and need your assistance with filling out the Work At Home Request form. Can you lend me a hand?",
+        "dialog": "Hi, I'm having difficulty filling out the Windows Domain Service Request form. Our domain controllers are outdated and we need to upgrade them.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Is there an option to get help on completing the Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Could you guide me through the process of filling out the firewall rules setup form?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hi! I have a small predicament. I'm trying to complete a Work At Home Request, but I'm a bit unsure about certain details. Would you mind guiding me through it?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Help required for Desktop SoftWare Installation Support. Can you provide support?",
+        "dialog": "I'm migrating my website to a new server and I need to update the DNS to point to the new IP address. Can you guide me through the process?",
         "label": [
-            "Desktop Software Installation Support"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I'm struggling to set up my work email on my phone. Can you assist me in configuring mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you assist me with the Work At Home Request? I'm a bit stuck.",
+        "dialog": "I'm experiencing transportation issues and won't be able to make it to the office tomorrow. Can you guide me through the process of submitting a Work At Home Request?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Can you provide support for filling out the working room setup request?",
+        "dialog": "Can you recommend a good movie to watch this weekend?",
         "label": [
-            "Working Room Setup"
+            "oos"
         ]
     },
     {
-        "dialog": "I need help filling out the form for a new virtual machine. Can you guide me?",
+        "dialog": "I'm not an expert in network security, but I've been tasked with configuring the firewall rules. Can you provide me with some support or help me with the Firewall Rules Setup form?",
         "label": [
-            "New Virtual Machine Request"
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Can you guide me through the process of setting up firewall rules?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Could you provide some support for completing the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I have a family member visiting and I would like to spend some time with them. Can you guide me through the process of submitting a Work At Home Request?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hey, I'm struggling with the firewall rules setup. Can you give me a hand in completing it?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "How can I improve my memory?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Could you support me in filling out the firewall rules setup form?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Do you know the correct format and sections for the Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey there, I need some assistance with setting up the firewall rules for my company's network. Can you help me with that?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Due to unexpected circumstances, I won't be able to come to the office tomorrow. Can you guide me through the process of submitting a Work At Home Request?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm currently working on the Event Support Request Form for an upcoming event. Can you guide me through it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm looking for help with the Event Support Request Form.",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm finding it hard to work with my DNS management task. Can you guide me on how to add/update/delete DNS?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I require help with the Work At Home Request form. Can you provide assistance?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Could you please guide me through completing the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need support to fill out a Windows Domain Service Request. Can you assist?",
+        "label": [
+            "Windows Domain Service Request"
         ]
     },
     {
@@ -2850,285 +1308,99 @@
         ]
     },
     {
-        "dialog": "Hi, I hope you're doing well. I was wondering if you could help me out with the Work At Home Request form. It would be a huge help!",
+        "dialog": "Good day! I'm organizing an event, and I could really use some assistance with completing the Event Support Request Form. Mind giving me a few pointers?",
         "label": [
-            "Work At Home Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Hello! I'm facing some challenges with installing software on my office computer. Can you please provide me with the Desktop Software Installation Support form so I can request help?",
+        "dialog": "Do you have any expertise in completing the Windows Domain Service Request?",
         "label": [
-            "Desktop Software Installation Support"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "Hi there! I'm unable to send or receive emails on my work account using my phone. Can you help me troubleshoot this issue?",
+        "dialog": "Hey! I'm expanding my online presence and need to add a new domain to my DNS. Could you provide instructions on completing the Add/Update/Delete DNS request?",
         "label": [
-            "Mobile Email Access"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I have a personal commitment in the morning and it would be great if you could assist me with completing the Work At Home Request form.",
+        "dialog": "I require guidance in making updates to the DNS information. Can you assist me?",
         "label": [
-            "Work At Home Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "I have a team meeting coming up and I need assistance with setting up the working room. Can you help me with the Working Room Setup request form?",
+        "dialog": "I want to use a subdomain for a specific landing page on my website. How can I add the subdomain to the DNS settings?",
         "label": [
-            "Working Room Setup"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Hey, I'm in a bit of a bind. Can you lend me a hand with completing the Work At Home Request form? I'm not sure what to do.",
+        "dialog": "I'm having difficulty with the Event Support Request Form, could you provide some guidance?",
         "label": [
-            "Work At Home Request"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "Could you help me complete the Work At Home Request?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you provide support for installing software on my desktop?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm in the process of arranging my working space, and I could use some help with the Working Room Setup request.",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Greetings! I need some help with the firewall rules setup for our company's network. Any chance you could lend me a hand?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble accessing my email on my phone. Can you provide assistance?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need assistance in filling out the New Virtual Machine Request. Can you help me?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the process of completing the Working Room Setup request?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "What are the steps to create a successful sales strategy?",
+        "dialog": "What is the process to buy a car?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "What are the steps to enable mobile email access on my phone?",
+        "dialog": "I'm stuck on the Event Support Request Form, can you give me some pointers?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I need help completing the Work At Home Request form. Can you guide me?",
+        "dialog": "I'm having difficulty with the DNS action form. Can you assist me?",
         "label": [
-            "Work At Home Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Can you assist me in finding a good financial advisor?",
+        "dialog": "How can I remove a virus from my computer?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I have a family member visiting from out of town and I would like to spend some time with them. Can you guide me through the process of submitting a Work At Home Request?",
+        "dialog": "I'm struggling to complete a Windows Domain Service Request. Can you guide me?",
         "label": [
-            "Work At Home Request"
+            "Windows Domain Service Request"
         ]
     },
     {
-        "dialog": "I need assistance with completing the working room setup form. Can you help?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I want to start investing. Can you recommend a good financial advisor?",
+        "dialog": "How can I improve my photography composition?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I'm having difficulty with the New Virtual Machine Request. Can you provide support?",
+        "dialog": "I want to improve the performance of my website by setting up DNS load balancing. Can you help me with that?",
         "label": [
-            "New Virtual Machine Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "What are the steps to develop a strong company culture?",
+        "dialog": "I need assistance with the Event Support Request Form. Can you show me how?",
         "label": [
-            "oos"
+            "Event Support Request Form"
         ]
     },
     {
-        "dialog": "I would appreciate your assistance in completing the Work At Home Request.",
+        "dialog": "Good day! I'm trying to set up a personalized email address using my own domain, but I'm having trouble with the DNS configuration. Can you help me through the Add/Update/Delete DNS process?",
         "label": [
-            "Work At Home Request"
+            "Add/Update/Delete DNS"
         ]
     },
     {
-        "dialog": "Can you provide instructions for accessing email on a mobile device?",
+        "dialog": "I have a charity event to plan and I'm struggling to fill out the Event Support Request Form. Can you give me a hand with that?",
         "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "How can I improve my photography skills?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "What are the steps to configure mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I require help with the firewall rules setup process.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Hello, can you guide me on filling out a form for requesting a new virtual machine? I need one to run simulations for my research project.",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you help me with filling out the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I need support with the working room setup form. Can you help?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "Could you guide me through the process of completing a New Virtual Machine Request?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey! I hope you're doing well. I need some help with a Work At Home Request form. Would it be possible for you to guide me through it?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Do you have any tips on filling out the working room setup request?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance in completing the New Virtual Machine Request form. Can you assist?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Can you provide support for filling out the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I require your assistance with the Work At Home Request form.",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Can you help me with mobile email setup?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "I need help completing the firewall rules setup form.",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I need guidance on completing the Work At Home Request. Can you help?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I'm having trouble understanding how to configure the firewall rules. Can you explain the concepts of source and destination IP addresses?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "I'm a teacher and I need help installing educational software on my desktop. Can you provide assistance with the Desktop Software Installation Support form?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "I'm unsure about how to complete the firewall rules setup. Can you offer your expertise?",
-        "label": [
-            "Firewall Rules Setup"
-        ]
-    },
-    {
-        "dialog": "Hey! I have a family member visiting from out of town and I want to spend some time with them. Can you assist me with a Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "I'm having difficulty completing the working room setup request. Can you provide support?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "How do I grow tomatoes in a garden?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "I have a personal commitment that requires me to be at home tomorrow. Can you assist me in completing the Work At Home Request form?",
-        "label": [
-            "Work At Home Request"
-        ]
-    },
-    {
-        "dialog": "Hi there! Can you help me out with the Desktop SoftWare Installation Support? I accidentally clicked on the wrong option during the installation and now I'm not sure how to undo it.",
-        "label": [
-            "Desktop Software Installation Support"
+            "Event Support Request Form"
         ]
     },
     {
@@ -3138,87 +1410,1005 @@
         ]
     },
     {
-        "dialog": "My work email is not working on my mobile device. Can you help me troubleshoot and get it working?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "Can you help me fill out the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "Hey! I've been tasked with setting up a new working room and I'm looking for some assistance in completing the Working Room Setup form. Can you help me out?",
-        "label": [
-            "Working Room Setup"
-        ]
-    },
-    {
-        "dialog": "I just upgraded my desktop's hardware and now I need help reinstalling all the software. Can you assist me with Desktop Software Installation Support?",
-        "label": [
-            "Desktop Software Installation Support"
-        ]
-    },
-    {
-        "dialog": "Do you have any tips for improving memory?",
-        "label": [
-            "oos"
-        ]
-    },
-    {
-        "dialog": "Can you assist in completing the firewall rules setup?",
+        "dialog": "Hey, I'm in need of help with firewall rules setup. Could you assist me with that?",
         "label": [
             "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "Could you assist me in completing the New Virtual Machine Request form?",
-        "label": [
-            "New Virtual Machine Request"
-        ]
-    },
-    {
-        "dialog": "I recently changed my work email password and now I can't access it on my phone. Can you help me with mobile email access?",
-        "label": [
-            "Mobile Email Access"
-        ]
-    },
-    {
-        "dialog": "How can I improve my writing skills?",
+        "dialog": "Can you recommend a good dance studio?",
         "label": [
             "oos"
         ]
     },
     {
-        "dialog": "I'm unsure of how to complete the Work At Home Request form. Can you guide me through it?",
+        "dialog": "Hey there! I have this amazing event coming up, but I'm not exactly sure how to complete the Event Support Request Form. Can you guide me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you help me find a reliable plumber to fix a leaky faucet?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "How do I fix a flat tire?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey! I want to set up a subdomain for my company's support portal and I need to add the necessary DNS records for it. Can you guide me through the process of adding DNS records for a subdomain?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I want to enjoy the beautiful weather and work from home. Can you help me fill out the Work At Home Request form?",
         "label": [
             "Work At Home Request"
         ]
     },
     {
-        "dialog": "Hi! I'm a video editor and I need to install some editing software on my desktop to meet my client's requirements. Can you give me a hand with the Desktop Software Installation Support form?",
+        "dialog": "Can you help me book a hotel in New York?",
         "label": [
-            "Desktop Software Installation Support"
+            "oos"
         ]
     },
     {
-        "dialog": "Can you assist me with Desktop SoftWare Installation Support?",
+        "dialog": "Can you assist me with the Work At Home Request form?",
         "label": [
-            "Desktop Software Installation Support"
+            "Work At Home Request"
         ]
     },
     {
-        "dialog": "I need assistance on the New Virtual Machine Request form. Can you lend a hand?",
+        "dialog": "Hey there! I'm encountering some difficulties while filling out the Firewall Rules Setup form. Can you lend a hand and help me complete it?",
         "label": [
-            "New Virtual Machine Request"
+            "Firewall Rules Setup"
         ]
     },
     {
-        "dialog": "What steps do I need to follow to access my email on my mobile device?",
+        "dialog": "I'm frustrated with this Event Support Request Form. Can you show me how to properly fill it out?",
         "label": [
-            "Mobile Email Access"
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hi! I'm encountering difficulties with the Firewall Rules Setup form. Can you lend me a hand in completing it?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I need your expertise to help me with the firewall rules setup. We've recently added new servers and I want to update our access control policies.",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hi! I recently bought a new domain and need to add the necessary DNS records for it to start working. Can you guide me through the process?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I'm not sure how to fill out the Windows Domain Service Request. Can you give me some advice?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm a little stuck with the Add/Update/Delete DNS form. We recently migrated our website to a different hosting provider and I need to update the DNS settings accordingly. Can you help me with this task?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hey, I need to submit an Event Support Request Form for an upcoming event, but I'm unsure about some fields. Can you assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hey, I seem to be stuck with my Windows Domain Service Request and could use your expertise to get me through it.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you assist me with completing a Windows Domain Service Request form?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hello! I messed up the MX records for my email server and now emails are not getting delivered. Can you assist me in fixing the DNS entries?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you guide me in completing the firewall rules setup form?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "How do I remove a stain from a carpet?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm unsure how to fill out the firewall rules setup form. Can you show me?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hi! I'm working on the Event Support Request Form, but I'm feeling a little lost. Can you assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm struggling with the firewall rules setup. Can you provide guidance?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hey! I'm in the process of organizing an event, and I'm having trouble filling out the Event Support Request Form. Could you lend me a hand?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you help me fill out the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hi! I have a family emergency and I need to be able to work from home for a few days. Can you assist me in completing a Work At Home Request?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you suggest some good hiking boots?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Would it be possible for you to help me complete the Work At Home form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you recommend some strategies for customer experience management?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm in charge of a company anniversary celebration and I'm stuck with the Event Support Request Form. Can you guide me through it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Greetings! I'm in need of your help with the Add/Update/Delete DNS form. I want to delete some unnecessary DNS entries.",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Assistance needed for firewall rules setup.",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble with the Add/Update/Delete DNS request. Can you assist?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hi there! I'm stuck on firewall rules setup. Could you please provide me with some instructions?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hey, I'm having trouble with the Event Support Request Form and was wondering if you could offer some assistance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I could use some help in understanding the requirements for the Windows Domain Service Request.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you guide me on how to complete the Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hello! I was wondering if you could guide me through the Windows Domain Service Request form. I need to change a user's password in the Active Directory.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Could you walk me through the steps of completing the Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I need some assistance with the Event Support Request Form. Can you offer guidance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you explain the process of adding/updating/deleting DNS records in detail?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hello, I would like some assistance with filling out the Windows Domain Service Request. We need to add a domain controller for better network management.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you guide me through the process of firewall rules setup?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hey! I'm planning an event and I need assistance with filling out the Event Support Request Form. Can you help me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I need help with the Work At Home Request form. Can you guide me through it?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm organizing an event and I could use some help. Would you mind guiding me through the Event Support Request Form?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I need to request permission to work remotely next week. Can you guide me through the steps of the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I'm feeling stressed. Can you suggest some relaxation techniques?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm a bit out of my depth when it comes to configuring firewall rules. Can you be my mentor and help me learn?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hey, I made some changes to my website and now I'm experiencing DNS resolution issues. Can you help me troubleshoot and fix the problem?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hi! I'm organizing an event and I'm stuck on the Event Support Request Form. Could you provide some assistance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you assist me with completing the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you help me with my fitness routine?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Greetings! I'm having a tough time setting up the firewall rules. Mind helping me out with this challenge?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm organizing an event and I'm struggling to complete the Event Support Request Form. Can you help me out?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I need help with planning a bridal shower, can you assist?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hello! I need some guidance in managing our DNS configuration. How can I add, update, or delete DNS records?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you help me complete the Event Support Request Form?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hey there! I'm organizing a big event and I could really use some help with the Event Support Request Form. Can you assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hi! I'm in a bit of a pickle. I need help with the Work At Home Request form. Can you lend a hand?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hey, I could really use your assistance with the Event Support Request Form. Can you provide some guidance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble completing the Work At Home Request form. Can you offer some support?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you provide instructions on how to complete the Windows Domain Service Request form?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hi there, I'm having difficulty properly filling in the Event Support Request Form. Can you help me out?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I have a family emergency and I need to submit a Work At Home Request. Can you help me with that?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need advice on buying a new camera. Can you assist?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Greetings! I'm in a bit of a pickle with the Firewall Rules Setup form. Could you help me out?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Can you help me complete the Event Support Request Form, please?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hey, my website is currently hosted on a shared server, but I want to move it to a dedicated server. Can you help me update the DNS records for this migration?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I need assistance completing the Work At Home Request form. Can you guide me through it?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I'm struggling with the firewall rules setup form. Can you provide assistance?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Our network administrator is currently unavailable, and I need to configure the firewall rules urgently. Can you help me with the Firewall Rules Setup form?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Is it possible to get assistance with the firewall rules setup?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I'm organizing a team retreat. Can you suggest some team-building exercises and icebreakers?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I require some support with the Work At Home request form. Can you help?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I'm struggling with the DNS Add/Update/Delete process. Can you help?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "What are the key factors to consider when selecting a vendor?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "How do I start a blog?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "What's the best way to improve my knitting skills?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I need help with completing the Event Support Request Form. Can you guide me through the process?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you assist me in completing the firewall rules setup form?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Can you assist me with completing a Work At Home Request?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I'm not sure how to proceed with the Add/Update/Delete DNS form. Can you give me some advice?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hello! I have a task at hand to modify the DNS entries. Can you provide me the steps for adding/updating/deleting DNS?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "How do I train a puppy?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm having difficulties with the Event Support Request Form. Can you provide assistance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Could you give me guidance on completing the firewall rules setup?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hi, I'm experiencing some transportation issues and I won't be able to make it to the office for the next few days. Can you guide me through the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Could you lend a hand with the Event Support Request Form? I want to make sure I fill it out correctly.",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Could you show me how to complete the Event Support Request Form?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "My child is sick and I need to stay home to take care of them. Can you guide me on how to submit a Work At Home Request?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "How can I enhance my data analysis skills?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey! Our company is expanding and we need to request a Windows Domain Service to accommodate the increased workload. Can you assist me in filling out the form?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm facing difficulties in setting up the firewall rules. Can you provide some guidance?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm struggling with the firewall rules setup and could use some assistance. Can you provide me with the necessary support?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I need help completing the Work At Home Request form, can you guide me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble comprehending the Windows Domain Service Request form. Can you provide some assistance?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey there! I need your help to fill out the Event Support Request Form. I want to make sure all the necessary arrangements are made for the event.",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you assist me with completing the Work At Home form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Could you please assist me with the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hey, can you provide some guidance on the Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey, I need some help with the Windows Domain Service Request. Any suggestions?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble filling out the Work At Home Request. Can you give me some guidance?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Greetings! I've been given the responsibility of planning an event, but I'm struggling with the Event Support Request Form. Mind offering some assistance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hi there! I've taken on the challenge of organizing a big event, but I'm having trouble with the Event Support Request Form. Can you guide me through it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hello! I need your assistance with DNS management. There are some changes I need to make by adding, updating or deleting DNS records. Can you help me with that?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I need help with the firewall rules setup. Can you guide me through it?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Excuse me, could you lend me a hand with the Windows Domain Service Request form? I'm looking to install a new certificate authority in the domain.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I need help filling out the Event Support Request Form. Can you guide me through it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hello! I've been given the task of arranging an event, and I'm struggling with the Event Support Request Form. Could you provide some assistance?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hi there! I'm having trouble understanding some of the fields in the Windows Domain Service Request Form. Can you provide some clarification?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Can you guide me through the process of setting up firewall rules?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "My car broke down and I need to find a reliable mechanic. Can you suggest any trustworthy auto repair shops in my area?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Do you have any tips for completing the DNS modification request?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I'm looking for assistance with the Work At Home Request form, can you help?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hi! I'm trying to implement stricter security measures by configuring the firewall rules. Can you provide some guidance by completing the Firewall Rules Setup form?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I'm struggling with the Work At Home Request form. Can you please provide some support?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Can you please guide me through the process of filling out the Event Support Request Form?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hello there! I'm having difficulty filling out the Event Support Request Form. Can you please assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hey, I'm in need of completing the Event Support Request Form, and I was wondering if you could lend a hand?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "How can I learn to play the guitar?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hello, Intelligent Agent. I'm facing an issue with the Windows domain services. Could you please guide me through the process of completing a Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I need some guidance on how to fill out the Work At Home Request form, can you assist me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I could use some help with completing the Event Support Request Form. Can you offer any advice?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you provide instructions on the firewall rules setup?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm attending a conference next week and I need to work remotely while I'm there. Could you assist me in completing the Work At Home Request form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need your expertise with the Windows Domain Service Request form. Can you guide me through it?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Could you help me out with the Windows Domain Service Request form? We're experiencing some replication issues between our domain controllers.",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey there! I'm finding it challenging to configure firewall rules. Can you be my guiding light and show me the way?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Could you assist me in completing the Work At Home form?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I'm struggling to configure the firewall rules correctly, and I'm worried about potential security risks. Can you help me with the Firewall Rules Setup?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Hi, can you assist me with filling out the Event Support Request Form? I'm not exactly sure how to complete it.",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble filling out the Work At Home request form. Can you offer assistance?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "What is the process to buy a house?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Good day! I'm struggling with the Event Support Request Form and I was hoping you could help me complete it.",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hello! I have a personal appointment later today and I was hoping you could help me with the process of submitting a Work At Home Request.",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Hey assistant, I need your help with managing our DNS settings. Can you provide assistance in adding, updating, or deleting DNS records?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Could you share some tips for completing the Event Support Request Form?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hey, I need some help organizing an event and I'm stuck on the Event Support Request Form. Can you show me the way?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Can you assist me with filling out the Work At Home Request form accurately?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "I need help with the Work At Home Request form, can you guide me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Good day! I require your help in filling out the Add/Update/Delete DNS form. We need to update the SOA record for our domain.",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I'm having difficulty completing the Work At Home Request form. Can you guide me?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "Could you explain how to fill out the Add/Update/Delete DNS form?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hi! I'm having trouble accessing my company email from Outlook on my computer connected to the company's domain. Can you guide me through a Windows Domain Service Request?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm facing a challenge when trying to fill out the Event Support Request Form. Can you lend me a hand?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I want to set up a custom domain for my online portfolio. Can you help me add/update/delete the necessary DNS records?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Can you help me with the Event Support Request Form? I'm not quite sure what to do.",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm struggling with the Windows Domain Service Request form. Can you provide assistance?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "I'm at a loss on how to properly set up the firewall rules. Can you give me some guidance?",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "Help needed! I'm struggling with the Event Support Request Form for my upcoming event. Can you assist me in completing it?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "What information do I need to provide to add/update/delete DNS records?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "I'm planning a family vacation. Can you suggest some family-friendly destinations?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "I'm unsure what to do with the Event Support Request Form, can you assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I need guidance on how to add DNS records.",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "Hey assistant, I'm facing some obstacles while trying to complete the Windows Domain Service Request form. Can you provide me with some guidance?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hey! I'm in need of your help to complete a Work At Home Request. Can you lend me a hand?",
+        "label": [
+            "Work At Home Request"
+        ]
+    },
+    {
+        "dialog": "What's the best way to improve my guitar playing?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey! Our company is undergoing a rebranding, and I need to update the domain name in our Windows domain. Can you help me fill out the Windows Domain Service Request form to make this change?",
+        "label": [
+            "Windows Domain Service Request"
+        ]
+    },
+    {
+        "dialog": "Hello! I'm struggling to complete the Event Support Request Form for my upcoming event. Could you please assist me?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "Hey, I'm having trouble understanding how to set up firewall rules. Can you help me out? I promise I'll return the favor!",
+        "label": [
+            "Firewall Rules Setup"
+        ]
+    },
+    {
+        "dialog": "I require some assistance in completing the Event Support Request Form. Can you help?",
+        "label": [
+            "Event Support Request Form"
+        ]
+    },
+    {
+        "dialog": "I'm having trouble with my home heating system. Can you assist?",
+        "label": [
+            "oos"
+        ]
+    },
+    {
+        "dialog": "Hey! I accidentally pointed the wrong IP address to my domain and now my website is displaying the wrong content. How can I fix this using the Add/Update/Delete DNS request?",
+        "label": [
+            "Add/Update/Delete DNS"
+        ]
+    },
+    {
+        "dialog": "My attempts to set up the firewall rules have been unsuccessful. Can you lend a hand?",
+        "label": [
+            "Firewall Rules Setup"
         ]
     }
 ]
